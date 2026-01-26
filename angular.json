@@ -5,6 +5,11 @@
     "packageManager": "npm"
   },
   "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "standalone": true
+    }
+  },
   "projects": {
     "spieledschungel": {
       "projectType": "application",
@@ -20,6 +25,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "stylePreprocessorOptions": {
+            "includePaths": [
+              "src/styles"
+            ]
+          },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",

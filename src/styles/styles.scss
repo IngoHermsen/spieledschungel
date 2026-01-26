@@ -1,6 +1,18 @@
-$nav-color: #98d36d;
+@use 'variables' as *;
+@import '../styles/fonts.scss';
 
 body {
     font-family: 'Oswald';
-    color: $nav-color,
+    margin: auto;
 }
+
+.content {
+    margin: 0 auto;
+    max-width: 1180px;
+    background-color: grey;
+}
+
+.hero {
+    height: 300px
+}
+ 
