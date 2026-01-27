@@ -1,11 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { ViewService } from '../../services/view-service';
 
-@Component({
+@Component({  
   selector: 'app-navigation',
   imports: [],
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })
-export class Navigation {
+export class Navigation implements OnInit {
+  viewService = inject(ViewService);
+  expandableMenu: boolean;
+  showMobileMenu: boolean = false;
+
+  constructor() {
+    this.expandableMenu = this.viewService.isMobileView;
+  }
+
+  ngOnInit(): void {
+    
+  }
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
+  }
+
 
 }

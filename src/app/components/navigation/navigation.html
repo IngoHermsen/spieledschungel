@@ -1,9 +1,37 @@
-<span class="menu-title">MENÜ</span>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
-<div class="nav-entry"></div>
+@if(expandableMenu) {
+<div class="mobile-nav-menu">
+    <div (click)="toggleMobileMenu()" class="menu-button">MENÜ</div>
+    @if(showMobileMenu) {
+    <div class="nav-list">
+        <div class="nav-entry">
+            <span>WILLKOMMEN</span>
+        </div>
+        <div class="nav-entry">
+            <span>ÜBER UNS</span>
+        </div>
+        <div class="nav-entry">
+            <span>DIE EINRICHTUNG</span>
+        </div>
+        <div class="nav-entry">
+            <span>VERPFLEGUNG</span>
+        </div>
+        <div class="nav-entry">
+            <span>ANMELDUNG</span>
+        </div>
+        <div class="nav-entry">
+            <span>REFERENZEN</span>
+        </div>
+        <div class="nav-entry">
+            <span>KONTAKT</span>
+        </div>
+        <div class="nav-entry">
+            <span>IMPRESSUM</span>
+        </div>
+    </div>
+    }
+
+</div>
+
+
+
+}

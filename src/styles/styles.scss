@@ -4,15 +4,16 @@
 body {
     font-family: 'Oswald';
     margin: auto;
+    overflow-y: scroll;
 }
 
 .content {
     margin: 0 auto;
     max-width: 1180px;
-    background-color: grey;
+    border: 1px solid grey;
 }
 
 .hero {
-    height: 300px
+    height: 280px
 }
  
