@@ -2,28 +2,28 @@
     <div (click)="toggleNav()" class="nav-toggle">MENÜ</div>
     <div class="nav-list" [class.is-open]="navIsOpen">
         <div class="nav-entry">
-            <span>WILLKOMMEN</span>
+            <span routerLink="/welcome">WILLKOMMEN</span>
         </div>
         <div class="nav-entry">
-            <span>ÜBER UNS</span>
+            <span routerLink="/about">ÜBER UNS</span>
         </div>
         <div class="nav-entry">
-            <span>DIE EINRICHTUNG</span>
+            <span routerLink="/facility">DIE EINRICHTUNG</span>
         </div>
         <div class="nav-entry">
-            <span>VERPFLEGUNG</span>
+            <span routerLink="food">VERPFLEGUNG</span>
         </div>
         <div class="nav-entry">
-            <span>ANMELDUNG</span>
+            <span routerLink="registration">ANMELDUNG</span>
         </div>
         <div class="nav-entry">
-            <span>REFERENZEN</span>
+            <span routerLink="testimonials">REFERENZEN</span>
         </div>
         <div class="nav-entry">
-            <span>KONTAKT</span>
+            <span routerLink="contact">KONTAKT</span>
         </div>
         <div class="nav-entry">
-            <span>IMPRESSUM</span>
+            <span routerLink="imprint">IMPRESSUM</span>
         </div>
     </div>
 </div>

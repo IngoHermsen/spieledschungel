@@ -16,7 +16,7 @@
 .nav-list {
     display: none;
     cursor: pointer;
-    position: static;
+    position: absolute;
     width: 100%;
     padding: 0px 32px;
     flex-direction: column;
@@ -54,6 +54,7 @@
     // medium devices
     .nav-list {
         display: flex;
+        position: static;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
