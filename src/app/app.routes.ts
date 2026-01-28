@@ -1,5 +1,12 @@
 import { Routes } from '@angular/router';
 import { Welcome } from './components/welcome/welcome';
+import { About } from './components/about/about';
+import { Facility } from './components/facility/facility';
+import { Food } from './components/food/food';
+import { Registration } from './components/registration/registration';
+import { Testimonials } from './components/testimonials/testimonials';
+import { Contact } from './components/contact/contact';
+import { Imprint } from './components/imprint/imprint';
 
 export const routes: Routes = [
     {path: 'welcome', component: Welcome},
