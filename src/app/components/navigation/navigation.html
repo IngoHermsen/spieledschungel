@@ -1,8 +1,6 @@
-@if(expandableMenu) {
-<div class="mobile-nav-menu">
-    <div (click)="toggleMobileMenu()" class="menu-button">MENÜ</div>
-    @if(showMobileMenu) {
-    <div class="nav-list">
+<div class="nav-menu">
+    <div (click)="toggleNav()" class="nav-toggle">MENÜ</div>
+    <div class="nav-list" [class.is-open]="navIsOpen">
         <div class="nav-entry">
             <span>WILLKOMMEN</span>
         </div>
@@ -28,10 +26,4 @@
             <span>IMPRESSUM</span>
         </div>
     </div>
-    }
-
 </div>
-
-
-
-}

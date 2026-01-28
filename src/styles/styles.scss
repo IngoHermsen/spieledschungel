@@ -10,10 +10,18 @@ body {
 .content {
     margin: 0 auto;
     max-width: 1180px;
-    border: 1px solid grey;
 }
 
 .hero {
     height: 280px
 }
- 
+
+@media (min-width: 768px) {
+    // medium devices
+
+}
+
+@media (min-width: 1024px) {
+    // large devices
+
+}
