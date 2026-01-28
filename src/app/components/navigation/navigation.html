@@ -1,29 +1,29 @@
 <div class="nav-menu">
     <div (click)="toggleNav()" class="nav-toggle">MENÜ</div>
     <div class="nav-list" [class.is-open]="navIsOpen">
-        <div class="nav-entry">
-            <span routerLink="/welcome">WILLKOMMEN</span>
+        <div (click)="toggleNav()" routerLink="/welcome" class="nav-entry">
+            <span>WILLKOMMEN</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="/about">ÜBER UNS</span>
+        <div (click)="toggleNav()" routerLink="/about" class="nav-entry">
+            <span>ÜBER UNS</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="/facility">DIE EINRICHTUNG</span>
+        <div (click)="toggleNav()" routerLink="/facility" class="nav-entry">
+            <span>DIE EINRICHTUNG</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="food">VERPFLEGUNG</span>
+        <div (click)="toggleNav()" routerLink="food" class="nav-entry">
+            <span>VERPFLEGUNG</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="registration">ANMELDUNG</span>
+        <div (click)="toggleNav()" routerLink="registration" class="nav-entry">
+            <span>ANMELDUNG</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="testimonials">REFERENZEN</span>
+        <div (click)="toggleNav()" routerLink="testimonials" class="nav-entry">
+            <span>REFERENZEN</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="contact">KONTAKT</span>
+        <div (click)="toggleNav()" routerLink="contact" class="nav-entry">
+            <span>KONTAKT</span>
         </div>
-        <div class="nav-entry">
-            <span routerLink="imprint">IMPRESSUM</span>
+        <div (click)="toggleNav()" routerLink="imprint" class="nav-entry">
+            <span>IMPRESSUM</span>
         </div>
     </div>
 </div>

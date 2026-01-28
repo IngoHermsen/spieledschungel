@@ -15,7 +15,6 @@
 
 .nav-list {
     display: none;
-    cursor: pointer;
     position: absolute;
     width: 100%;
     padding: 0px 32px;
@@ -41,6 +40,7 @@
 }
 
 .nav-entry {
+    cursor: pointer;
     padding: 16px 0px;
 
     &:not(:last-child) {
