@@ -9,7 +9,8 @@
 
 .nav-menu {
     user-select: none;
-    position: relative;
+    position: sticky;
+    top: 0px;
 }
 
 .nav-list {
