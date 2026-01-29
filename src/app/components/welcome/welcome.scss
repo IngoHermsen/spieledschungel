@@ -1,3 +1,35 @@
-.title-img {
-    height: 600px;
+.welcome-intro-container {
+    position: relative;
+}
+
+.welcome-hero-image {
+    height: 450px;
+    background-color: grey;
+}
+
+@media (min-width: 768px) {
+    // medium devices
+
+    .welcome-intro-container {
+        position: relative
+    }
+
+    .welcome-textbox {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 0px;
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+
+    .welcome-text {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    // large devices
 }
