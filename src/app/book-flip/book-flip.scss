@@ -1,0 +1,46 @@
+.book-flip-wrapper {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0px;
+}
+
+.book-navigation-medium-screen span {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    width: 32px;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+.page-content {
+    position: relative;
+
+}
+
+
+
+.page img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.link {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    // medium devices
+
+    .book-navigation-medium-screen span {
+        display: flex;
+    }
+
+}
