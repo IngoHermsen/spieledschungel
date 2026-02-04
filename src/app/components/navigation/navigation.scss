@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@import 'material-icons/iconfont/material-icons.css';
 
 * {
     font-weight: 600;
@@ -7,11 +8,26 @@
     background-color: $nav-color;
 }
 
+
 .nav-menu {
     user-select: none;
     position: sticky;
     top: 0px;
     z-index: 100;
+}
+
+.media-controls {
+    position: absolute;
+    bottom: -50px;
+    background-color: unset;
+
+    span {
+       font-size: 32px;
+    }
+}
+
+.volume-toggle {
+    cursor: pointer;
 }
 
 .nav-list {

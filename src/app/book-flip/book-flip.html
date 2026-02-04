@@ -1,62 +1,88 @@
-<div class="book-flip-wrapper">
-  <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
-    <span class="material-icons-round">arrow_back_ios</span>
-  </div>
-  <div #book class="book">
-    <div class="page">
-      <div class="page-content" id="cover-kinderbuch">
-        <div class="begruessungstext">
-          Dies ist der Text der links erscheint neben dem Buch.
+<div class="book-wrapper">
+  <div class="book-flip-wrapper">
+    <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
+      @if(!(pageState == 'first')) {
+      <span class="material-icons-round">arrow_back_ios</span>
+      }
+    </div>
+    <div #book class="book">
+      <div class="page">
+        <div class="page-content" id="cover-kinderbuch">
+          <div class="begruessungstext">
+            Dies ist der Text der links erscheint neben dem Buch.
+          </div>
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content" id="">
+          <div class="flip-hint">
+            <span>Umblättern</span>
+            <div class="arrow">⇆</div>
+          </div>
+          <img src="assets\flipbook\cover-kinderbuch.png" alt="Logo-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Willkommen.png" alt="Willkommen-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Kennenlernen.png" alt="Kennenlernen-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Eingewoehnung.png" alt="Eingewoehnung-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Vertrauen.png" alt="Vertrauen-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Zusammen-mit-Eltern.png" alt="Zusammen-mit-Eltern-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/sanftes_ankommen.png" alt="sanftes-ankommen-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Ruhe_spueren.png" alt="Ruhe-spueren-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/Individualitaet.png" alt="Individualität-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/besondere-Momente.png" alt="besondere-Momente-Bild-und-Text">
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/(Ende)-Wohlfuehlort.png" alt="Wohlfuehlort-Bild-und-Text">
         </div>
       </div>
     </div>
-    <div class="page">
-      <div class="page-content" id="cover-kinderbuch">
-        <img src="assets\flipbook\cover-kinderbuch.png" alt="Logo-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/Willkommen.png" alt="Willkommen-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/Kennenlernen.png" alt="Kennenlernen-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/Eingewoehnung.png" alt="Eingewoehnung-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/Vertrauen.png" alt="Vertrauen-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/Zusammen-mit-Eltern.png" alt="Zusammen-mit-Eltern-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/Individualitaet.png" alt="Individualität-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/besondere-Momente.png" alt="besondere-Momente-Bild-und-Text">
-      </div>
-    </div>
-    <div class="page">
-      <div class="page-content">
-        <img src="assets/flipbook/(Ende)-Wohlfuehlort.png" alt="Wohlfuehlort-Bild-und-Text">
-      </div>
+    <div class="book-navigation-medium-screen forward">
+      @if(!(this.pageState == 'last')) {
+      <span (click)="flipNextPage()" class="material-icons-round">arrow_forward_ios</span>
+      }
     </div>
   </div>
-  <div class="book-navigation-medium-screen forward">
-    <span (click)="flipNextPage()" class="material-icons-round">arrow_forward_ios</span>
-  </div>
+
+  <span class="page-control-wrapper">
+    @if(pageFlipReady()) {
+    <span class="page-count">Seite {{ currentPage() }} von {{ pageCount() }}</span>
+    }
+  </span>
 </div>

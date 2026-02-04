@@ -1,8 +1,24 @@
+.book-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
 .book-flip-wrapper {
     user-select: none;
     display: flex;
     justify-content: center;
     padding: 12px 0px;
+}
+
+.book {
+    overflow: hidden;
+}
+
+.book-navigation-medium-screen {
+    display: none;
+    width: 48px;
 }
 
 .book-navigation-medium-screen span {
@@ -21,7 +37,19 @@
 
 .page-content {
     position: relative;
+}
 
+.page-control-wrapper {
+    height: 24px;
+    display: flex;
+}
+
+.flip-page-hint {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    font-size: 12px;
 }
 
 
@@ -36,8 +64,46 @@
     cursor: pointer;
 }
 
+// Flip Hint
+
+.flip-hint {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    top: 12px;
+    right: 0px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    animation: hint 1.5s forwards;
+    pointer-events: none;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.6);
+}
+
+@keyframes hint {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-60%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+// Flip Hint End
+
+
 @media (min-width: 768px) {
     // medium devices
+
+    .book-navigation-medium-screen {
+        display: block;
+    }
 
     .book-navigation-medium-screen span {
         display: flex;

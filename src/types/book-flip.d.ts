@@ -19,10 +19,38 @@ declare module 'book-flip' {
     );
 
     loadFromHTML(pages: HTMLElement[]): void;
-    flipNext(): void;
+    flipNext(): void
     flipPrev(): void;
     turnToPage(page: number): void;
     getCurrentPageIndex(): number;
     getPageCount(): number;
+
+    on<K extends keyof PageFlipEvents>(
+      event: K,
+      callback: (event: PageFlipEvents[K]) => void
+    ): void;
+  }
+
+  interface FlipEvent {
+    data: number;
+  }
+
+  interface ChangeStateEvent {
+    data: 'user_fold' | 'fold_corner' | 'read';
+  }
+
+  interface ChangeOrientationEvent {
+    data: 'portrait' | 'landscape';
+  }
+
+  interface InitEvent {
+    data: PageFlip;
+  }
+
+  interface PageFlipEvents {
+    flip: FlipEvent;
+    changeState: ChangeStateEvent;
+    changeOrientation: ChangeOrientationEvent;
+    init: InitEvent;
   }
 }

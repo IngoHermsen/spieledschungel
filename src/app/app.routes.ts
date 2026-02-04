@@ -8,6 +8,7 @@ import { Contact } from './components/contact/contact';
 import { Imprint } from './components/imprint/imprint';
 
 export const routes: Routes = [
+    {path: '', redirectTo: 'Willkommen',pathMatch: 'full'},
     {path: 'Willkommen', component: Welcome},
     {path: 'Einrichtung', component: Facility},
     {path: 'Verpflegung', component: Food},
