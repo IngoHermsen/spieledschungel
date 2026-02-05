@@ -1,25 +1,28 @@
 <div class="book-wrapper">
   <div class="book-flip-wrapper">
     <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
-      @if(!(pageState == 'first')) {
-      <span class="material-icons-round">arrow_back_ios</span>
-      }
+      <button [disabled]="(pageState === 'start')" class="material-icons-round control-btn">keyboard_arrow_left</button>
     </div>
     <div #book class="book">
+      @for (page of bookService.parentsBookImages; let idx = $index; track $index) {
       <div class="page">
-        <div class="page-content" id="cover-kinderbuch">
+        <div class="page-content">
+          <img src="{{ page.imagePath }}" alt="{{ page.altText }}">
+          @if(isPortrait() || (!isPortrait() && idx % 2 > 0)) {<div class="corner-triangle"></div>}
+        </div>
+      </div>
+      }
+
+      <!-- <div class="page">
+        <div class="page-content">
           <div class="begruessungstext">
             Dies ist der Text der links erscheint neben dem Buch.
           </div>
         </div>
-      </div>
-      <div class="page">
-        <div class="page-content" id="">
-          <div class="flip-hint">
-            <span>Umblättern</span>
-            <div class="arrow">⇆</div>
-          </div>
-          <img src="assets\flipbook\cover-kinderbuch.png" alt="Logo-Bild-und-Text">
+      </div> -->
+      <!-- <div class="page">
+        <div class="page-content">
+          <img src="assets/flipbook/cover-kinderbuch.png" alt="Logo-Bild-und-Text">
         </div>
       </div>
       <div class="page">
@@ -71,18 +74,29 @@
         <div class="page-content">
           <img src="assets/flipbook/(Ende)-Wohlfuehlort.png" alt="Wohlfuehlort-Bild-und-Text">
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="book-navigation-medium-screen forward">
-      @if(!(this.pageState == 'last')) {
-      <span (click)="flipNextPage()" class="material-icons-round">arrow_forward_ios</span>
-      }
+      <button [disabled]="pageState === 'end'" (click)="flipNextPage()"
+        class="material-icons-round control-btn">keyboard_arrow_right</button>
+
     </div>
   </div>
 
-  <span class="page-control-wrapper">
+  <span class="bottom-page-control">
     @if(pageFlipReady()) {
+    <button [disabled]="pageState === 'start'" (click)="turnToPage(0)"
+      class="material-icons-round control-btn">keyboard_double_arrow_left</button>
+    <button [disabled]="pageState === 'start'" (click)="flipPrevPage()"
+      class="material-icons-round control-btn">keyboard_arrow_left</button>
+
     <span class="page-count">Seite {{ currentPage() }} von {{ pageCount() }}</span>
+
+    <button [disabled]="pageState === 'end'" (click)="flipNextPage()"
+      class="material-icons-round control-btn">keyboard_arrow_right</button>
+    <button [disabled]="pageState === 'end'" (click)="turnToPage(this.pageCount()-1)"
+      class="material-icons-round control-btn">keyboard_double_arrow_right</button>
+
     }
   </span>
 </div>
