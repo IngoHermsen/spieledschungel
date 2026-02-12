@@ -50,7 +50,7 @@
   height: 0;
   border-top: 80px solid rgba(0, 128, 0, 0.1);
   border-left: 80px solid transparent;
-  animation: pulseAnimation 2500ms infinite;
+  animation: pulseAnimation 2500ms forwards;
 
 }
 

@@ -34,7 +34,7 @@ export class BookFlip implements AfterViewInit {
       height: this.pageHeight,
       size: 'fixed',
       usePortrait: this.viewService.isMobile,
-      mobileScrollSupport: this.viewService.isMobile,
+      mobileScrollSupport: false,
       flippingTime: 1500,
     });
 
@@ -87,14 +87,16 @@ export class BookFlip implements AfterViewInit {
       this.pageState = 'middle'
     }
 
+    console.log(this.pageState)
+
   }
 
   isLastPage(page: number): boolean {
     const pageCount = this.pageCount();
 
     return this.isPortrait()
-      ? page >= pageCount - 1
-      : page >= pageCount - 2;
+      ? page >= pageCount
+      : page >= pageCount - 1;
   }
 
 }
