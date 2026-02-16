@@ -3,7 +3,6 @@
 
 * {
     font-weight: 600;
-    font-family: 'Source Sans 3';
     color: rgba(0, 0, 0, 0.6);
     background-color: $nav-color;
 }
@@ -36,7 +35,7 @@
     width: 100%;
     padding: 0px 32px;
     flex-direction: column;
-    gap: 24px;
+    // row-gap: 24px;
     z-index: 30;
     box-sizing: border-box;
 }
@@ -83,7 +82,7 @@
         &::after {
             content: '•';
             color: #CFEBBC;
-            padding-left: 18px;
+            margin: 0 12px;
         }
 
     }

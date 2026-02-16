@@ -86,9 +86,6 @@ export class BookFlip implements AfterViewInit {
     } else {
       this.pageState = 'middle'
     }
-
-    console.log(this.pageState)
-
   }
 
   isLastPage(page: number): boolean {
@@ -98,5 +95,10 @@ export class BookFlip implements AfterViewInit {
       ? page >= pageCount
       : page >= pageCount - 1;
   }
+
+  pageIndexIsEven(index: number): boolean {
+    return index % 2 > 0;
+  }
+
 
 }

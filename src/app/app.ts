@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { Header } from './components/header/header';
+import { Component, inject } from '@angular/core';
 import { Navigation } from './components/navigation/navigation';
 import { RouterOutlet } from '@angular/router';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Navigation, RouterOutlet],
+  imports: [Navigation, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

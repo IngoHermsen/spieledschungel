@@ -8,7 +8,9 @@
       <div class="page">
         <div class="page-content">
           <img src="{{ page.imagePath }}" alt="{{ page.altText }}">
-          @if(isPortrait() || (!isPortrait() && idx % 2 > 0)) {<div class="corner-triangle"></div>}
+          @if(!isLastPage(idx + 1) && (isPortrait() || (!isPortrait() && pageIndexIsEven(idx)))) {
+            <div class="corner-triangle"></div>
+          }
         </div>
       </div>
       }
