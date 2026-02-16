@@ -2,6 +2,14 @@
 @import '../styles/fonts.scss';
 @import 'material-icons/iconfont/material-icons.css';
 
+// basic styles
+
+html,
+body {
+    height: 100%;
+    overflow-y: hidden;
+}
+
 body {
     font-family:
         "Segoe UI",
@@ -11,10 +19,46 @@ body {
         Arial,
         sans-serif;
     margin: auto;
+    position: relative;
+}
+
+app-root {
+    height: 100%;
+}
+
+// 
+
+
+.modal-overlay {
+    padding: 12px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
+    background-color: white;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    .close-button {
+        user-select: none;
+        cursor: pointer;
+    }
+}
+
+.hide-modal {
+    display: none;
+}
+
+.full-screen-content {
+    height: 100%;
     overflow-y: scroll;
 }
 
-.content {
+.disable-scroll {
+    overflow-y: hidden;
+}
+
+.website-content {
     margin: 0 auto;
     max-width: 1180px;
 }

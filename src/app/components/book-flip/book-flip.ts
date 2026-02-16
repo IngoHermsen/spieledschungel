@@ -1,14 +1,13 @@
 import { AfterViewInit, Component, ElementRef, inject, ViewChild, Signal, signal } from '@angular/core';
 import { PageFlip } from 'book-flip';
-import { ViewService } from '../services/view-service';
-import { Books } from '../services/books';
-import { FlipHint } from "../directives/flip-hint";
+import { ViewService } from '../../services/view-service';
+import { Books } from '../../services/books';
 
 type PageState = 'start' | 'middle' | 'end';
 
 @Component({
   selector: 'app-book-flip',
-  imports: [FlipHint],
+  imports: [],
   templateUrl: './book-flip.html',
   styleUrl: './book-flip.scss',
 })

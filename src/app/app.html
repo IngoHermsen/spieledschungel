@@ -1,6 +1,17 @@
+<div [class.disable-scroll]="viewService.activeModal()" class="full-screen-content">
+    <!-- Book Modal -->
+    @if (viewService.activeModal()) {
+    <div class="modal-overlay">
+        <div class="navigation-bar">
+            <span class="close-button" (click)="closeModal()">[x]</span>
+        </div>
+        <app-book-flip></app-book-flip>
+    </div>
+    }
 
-
-<div class="content">
-    <app-navigation></app-navigation>
-    <router-outlet></router-outlet>
+    <!-- END of Book Modal -->
+    <div class="website-content">
+        <app-navigation></app-navigation>
+        <router-outlet></router-outlet>
+    </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { PageFlip } from 'book-flip';
-import { BookFlip } from '../../book-flip/book-flip';
+import { BookFlip } from '../book-flip/book-flip';
 
 
 @Component({
