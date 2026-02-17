@@ -2,10 +2,11 @@
 
     <div (click)="toggleNav()" translate="no" class="nav-toggle">MENÜ</div>
     <div class="nav-list" [class.is-open]="navIsOpen">
-        <div translate="no" class="media-controls nav-entry">
-            @if(!audioService.isPlaying()) { <span (click)="audioService.togglePlay()" class="material-icons volume-toggle">volume_off</span> }
-            @if(audioService.isPlaying()) { <span (click)="audioService.togglePlay()" class="material-icons volume-toggle">volume_up</span> }
-        </div>
+        <!-- MediaControls -->
+         <span class="media-controls">
+             <app-media-controls></app-media-controls>
+         </span>
+       
         <div (click)="toggleNav()" routerLink="/Willkommen" class="nav-entry">
             <span>WILLKOMMEN</span>
         </div>

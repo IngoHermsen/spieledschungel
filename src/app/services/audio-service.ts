@@ -23,6 +23,7 @@ export class AudioService {
   init() {
     this.audio.src = 'assets/music/sd-song.aac';
     this.audio.volume = 0.3;
+    this.audio.loop = true;
     this.audio.load();
   }
 

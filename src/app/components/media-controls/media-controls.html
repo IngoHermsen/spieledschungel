@@ -1,0 +1,6 @@
+<div translate="no" class="media-controls nav-entry">
+    @if(!audioService.isPlaying()) { <span (click)="audioService.togglePlay()"
+        class="material-icons volume-toggle">volume_off</span> }
+    @if(audioService.isPlaying()) { <span (click)="audioService.togglePlay()"
+        class="material-icons volume-toggle">volume_up</span> }
+</div>

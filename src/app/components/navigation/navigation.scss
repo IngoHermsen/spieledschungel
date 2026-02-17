@@ -7,7 +7,6 @@
     background-color: $nav-color;
 }
 
-
 .nav-menu {
     user-select: none;
     position: sticky;
@@ -25,6 +24,17 @@
     flex-direction: column;
     z-index: 30;
     box-sizing: border-box;
+}
+
+.nav-list .media-controls {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    padding-left:12px;
+
 }
 
 .nav-list.is-open {
