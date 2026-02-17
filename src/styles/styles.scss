@@ -54,6 +54,15 @@ app-root {
     overflow-y: scroll;
 }
 
+
+.media-controls {
+    display: flex;
+
+    .volume-toggle {
+        cursor: pointer,
+    }
+}
+
 .disable-scroll {
     overflow-y: hidden;
 }

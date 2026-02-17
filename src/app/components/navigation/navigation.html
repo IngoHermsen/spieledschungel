@@ -1,15 +1,11 @@
 <div class="nav-menu">
-    <div translate="no" class="media-controls">
-        @if(isMuted) { <span (click)="toggleMute()" class="material-icons volume-toggle">volume_off</span> }
-        @if(!isMuted) { <span (click)="toggleMute()" class="material-icons volume-toggle">volume_up</span> }
-    </div>
-<!-- Audio Ref Element START -->
- <audio #audioRef loop>
-  <source src="assets/music/sd-song.aac" type="audio/mpeg">
-</audio>
-<!-- Audio Ref Element END -->
+
     <div (click)="toggleNav()" translate="no" class="nav-toggle">MENÜ</div>
     <div class="nav-list" [class.is-open]="navIsOpen">
+        <div translate="no" class="media-controls nav-entry">
+            @if(!audioService.isPlaying()) { <span (click)="audioService.togglePlay()" class="material-icons volume-toggle">volume_off</span> }
+            @if(audioService.isPlaying()) { <span (click)="audioService.togglePlay()" class="material-icons volume-toggle">volume_up</span> }
+        </div>
         <div (click)="toggleNav()" routerLink="/Willkommen" class="nav-entry">
             <span>WILLKOMMEN</span>
         </div>

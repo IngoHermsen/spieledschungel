@@ -15,19 +15,7 @@
     z-index: 100;
 }
 
-.media-controls {
-    position: absolute;
-    bottom: -50px;
-    background-color: unset;
 
-    span {
-       font-size: 32px;
-    }
-}
-
-.volume-toggle {
-    cursor: pointer;
-}
 
 .nav-list {
     display: none;
@@ -35,7 +23,6 @@
     width: 100%;
     padding: 0px 32px;
     flex-direction: column;
-    // row-gap: 24px;
     z-index: 30;
     box-sizing: border-box;
 }

@@ -1,9 +1,10 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appFlipHint]',
+  selector: '[appAudio]',
 })
-export class FlipHint {
+export class Audio {
+  
 
   constructor() { }
 
