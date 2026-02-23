@@ -1,15 +1,15 @@
 <div class="book-wrapper">
-  <div class="book-flip-wrapper">
+  <div class="book-flip-wrapper" #bookWrapper>
     <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
       <button [disabled]="(pageState === 'start')" class="material-icons-round control-btn">keyboard_arrow_left</button>
     </div>
-    <div #book class="book">
+    <div class="book" #book>
       @for (page of bookService.parentsBookImages; let idx = $index; track $index) {
       <div class="page">
         <div class="page-content">
           <img src="{{ page.imagePath }}" alt="{{ page.altText }}">
           @if(!isLastPage(idx + 1) && (isPortrait() || (!isPortrait() && pageIndexIsEven(idx)))) {
-            <div class="corner-triangle"></div>
+          <div class="corner-triangle"></div>
           }
         </div>
       </div>
@@ -21,9 +21,9 @@
 
     </div>
   </div>
-
+  <!-- bottom page control -->
   <span class="bottom-page-control">
-    @if(pageFlipReady()) {
+    <!-- @if(pageFlipReady()) { -->
     <button [disabled]="pageState === 'start'" (click)="turnToPage(0)"
       class="material-icons-round control-btn">keyboard_double_arrow_left</button>
     <button [disabled]="pageState === 'start'" (click)="flipPrevPage()"
@@ -35,7 +35,6 @@
       class="material-icons-round control-btn">keyboard_arrow_right</button>
     <button [disabled]="pageState === 'end'" (click)="turnToPage(this.pageCount()-1)"
       class="material-icons-round control-btn">keyboard_double_arrow_right</button>
-
-    }
+    <!-- } -->
   </span>
 </div>

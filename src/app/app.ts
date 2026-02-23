@@ -1,9 +1,10 @@
-import { Component, effect, inject } from '@angular/core';
+import { Component, effect, inject, OnInit } from '@angular/core';
 import { Navigation } from './components/navigation/navigation';
 import { BookFlip } from './components/book-flip/book-flip';
 import { MediaControls } from './components/media-controls/media-controls';
 import { RouterOutlet } from '@angular/router';
 import { ViewService } from './services/view-service';
+import { KeyControlService } from './services/key-control';
 
 @Component({
   selector: 'app-root',
@@ -12,30 +13,27 @@ import { ViewService } from './services/view-service';
   styleUrl: './app.scss'
 })
 
-export class App {
+export class App implements OnInit {
   viewService = inject(ViewService);
+  keyControlService = inject(KeyControlService);
+
+  controlKey: string | null = null;
 
   constructor() {
-    effect((onCleanup) => {
-      if (this.viewService.activeModal()) {
-        const listener = (event: KeyboardEvent) => {
-          if (event.key === 'Escape') {
-            this.closeModal()
-          }
-        }
-        document.addEventListener('keydown', listener);
-        // Cleanup at modal view update
-
-        onCleanup(() => {
-          document.removeEventListener('keydown', listener)
-        })
+    effect(() => {
+      console.log('matichingKey in App component')
+      if(this.keyControlService.matchingKey() === 'Escape') {
+        this.closeModal()
       }
     })
   }
 
-  closeModal() {
-    this.viewService.activeModal.set(false);
+  ngOnInit(): void {
+    this.keyControlService.setKeyListeners();
   }
 
-
+  closeModal() {
+    this.keyControlService.stopKeyListeners
+    this.viewService.activeModal.set(false);
+  }
 }

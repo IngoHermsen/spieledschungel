@@ -30,9 +30,12 @@ app-root {
 
 
 .modal-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 12px;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: 200;
     background-color: white;
