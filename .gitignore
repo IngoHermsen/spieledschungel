@@ -38,7 +38,7 @@ yarn-error.log
 testem.log
 /typings
 __screenshots__/
-/src/assets/images
+/src/assets/
 /src/texte
 
 # System files
