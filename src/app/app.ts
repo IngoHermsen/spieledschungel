@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { Navigation } from './components/navigation/navigation';
 import { BookFlip } from './components/book-flip/book-flip';
 import { MediaControls } from './components/media-controls/media-controls';
@@ -15,12 +15,27 @@ import { ViewService } from './services/view-service';
 export class App {
   viewService = inject(ViewService);
 
-  activeModal: boolean = true;
+  constructor() {
+    effect((onCleanup) => {
+      if (this.viewService.activeModal()) {
+        const listener = (event: KeyboardEvent) => {
+          if (event.key === 'Escape') {
+            this.closeModal()
+          }
+        }
+        document.addEventListener('keydown', listener);
+        // Cleanup at modal view update
+
+        onCleanup(() => {
+          document.removeEventListener('keydown', listener)
+        })
+      }
+    })
+  }
 
   closeModal() {
-    console.log('was here')
     this.viewService.activeModal.set(false);
   }
 
-  
+
 }

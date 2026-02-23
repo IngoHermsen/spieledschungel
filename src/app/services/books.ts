@@ -6,61 +6,83 @@ import { PageImage } from '../interfaces/page-image';
 })
 export class Books {
   parentsBookImages: PageImage[] = [
+
     {
-      imagePath: "assets/flipbook/Begruessung_und_Kontakt.jpeg",
-      altText: "Begruessung-und-Kontakt"
+      imagePath: "assets/flipbook/0.png",
+      altText: ""
     },
     {
-      imagePath: "assets/flipbook/cover-kinderbuch.png",
-      altText: "Logo-Bild-und-Text"
+      imagePath: "assets/flipbook/1.png",
+      altText: ""
     },
     {
-      imagePath: "assets/flipbook/sanftes_ankommen.jpeg",
-      altText: "Sanftes-Ankommen"
+      imagePath: "assets/flipbook/2.png",
+      altText: ""
     },
     {
-      imagePath: "assets/flipbook/ruhigere_Momente.jpeg",
-      altText: "ruhigere-Momente"
+      imagePath: "assets/flipbook/3.png",
+      altText: ""
     },
     {
-      imagePath: "assets/flipbook/so_sein.jpeg",
-      altText: "so-sein"
+      imagePath: "assets/flipbook/4.png",
+      altText: ""
     },
     {
-      imagePath: "assets/flipbook/toben.jpeg",
-      altText: "toben"
+      imagePath: "assets/flipbook/5.png",
+      altText: ""
     },
     {
-      imagePath: "assets/flipbook/Kennenlernen.png",
-      altText: "Kennenlernen-Bild-und-Text"
+      imagePath: "assets/flipbook/6.png",
+      altText: ""
     },
-    // {
-    //   imagePath: "assets/flipbook/Eingewoehnung.png",
-    //   altText: "Eingewoehnung-Bild-und-Text"
-    // },
-    // {
-    //   imagePath: "assets/flipbook/Vertrauen.png",
-    //   altText: "Vertrauen-Bild-und-Text"
-    // },
-    // {
-    //   imagePath: "assets/flipbook/Zusammen-mit-Eltern.png",
-    //   altText: "Zusammen-mit-Eltern-Bild-und-Text"
-    // },
-    // {
-    //   imagePath: "assets/flipbook/Ruhe_spueren.png",
-    //   altText: "Ruhe-spueren-Bild-und-Text"
-    // },
-    // {
-    //   imagePath: "assets/flipbook/Individualitaet.png",
-    //   altText: "Individualität-Bild-und-Text"
-    // },
-    // {
-    //   imagePath: "assets/flipbook/besondere-Momente.png",
-    //   altText: "besondere-Momente-Bild-und-Text"
-    // },
-    // {
-    //   imagePath: "assets/flipbook/(Ende)-Wohlfuehlort.png",
-    //   altText: "Wohlfuehlort-Bild-und-Text"
-    // }
+    {
+      imagePath: "assets/flipbook/7.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/8.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/9.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/10.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/11.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/12.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/13.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/14.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/15.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/16.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/17.png",
+      altText: ""
+    },
+    {
+      imagePath: "assets/flipbook/18.png",
+      altText: ""
+    },
+ 
   ]
 }

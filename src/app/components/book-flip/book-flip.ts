@@ -49,13 +49,13 @@ export class BookFlip implements AfterViewInit {
 
 
     this.pageFlip.on('init', e => {
-      this.currentPage.set(this.pageFlip.getCurrentPageIndex() + 1);
+      this.currentPage.set(this.pageFlip.getCurrentPageIndex());
       this.pageCount.set(this.pageFlip.getPageCount());
       this.pageFlipReady.set(true);
     })
 
     this.pageFlip.on('flip', e => {
-      const page: number = this.pageFlip.getCurrentPageIndex() + 1;
+      const page: number = this.pageFlip.getCurrentPageIndex();
       this.currentPage.set(page);
       this.updatePageState(page);
     })
