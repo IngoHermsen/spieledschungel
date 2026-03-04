@@ -1,6 +1,14 @@
-<div translate="no" class="media-controls nav-entry">
-    @if(!audioService.isPlaying()) { <span (click)="audioService.togglePlay()"
-        class="material-icons volume-toggle">volume_off</span> }
-    @if(audioService.isPlaying()) { <span (click)="audioService.togglePlay()"
-        class="material-icons volume-toggle">volume_up</span> }
+<div translate="no" class="media-controls">
+    <span class="nav-entry">
+        <img class="toggle-img icon" src="assets/music/music.svg" alt="music-on-button">
+    </span>
+    <div class="controls--replay--pause">
+        <span (click)="audioService.restartAudio()" class="button material-icons icon">replay_circle_filled</span>
+        @if(audioService.isPlaying()) {
+            <span (click)="audioService.togglePlay()" class="button material-icons icon">pause_circle_filled</span>
+        }
+        @if(!audioService.isPlaying()) {
+            <span (click)="audioService.togglePlay()" class="button material-icons icon">play_circle_filled</span>
+        }
+    </div>
 </div>

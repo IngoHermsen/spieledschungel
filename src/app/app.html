@@ -5,8 +5,8 @@
         <div class="modal--nav-bar">
             <app-media-controls></app-media-controls>
             <section class="modal--nav-bar--right">
-                <span class="close-button" (click)="closeModal()">Zur Webseite >>></span>
-                <span class="close-button" (click)="closeModal()">[x]</span>
+                <span class="close-button" (click)="closeModal()">Zur Webseite</span>
+                <span (click)="this.viewService.activeModal.set(false)" class="material-icons">arrow_circle_right</span>
             </section>
         </div>
         <app-book-flip></app-book-flip>

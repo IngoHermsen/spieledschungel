@@ -38,10 +38,10 @@ export class BookFlip implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const bookWidthFraction: number = window.innerWidth * 0.6;
-    const bookHeightFraction: number = window.innerHeight * 0.8;
+    const bookWidthFraction: number = this.viewService.isMobile ? window.innerWidth * 0.9 : window.innerWidth * 0.6;
+    const bookHeightFraction: number = window.innerHeight * 0.7;
     const calcMinWidth: number = this.viewService.isMobile ? bookWidthFraction : bookWidthFraction / 2;
-    const calcMaxHeight: number = this.viewService.isMobile ? bookHeightFraction : bookWidthFraction / 2;
+    const calcMaxHeight: number = this.viewService.isMobile ? bookHeightFraction : bookHeightFraction / 2;
 
     this.pageFlip = new PageFlip(this.book.nativeElement, {
       width: 400,

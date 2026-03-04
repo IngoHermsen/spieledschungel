@@ -1,4 +1,23 @@
-.volume-toggle {
+.media-controls {
+    width: 30px;
     display: flex;
     align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+.controls--replay--pause {
+    display: flex;
+    border: 2px solid grey;
+    border-radius: 50px;
+    gap: inherit;
+    padding: 0px 4px;
+
+    .button {
+        cursor: pointer;
+    }
+}
+
+.toggle-img {
+    height: 25px;
 }

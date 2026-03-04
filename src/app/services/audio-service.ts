@@ -35,5 +35,10 @@ export class AudioService {
     }
   }
 
+  restartAudio() {
+    this.audio.currentTime = 0;
+    this.audio.play()
+  }
+
 }
 
