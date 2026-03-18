@@ -7,7 +7,7 @@
     flex-direction: column;
     height: 100%;
     align-items: center;
-    
+
 }
 
 .book-flip-wrapper {
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    padding: 12px 0px;
+    padding: 8px 0px 12px 0px;
 }
 
 .book {
@@ -36,6 +36,11 @@
     object-fit: contain;
 }
 
+.page-count {
+    text-align: center;
+    width: 118px;
+}
+
 .page-content {
     position: relative;
     height: 100%;
@@ -47,53 +52,87 @@
 }
 
 .control-btn {
-    font-size: 36px;
+    color: lightgrey;
+    display: none;
+    font-size: 42px;
     background-color: unset;
     border: unset;
-    display: none;
     cursor: pointer;
     user-select: none;
     width: 32px;
     height: 100%;
-    margin: 0px 8px;
+    margin: 0px 4px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 12px 0px;
 }
 
+.control-btn:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6)
+}
+
 .corner-triangle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 80px solid rgba(0, 128, 0, 0.1);
-  border-left: 80px solid transparent;
-  animation: pulseAnimation 2500ms forwards;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 80px solid rgba(0, 128, 0, 0.1);
+    border-left: 80px solid transparent;
+    animation: pulseAnimation 2500ms forwards;
 
 }
 
 // corner triangle pulse animation
 
 @keyframes pulseAnimation {
-    0% { border-top: 80px solid rgba(0, 0, 0, 0) };
-    20% { border-top: 80px solid rgba(250, 138, 19, 0.8) };
-    40% { border-top: 80px solid rgba(250, 138, 19, 0.4) };
-    60% { border-top: 80px solid rgba(250, 138, 19, 0.8) };
-    80% { border-top: 80px solid rgba(250, 138, 19,  0.4) };
-    100% { border-top: 80px solid rgba(250, 138, 19, 0.8) };
+    0% {
+        border-top: 80px solid rgba(0, 0, 0, 0)
+    }
+
+    ;
+
+    20% {
+        border-top: 80px solid rgba(250, 138, 19, 0.8)
+    }
+
+    ;
+
+    40% {
+        border-top: 80px solid rgba(250, 138, 19, 0.4)
+    }
+
+    ;
+
+    60% {
+        border-top: 80px solid rgba(250, 138, 19, 0.8)
+    }
+
+    ;
+
+    80% {
+        border-top: 80px solid rgba(250, 138, 19, 0.4)
+    }
+
+    ;
+
+    100% {
+        border-top: 80px solid rgba(250, 138, 19, 0.8)
+    }
+
+    ;
 
 }
 
-
-.bottom-page-control {
+.page-controls {
     height: 24px;
     display: flex;
 }
 
-.bottom-page-control button {
-    display: flex; 
+.page-controls button {
+    display: flex;
 
 }
 

@@ -6,16 +6,9 @@
     user-select: none;
 }
 
-.controls--replay--pause {
-    display: flex;
-    border: 2px solid grey;
-    border-radius: 50px;
-    gap: inherit;
-    padding: 0px 4px;
-
-    .button {
-        cursor: pointer;
-    }
+.controls--replay--pause .button:hover {
+    cursor: pointer;
+    color: rgba(255,255,255,0.7)
 }
 
 .toggle-img {

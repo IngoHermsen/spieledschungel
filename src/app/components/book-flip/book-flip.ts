@@ -79,13 +79,13 @@ export class BookFlip implements AfterViewInit {
   }
 
   flipPrevPage() {
-    this.pageFlip.flipPrev();
     this.keyControlService.matchingKey.set(null);
+    this.pageFlip.flipPrev();
   }
 
   flipNextPage() {
-    this.pageFlip.flipNext();
     this.keyControlService.matchingKey.set(null);
+    this.pageFlip.flipNext();
   }
 
   turnToPage(page: number) {

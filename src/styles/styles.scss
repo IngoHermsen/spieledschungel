@@ -28,8 +28,13 @@ app-root {
 
 // 
 
+.close-button {
+    font-size: 42px;
+}
+
 
 .modal-overlay {
+    color: lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,14 +43,13 @@ app-root {
     height: 100%;
     width: 100vw;
     z-index: 200;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     overflow-y: scroll;
     box-sizing: border-box;
-
-    .close-button {
-        user-select: none;
-        cursor: pointer;
-    }
+    backdrop-filter: blur(4px);
+    /* Blur-Effekt */
+    -webkit-backdrop-filter: blur(8px);
+    /* für Safari */
 }
 
 .modal--nav-bar {
@@ -56,13 +60,25 @@ app-root {
 }
 
 .modal--nav-bar--right {
+    user-select: none;
     max-height: 100%;
     display: flex;
     gap: 4px;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.7);
+    }
 }
 
-.modal--nav-bar--right :first-child {
+.modal--footer {
     color: rgba(0, 0, 0, 0.6);
+    text-align: end;
+}
+
+.modal--footer span:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .hide-modal {
@@ -88,6 +104,10 @@ app-root {
 }
 
 .website-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0 auto;
     max-width: 1180px;
 }
@@ -96,8 +116,13 @@ app-root {
     height: 50vh
 }
 
-.test {
-    height: 100vh;
+.control-border {
+    display: flex;
+    border: 2px solid grey;
+    border-radius: 50px;
+    gap: inherit;
+    padding: 0px 4px;
+
 }
 
 h1 {

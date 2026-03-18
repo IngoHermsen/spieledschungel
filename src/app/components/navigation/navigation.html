@@ -1,12 +1,13 @@
 <div class="nav-menu">
-
     <div (click)="toggleNav()" translate="no" class="nav-toggle">MENÜ</div>
     <div class="nav-list" [class.is-open]="navIsOpen">
         <!-- MediaControls -->
-         <span class="media-controls">
-             <app-media-controls></app-media-controls>
-         </span>
-       
+        <span class="media-controls">
+            <app-media-controls></app-media-controls>
+        </span>
+        <div (click)="toggleNav()" routerLink="/Buch" class="nav-entry">
+            <span class="book-txt"><span class="material-icons">menu_book</span><span>BUCH</span></span>
+        </div>
         <div (click)="toggleNav()" routerLink="/Willkommen" class="nav-entry">
             <span>WILLKOMMEN</span>
         </div>

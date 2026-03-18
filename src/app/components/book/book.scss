@@ -1,0 +1,19 @@
+.book-content {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+}
+
+
+.open-book-button {
+    min-width: 100px;
+    max-width: 200px;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0.5;
+}

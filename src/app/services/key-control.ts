@@ -25,9 +25,11 @@ export class KeyControlService {
             break;
         }
       });
+      console.log('key Sub', this.keySub)
   }
 
   stopKeyListeners() {
+    this.matchingKey.set(null);
     this.keySub?.unsubscribe();
     this.keySub = undefined;
   }

@@ -7,10 +7,7 @@ import { AudioService } from '../../services/audio-service';
   templateUrl: './media-controls.html',
   styleUrl: './media-controls.scss',
 })
-export class MediaControls implements OnInit {
+export class MediaControls {
   audioService = inject(AudioService);
 
-  ngOnInit(): void {
-    this.audioService.init();
-  }
 }

@@ -33,7 +33,7 @@
     transform: translateY(-50%);
     display: flex;
     align-items: center;
-    padding-left:12px;
+    padding-left: 12px;
 
 }
 
@@ -53,6 +53,8 @@
 }
 
 .nav-entry {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     padding: 16px 0px;
 
@@ -60,6 +62,19 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     }
 }
+
+.nav-entry span {
+    &:hover {
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.book-txt {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 
 
 @media (min-width: 768px) {

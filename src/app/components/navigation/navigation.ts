@@ -19,7 +19,6 @@ export class Navigation implements OnInit {
   hasStarted: boolean = false;
 
   ngOnInit(): void {
-    this.audioService.init();
   }
 
   toggleNav() {
