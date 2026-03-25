@@ -1,0 +1,70 @@
+@use 'variables' as *;
+
+.footer--content {
+    color: $main-font-color;
+    background-color: $main-color;
+    display: flex; 
+    flex-direction: column;
+    padding: 24px
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    gap: 48px;
+}
+
+.company-data-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 2;
+}
+
+.map-section {
+    flex: 1;
+    min-height: 180px;
+}
+
+.hover:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.privacy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.map-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.user-click-info {
+    font-weight: 600;
+}
+
+.confirm-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    color: $main-color;
+    padding: 8px 4px;
+    border-radius: 10px;
+
+    &:hover {
+        font-weight: 500;
+    }
+}
+
+.gmaps-iframe {
+    width: 100%;
+}

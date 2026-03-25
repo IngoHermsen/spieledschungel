@@ -82,7 +82,6 @@ export class Books {
     {
       imagePath: "assets/flipbook/18.png",
       altText: ""
-    },
- 
+    } 
   ]
 }

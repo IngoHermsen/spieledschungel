@@ -1,36 +1,43 @@
 <div class="nav-menu">
+    <span class="media-controls">
+        <app-media-controls></app-media-controls>
+    </span>
     <div (click)="toggleNav()" translate="no" class="nav-toggle">MENÜ</div>
     <div class="nav-list" [class.is-open]="navIsOpen">
         <!-- MediaControls -->
-        <span class="media-controls">
-            <app-media-controls></app-media-controls>
-        </span>
-        <div (click)="toggleNav()" routerLink="/Buch" class="nav-entry">
-            <span class="book-txt"><span class="material-icons">menu_book</span><span>BUCH</span></span>
+
+        <div class="nav-entry">
+        <!-- <div (click)="handleNavClick('subMenu')" appSubMenu class="nav-entry"> -->
+            <span appSubMenu>Räumlichkeiten</span>
+            <div class="sub-menu"></div>
         </div>
-        <div (click)="toggleNav()" routerLink="/Willkommen" class="nav-entry">
-            <span>WILLKOMMEN</span>
+        <div (click)="handleNavClick('meine-welt')" class="nav-entry">
+            <span>Über mich</span>
+            <div class="sub-menu">
+                <span>Meine kleine Welt</span>
+                <span>Am Ende des Tages</span>
+                <span>In Ruhe miteinander sprechen</span>
+            </div>
         </div>
-        <div (click)="toggleNav()" class="nav-entry">
-            <span>ÜBER UNS</span>
+        <div (click)="handleNavClick('kennenlernen')" class="nav-entry">
+            <span>Kennenlernen</span>
         </div>
-        <div (click)="toggleNav()" routerLink="/Einrichtung" class="nav-entry">
-            <span>DIE EINRICHTUNG</span>
+        <div (click)="handleNavClick('tag-im-spieledschungel')" class="nav-entry">
+            <span>Tag im Spieledschungel</span>
+            <div class="sub-menu"></div>
         </div>
-        <div (click)="toggleNav()" routerLink="/Verpflegung" class="nav-entry">
-            <span>VERPFLEGUNG</span>
+        <div (click)="handleNavClick('bindung-und-ankommen')" class="nav-entry">
+            <span>Bindung und Ankommen</span>
+            <div class="sub-menu"></div>
         </div>
-        <div (click)="toggleNav()" routerLink="/Anmeldung" class="nav-entry">
-            <span>ANMELDUNG</span>
+        <div (click)="handleNavClick('erholungspausen')" class="nav-entry">
+            <span>Erholungspausen</span>
         </div>
-        <div (click)="toggleNav()" routerLink="/Referenzen" class="nav-entry">
-            <span>REFERENZEN</span>
-        </div>
-        <div (click)="toggleNav()" routerLink="/Kontakt" class="nav-entry">
-            <span>KONTAKT</span>
-        </div>
-        <div (click)="toggleNav()" routerLink="/Impressum" class="nav-entry">
-            <span>IMPRESSUM</span>
+        <div (click)="handleNavClick('openModal')" class="nav-entry">
+            <span class="book-txt">
+                <span class="material-icons">menu_book</span>
+                <span>Buch</span>
+            </span>
         </div>
     </div>
 </div>

@@ -30,7 +30,6 @@ export class BookFlip implements AfterViewInit {
   constructor() {
     effect(() => {
       const key = this.keyControlService.matchingKey();
-      console.log('matching key in Book Component')
       if (key === 'ArrowLeft' || key === 'ArrowRight') {
         this.handleKeyControl(key)
       }
@@ -59,11 +58,6 @@ export class BookFlip implements AfterViewInit {
     this.pageFlip.loadFromHTML(
       Array.from(this.book.nativeElement.children) as HTMLElement[]
     );
-
-    this.pageFlip.on('changeOrientation', e => {
-      console.log(e.data)
-    })
-
 
     this.pageFlip.on('init', event => {
       this.currentPage.set(this.pageFlip.getCurrentPageIndex());

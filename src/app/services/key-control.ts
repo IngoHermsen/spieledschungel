@@ -12,7 +12,6 @@ export class KeyControlService {
     this.keySub = fromEvent<KeyboardEvent>(document, 'keydown')
       .subscribe(event => {
         const eventKey: string = event.key;
-        console.log('event Key:', eventKey)
         switch (eventKey) {
           case 'Escape':
             this.matchingKey.set(eventKey);
@@ -25,7 +24,6 @@ export class KeyControlService {
             break;
         }
       });
-      console.log('key Sub', this.keySub)
   }
 
   stopKeyListeners() {

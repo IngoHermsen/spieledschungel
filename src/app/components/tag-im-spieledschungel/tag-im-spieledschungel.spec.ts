@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Contact } from './contact';
+import { TagImSpieledschungel } from './tag-im-spieledschungel';
 
-describe('Contact', () => {
-  let component: Contact;
-  let fixture: ComponentFixture<Contact>;
+describe('TagImSpieledschungel', () => {
+  let component: TagImSpieledschungel;
+  let fixture: ComponentFixture<TagImSpieledschungel>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Contact]
+      imports: [TagImSpieledschungel]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Contact);
+    fixture = TestBed.createComponent(TagImSpieledschungel);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

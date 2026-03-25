@@ -25,6 +25,10 @@
     height: 100%;
 }
 
+.book-header {
+    display: flex;
+}
+
 .page {
     max-height: 100%;
 }
@@ -129,6 +133,7 @@
 .page-controls {
     height: 24px;
     display: flex;
+    gap: 24px;
 }
 
 .page-controls button {

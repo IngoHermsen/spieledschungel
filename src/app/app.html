@@ -5,7 +5,7 @@
         <div class="modal--nav-bar">
             <app-media-controls></app-media-controls>
             <section class="modal--nav-bar--right">
-                <span class="close-button material-icons-round" (click)="closeModal()">close</span>
+                <span class="close-button material-icons-round" (click)="this.viewService.closeModal()">close</span>
             </section>
         </div>
         <app-book-flip></app-book-flip>
@@ -14,10 +14,11 @@
         </div>
     </div>
     }
-
     <!-- END of Book Modal -->
     <div class="website-content">
         <app-navigation></app-navigation>
+        <section class="hero">Maries Spieledschungel LOGO usw.</section>
         <router-outlet></router-outlet>
+        <app-footer></app-footer>
     </div>
 </div>

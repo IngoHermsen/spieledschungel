@@ -1,19 +1,30 @@
 .book-content {
-    background-color: red;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     flex: 1;
+    gap: 40px;
 }
 
 
-.open-book-button {
+.reading-book-icon {
     min-width: 100px;
     max-width: 200px;
     left: 0;
     bottom: 0;
     object-fit: contain;
-    opacity: 0.5;
+}
+
+
+.book-button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
 }

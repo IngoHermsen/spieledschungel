@@ -1,23 +1,26 @@
 <div class="book-wrapper">
-  <!-- bottom page control -->
-  <span class="page-controls">
-    <!-- @if(pageFlipReady()) { -->
-    <button [disabled]="pageState === 'start'" (click)="turnToPage(0)"
-      class="material-icons-sharp control-btn">keyboard_double_arrow_left</button>
-    <button [disabled]="pageState === 'start'" (click)="flipPrevPage()"
-      class="material-icons-sharp control-btn">keyboard_arrow_left</button>
+  <!-- page control -->
+  <div class="book-header">
 
-    <span class="page-count">Seite {{ currentPage() }} von {{ pageCount() }}</span>
+  </div>
+  <span class="page-controls">
+    <!-- <button [disabled]="pageState === 'start'" (click)="turnToPage(0)"
+      class="material-icons-round control-btn">keyboard_double_arrow_left</button> -->
+    <button [disabled]="pageState === 'start'" (click)="flipPrevPage()"
+      class="material-icons-round control-btn">keyboard_arrow_left</button>
+
+  <span class="page-count">Seite {{ currentPage() }} von {{ pageCount() -1 }}</span>
 
     <button [disabled]="pageState === 'end'" (click)="flipNextPage()"
-      class="material-icons-sharp control-btn">keyboard_arrow_right</button>
-    <button [disabled]="pageState === 'end'" (click)="turnToPage(this.pageCount()-1)"
-      class="material-icons-sharp control-btn">keyboard_double_arrow_right</button>
-    <!-- } -->
+      class="material-icons-round control-btn">keyboard_arrow_right</button>
+
+    <!-- <button [disabled]="pageState === 'end'" (click)="turnToPage(this.pageCount()-1)"
+      class="material-icons-round control-btn">keyboard_double_arrow_right</button> -->
   </span>
+
   <div class="book-flip-wrapper" #bookWrapper>
     <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
-      <button [disabled]="(pageState === 'start')" class="material-icons-sharp control-btn">keyboard_arrow_left</button>
+      <button [disabled]="(pageState === 'start')" class="material-icons-round control-btn">keyboard_arrow_left</button>
     </div>
     <div class="book" #book>
       @for (page of bookService.parentsBookImages; let idx = $index; track $index) {
@@ -33,7 +36,7 @@
     </div>
     <div class="book-navigation-medium-screen forward">
       <button [disabled]="pageState === 'end'" (click)="flipNextPage()"
-        class="material-icons-sharp control-btn">keyboard_arrow_right</button>
+        class="material-icons-round control-btn">keyboard_arrow_right</button>
 
     </div>
   </div>

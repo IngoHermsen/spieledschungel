@@ -1,0 +1,31 @@
+<div class="footer--content">
+    <section class="main-section">
+        <section class="company-data-section">
+            <h4>Maries SpieleDschungel</h4>
+            <span>Säuglings- und Kinderbetreuung</span>
+            <span>Moerser Straße 84</span>
+            <span>40667 Meerbusch</span>
+            <span>Telefon: 0152 / 1234567</span>
+            <a class="hover" href="mailto:panda@spieledschungel.de">Email: Panda@SpieleDschungel.de</a>
+        </section>
+        <section class="map-section">
+            @if(!showMap) {
+            <div class="map-confirmation">
+                <span class="user-click-info">Mit Klick auf „Karte anzeigen“ stimmen Sie zu, dass Daten an Google
+                    übermittelt
+                    werden.</span>
+                <div (click)="showMap = true" class=" hover confirm-button">Karte anzeigen</div>
+            </div>
+            }
+            @if(showMap) {
+            <iframe class="gmaps-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2496.8775584217815!2d6.678425776111598!3d51.25816372888098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8b4332d3d48c5%3A0xddbe644f1d995c83!2sS%C3%A4uglings-%20und%20Kinderbetreuung%20%22Maries%20Spieledschungel%22!5e0!3m2!1sde!2sde!4v1774188582013!5m2!1sde!2sde"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            }
+        </section>
+    </section>
+    <div class="privacy">
+        <span class="imprint hover" routerLink="/Impressum">Impressum</span>
+    </div>
+</div>
