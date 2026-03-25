@@ -18,11 +18,19 @@
     background-color: $main-color;
     display: none;
     position: absolute;
+    overflow-y: auto;
+    max-height: 500px;
     width: 100%;
     padding: 0px 32px;
     flex-direction: column;
     z-index: 30;
     box-sizing: border-box;
+
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* IE / Edge (alt) */
+    -ms-overflow-style: none;
 }
 
 .nav-list .media-controls {
@@ -57,7 +65,8 @@
     flex-direction: column;
     align-items: start;
     cursor: pointer;
-    padding: 16px 0px;
+    padding-top: 16px;
+    padding-bottom: 12px;
 
     &:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -76,17 +85,22 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width: 80%;
     background-color: rgb(247, 194, 241);
     gap: 16px;
     margin-top: 8px;
     border-radius: 10px;
-    padding: 12px;
+    padding: 12px 12px 12px 24px;
 
-    span {
+    li {
         white-space: nowrap;
-
     }
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .book-txt {

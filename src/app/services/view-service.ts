@@ -8,6 +8,7 @@ export class ViewService {
   private keyControlService = inject(KeyControlService);
 
   activeModal = signal(true);
+  navIsOpen = signal(false);
   isMobile: boolean = false;
 
 

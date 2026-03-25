@@ -3,37 +3,59 @@
         <app-media-controls></app-media-controls>
     </span>
     <div (click)="toggleNav()" translate="no" class="nav-toggle">MENÜ</div>
-    <div class="nav-list" [class.is-open]="navIsOpen">
+    <div class="nav-list" [class.is-open]="showNav">
         <!-- MediaControls -->
 
         <div class="nav-entry">
-        <!-- <div (click)="handleNavClick('subMenu')" appSubMenu class="nav-entry"> -->
-            <span appSubMenu>Räumlichkeiten</span>
-            <div class="sub-menu"></div>
-        </div>
-        <div (click)="handleNavClick('meine-welt')" class="nav-entry">
-            <span>Über mich</span>
+            <!-- <div (click)="handleNavClick('subMenu')" appSubMenu class="nav-entry"> -->
+            <span (click)="toggleSubMenu('raeumlichkeiten')">Räumlichkeiten</span>
+            @if(activeSubMenu === "start") {
             <div class="sub-menu">
                 <span>Meine kleine Welt</span>
                 <span>Am Ende des Tages</span>
                 <span>In Ruhe miteinander sprechen</span>
             </div>
+            }
         </div>
-        <div (click)="handleNavClick('kennenlernen')" class="nav-entry">
-            <span>Kennenlernen</span>
+        <div (click)="toggleSubMenu('ueberMich')" class="nav-entry">
+            <span>Über mich</span>
+            @if(activeSubMenu === "start") {
+            <div class="sub-menu">
+                <span>ÜberMich - Punkt 1</span>
+                <span>ÜberMich - Punkt 2</span>
+                <span>ÜberMich - Punkt 3</span>
+            </div>
+            }
         </div>
-        <div (click)="handleNavClick('tag-im-spieledschungel')" class="nav-entry">
+        <div (click)="toggleSubMenu('meineWelt')" class="nav-entry">
+            <span>Meine Welt</span>
+            @if(activeSubMenu === "start") {
+            <div class="sub-menu">
+                <span>Meine kleine Welt</span>
+                <span>Am Ende des Tages</span>
+                <span>In Ruhe miteinander sprechen</span>
+            </div>
+            }
+        </div>
+        <div class="nav-entry">
+            <span (click)="toggleSubMenu('kennenlernen')" >Kennenlernen</span>
+            @if(activeSubMenu === "start") {
+            <ul class="sub-menu">
+                <li>Entspanntes Kennenlernen</li>
+                <li>Kontakt</li>
+            </ul>
+            }
+        </div>
+        <div (click)="router.navigate(['tag-im-spieledschungel'])" class="nav-entry">
             <span>Tag im Spieledschungel</span>
-            <div class="sub-menu"></div>
         </div>
-        <div (click)="handleNavClick('bindung-und-ankommen')" class="nav-entry">
+        <div (click)="router.navigate(['bindung-und-ankommen'])" class="nav-entry">
             <span>Bindung und Ankommen</span>
-            <div class="sub-menu"></div>
         </div>
-        <div (click)="handleNavClick('erholungspausen')" class="nav-entry">
+        <div (click)="router.navigate(['erholungspausen'])" class="nav-entry">
             <span>Erholungspausen</span>
         </div>
-        <div (click)="handleNavClick('openModal')" class="nav-entry">
+        <div (click)="this.viewService.openModal()" class="nav-entry">
             <span class="book-txt">
                 <span class="material-icons">menu_book</span>
                 <span>Buch</span>

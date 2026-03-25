@@ -1,4 +1,4 @@
-<div [class.disable-scroll]="viewService.activeModal()" class="full-screen-content">
+<div [class.disable-scroll]="viewService.activeModal() || viewService.navIsOpen()" class="full-screen-content">
     <!-- Book Modal -->
     @if (viewService.activeModal()) {
     <div class="modal-overlay">
