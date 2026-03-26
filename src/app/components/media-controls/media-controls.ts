@@ -10,4 +10,8 @@ import { AudioService } from '../../services/audio-service';
 export class MediaControls {
   audioService = inject(AudioService);
 
+  stopPropagation(event: Event) {
+    event.stopPropagation()
+  }
+
 }

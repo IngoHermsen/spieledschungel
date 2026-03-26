@@ -9,7 +9,7 @@
         <div class="nav-entry">
             <!-- <div (click)="handleNavClick('subMenu')" appSubMenu class="nav-entry"> -->
             <span (click)="toggleSubMenu('raeumlichkeiten')">Räumlichkeiten</span>
-            @if(activeSubMenu === "start") {
+            @if(viewService.isMobile || activeSubMenu === 'raeumlichkeiten') {
             <ul class="sub-menu">
                 <li>Meine kleine Welt</li>
                 <li>Am Ende des Tages</li>
@@ -19,7 +19,7 @@
         </div>
         <div (click)="toggleSubMenu('ueberMich')" class="nav-entry">
             <span>Über mich</span>
-            @if(activeSubMenu === "start") {
+            @if(this.viewService.isMobile || activeSubMenu === 'ueberMich') {
             <ul class="sub-menu">
                 <li>ÜberMich - Punkt 1</li>
                 <li>ÜberMich - Punkt 2</li>
@@ -29,7 +29,7 @@
         </div>
         <div (click)="toggleSubMenu('meineWelt')" class="nav-entry">
             <span>Meine Welt</span>
-            @if(activeSubMenu === "start") {
+            @if(this.viewService.isMobile || activeSubMenu === 'meineWelt') {
             <ul class="sub-menu">
                 <li>Meine kleine Welt</li>
                 <li>Am Ende des Tages</li>
@@ -39,7 +39,7 @@
         </div>
         <div class="nav-entry">
             <span (click)="toggleSubMenu('kennenlernen')">Kennenlernen</span>
-            @if(activeSubMenu === "start") {
+            @if(activeSubMenu === 'kennenlernen') {
             <ul class="sub-menu">
                 <li>Entspanntes Kennenlernen</li>
                 <li>Kontakt</li>

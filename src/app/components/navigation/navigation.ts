@@ -16,7 +16,7 @@ export class Navigation {
   router = new Router()
   viewService = inject(ViewService);
   audioService = inject(AudioService);
-  activeSubMenu: string | null = "start";
+  activeSubMenu: string | null = null;
 
   showNav: boolean = false;
   isMuted: boolean = true;
@@ -29,8 +29,7 @@ export class Navigation {
   }
   
   toggleSubMenu(subMenuName: string) {
-    this.activeSubMenu = this.activeSubMenu == "start" ? null : "start" ;
-    // this.activeSubMenu = subMenuName === this.activeSubMenu ? null : subMenuName;
+    this.activeSubMenu = subMenuName === this.activeSubMenu ? null : subMenuName;
    
   }
 }
