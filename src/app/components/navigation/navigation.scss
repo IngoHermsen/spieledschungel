@@ -6,6 +6,7 @@
 }
 
 .nav-menu {
+    height: 100%;
     background-color: $main-color;
     color: rgba(0, 0, 0, 0.6);
     user-select: none;
@@ -14,26 +15,20 @@
     z-index: 100;
 }
 
-.nav-list {
-    background-color: $main-color;
-    display: none;
-    position: absolute;
-    overflow-y: auto;
-    max-height: 500px;
-    width: 100%;
-    padding: 0px 32px;
-    flex-direction: column;
-    z-index: 30;
+
+.nav-toggle {
+    display: flex;
+    text-align: center;
+    position: relative;
     box-sizing: border-box;
-
-    /* Firefox */
-    scrollbar-width: none;
-
-    /* IE / Edge (alt) */
-    -ms-overflow-style: none;
+    cursor: pointer;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-list .media-controls {
+
+.nav-toggle > .media-controls {
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -44,27 +39,38 @@
 
 }
 
+
+.nav-list {
+   display: none;
+}
+
 .nav-list.is-open {
+    background-color: $main-color;
     display: flex;
-
-}
-
-.nav-toggle {
-    display: flex;
-    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    width: 100%;
+    padding: 0px 32px;
+    z-index: 30;
     box-sizing: border-box;
-    cursor: pointer;
-    height: 60px;
-    align-items: center;
-    justify-content: center;
+    border-bottom: 2px solid white;
+
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* IE / Edge (alt) */
+    -ms-overflow-style: none;
+
 }
+
 
 .nav-entry {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
-    cursor: pointer;
     padding-top: 16px;
     padding-bottom: 12px;
 
@@ -74,6 +80,7 @@
 }
 
 .nav-entry>span {
+    cursor: pointer;
     font-weight: 800;
 
     &:hover {
@@ -91,9 +98,16 @@
     margin-top: 8px;
     border-radius: 10px;
     padding: 12px 12px 12px 24px;
+    border: 2px solid white;
+}
 
-    li {
-        white-space: nowrap;
+.sub-menu li {
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.8);
+
     }
 }
 

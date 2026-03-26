@@ -1,44 +1,44 @@
 <div class="nav-menu">
-    <span class="media-controls">
-        <app-media-controls></app-media-controls>
-    </span>
-    <div (click)="toggleNav()" translate="no" class="nav-toggle">MENÜ</div>
+    <div (click)="toggleNav()" translate="no" class="nav-toggle">
+        <div class="media-controls">
+            <app-media-controls></app-media-controls>
+        </div>
+        <span>MENÜ</span>
+    </div>
     <div class="nav-list" [class.is-open]="showNav">
-        <!-- MediaControls -->
-
         <div class="nav-entry">
             <!-- <div (click)="handleNavClick('subMenu')" appSubMenu class="nav-entry"> -->
             <span (click)="toggleSubMenu('raeumlichkeiten')">Räumlichkeiten</span>
             @if(activeSubMenu === "start") {
-            <div class="sub-menu">
-                <span>Meine kleine Welt</span>
-                <span>Am Ende des Tages</span>
-                <span>In Ruhe miteinander sprechen</span>
-            </div>
+            <ul class="sub-menu">
+                <li>Meine kleine Welt</li>
+                <li>Am Ende des Tages</li>
+                <li>In Ruhe miteinander sprechen</li>
+            </ul>
             }
         </div>
         <div (click)="toggleSubMenu('ueberMich')" class="nav-entry">
             <span>Über mich</span>
             @if(activeSubMenu === "start") {
-            <div class="sub-menu">
-                <span>ÜberMich - Punkt 1</span>
-                <span>ÜberMich - Punkt 2</span>
-                <span>ÜberMich - Punkt 3</span>
-            </div>
+            <ul class="sub-menu">
+                <li>ÜberMich - Punkt 1</li>
+                <li>ÜberMich - Punkt 2</li>
+                <li>ÜberMich - Punkt 3</li>
+            </ul>
             }
         </div>
         <div (click)="toggleSubMenu('meineWelt')" class="nav-entry">
             <span>Meine Welt</span>
             @if(activeSubMenu === "start") {
-            <div class="sub-menu">
-                <span>Meine kleine Welt</span>
-                <span>Am Ende des Tages</span>
-                <span>In Ruhe miteinander sprechen</span>
-            </div>
+            <ul class="sub-menu">
+                <li>Meine kleine Welt</li>
+                <li>Am Ende des Tages</li>
+                <li>In Ruhe miteinander sprechen</li>
+            </ul>
             }
         </div>
         <div class="nav-entry">
-            <span (click)="toggleSubMenu('kennenlernen')" >Kennenlernen</span>
+            <span (click)="toggleSubMenu('kennenlernen')">Kennenlernen</span>
             @if(activeSubMenu === "start") {
             <ul class="sub-menu">
                 <li>Entspanntes Kennenlernen</li>
