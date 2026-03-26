@@ -60,12 +60,12 @@ app-navigation {
     height: 100%;
     width: 100vw;
     z-index: 200;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     overflow-y: scroll;
     box-sizing: border-box;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
     /* Blur-Effekt */
-    -webkit-backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(1px);
     /* für Safari */
 }
 
