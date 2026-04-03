@@ -2,23 +2,31 @@
     <!-- Book Modal -->
     @if (viewService.activeModal()) {
     <div class="modal-overlay">
-        <div class="modal--nav-bar">
-            <app-media-controls></app-media-controls>
-            <section class="modal--nav-bar--right">
-                <span class="close-button material-icons-round" (click)="this.viewService.closeModal()">close</span>
-            </section>
-        </div>
-        <app-book-flip></app-book-flip>
-        <div class="modal--footer">
+        <section class="modal--top-content">
+            <div class="modal--media-controls">
+                <app-media-controls></app-media-controls>
+            </div>
+            <app-book-flip></app-book-flip>
+            <span class="close-button material-icons-round" (click)="this.viewService.closeModal()">close</span>
+        </section>
+        <section class="modal--footer">
             <span routerLink="">Impressum</span>
-        </div>
+        </section>
     </div>
     }
     <!-- END of Book Modal -->
+    <section class="white-space">
+        <img class="contact-img" src="assets/images/contact-tiger.png" alt="contact-tiger-with-sign">
+    </section>
     <div class="website-content">
         <app-navigation></app-navigation>
         <section class="hero">Maries Spieledschungel LOGO usw.</section>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
     </div>
+    <section class="white-space">
+        <a class="contact-img-link panda" href="mailto: panda@spieledschungel.de">
+            <img class="contact-img" src="assets/images/contact-panda.png" alt="contact-panda-with-sign">
+        </a>
+    </section>
 </div>

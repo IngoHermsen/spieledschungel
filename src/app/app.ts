@@ -7,6 +7,9 @@ import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { ViewService } from './services/view-service';
 import { KeyControlService } from './services/key-control';
 import { AudioService } from './services/audio-service';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 @Component({
   selector: 'app-root',

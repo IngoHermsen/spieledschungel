@@ -8,7 +8,7 @@
     <div class="nav-list" [class.is-open]="showNav">
         <div class="nav-entry">
             <!-- <div (click)="handleNavClick('subMenu')" appSubMenu class="nav-entry"> -->
-            <span (click)="toggleSubMenu('raeumlichkeiten')">Räumlichkeiten</span>
+            <span (click)="toggleSubMenu('raeumlichkeiten')" class="nav-entry--bg-color-red" [class.active-nav]="activeSubMenu === 'raeumlichkeiten'">Räumlichkeiten</span>
             @if(viewService.isMobile || activeSubMenu === 'raeumlichkeiten') {
             <ul class="sub-menu">
                 <li>Meine kleine Welt</li>
@@ -17,8 +17,8 @@
             </ul>
             }
         </div>
-        <div (click)="toggleSubMenu('ueberMich')" class="nav-entry">
-            <span>Über mich</span>
+        <div class="nav-entry">
+            <span (click)="toggleSubMenu('ueberMich')" class="nav-entry--bg-color-orange" [class.active-nav]="activeSubMenu === 'ueberMich'" >Über mich</span>
             @if(this.viewService.isMobile || activeSubMenu === 'ueberMich') {
             <ul class="sub-menu">
                 <li>ÜberMich - Punkt 1</li>
@@ -27,8 +27,8 @@
             </ul>
             }
         </div>
-        <div (click)="toggleSubMenu('meineWelt')" class="nav-entry">
-            <span>Meine Welt</span>
+        <div (click)="toggleSubMenu('meineWelt')" [class.active-nav]="activeSubMenu === 'meineWelt'" class="nav-entry">
+            <span class="nav-entry--bg-color-yellow" >Meine Welt</span>
             @if(this.viewService.isMobile || activeSubMenu === 'meineWelt') {
             <ul class="sub-menu">
                 <li>Meine kleine Welt</li>
@@ -38,7 +38,7 @@
             }
         </div>
         <div class="nav-entry">
-            <span (click)="toggleSubMenu('kennenlernen')">Kennenlernen</span>
+            <span class="nav-entry--bg-color-green" (click)="toggleSubMenu('kennenlernen')" >Kennenlernen</span>
             @if(activeSubMenu === 'kennenlernen') {
             <ul class="sub-menu">
                 <li>Entspanntes Kennenlernen</li>
@@ -47,19 +47,16 @@
             }
         </div>
         <div (click)="router.navigate(['tag-im-spieledschungel'])" class="nav-entry">
-            <span>Tag im Spieledschungel</span>
+            <span class="nav-entry--bg-color-blue">Tag im Spieledschungel</span>
         </div>
         <div (click)="router.navigate(['bindung-und-ankommen'])" class="nav-entry">
-            <span>Bindung und Ankommen</span>
+            <span class="nav-entry--bg-color-pink">Bindung und Ankommen</span>
         </div>
         <div (click)="router.navigate(['erholungspausen'])" class="nav-entry">
-            <span>Erholungspausen</span>
+            <span class="nav-entry--bg-color-violet">Erholungspausen</span>
         </div>
         <div (click)="this.viewService.openModal()" class="nav-entry">
-            <span class="book-txt">
-                <span class="material-icons">menu_book</span>
-                <span>Buch</span>
-            </span>
+                <span class="nav-entry--bg-color-red">Buch</span>
         </div>
     </div>
 </div>

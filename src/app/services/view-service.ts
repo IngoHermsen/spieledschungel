@@ -11,8 +11,6 @@ export class ViewService {
   navIsOpen = signal(false);
   isMobile: boolean = false;
 
-
-
   constructor() {
     this.isMobile = window.innerWidth < 768;
 
@@ -25,6 +23,7 @@ export class ViewService {
   }
 
   openModal() {
+    document.body.style.overflow = 'hidden';
     this.keyControlService.setKeyListeners();
     this.activeModal.set(true);
   }

@@ -43,8 +43,8 @@ export class BookFlip implements AfterViewInit {
     const calcMaxHeight: number = this.viewService.isMobile ? bookHeightFraction : bookHeightFraction / 2;
 
     this.pageFlip = new PageFlip(this.book.nativeElement, {
-      width: 400,
-      height: 600,
+      width: 800,
+      height: 1200,
       minWidth: calcMinWidth,
       maxHeight: calcMaxHeight,
       size: 'stretch',
