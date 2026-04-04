@@ -6,7 +6,6 @@ import { PageImage } from '../interfaces/page-image';
 })
 export class Books {
   parentsBookImages: PageImage[] = [
-
     {
       imagePath: "assets/flipbook/0.jpg",
       altText: ""
@@ -81,6 +80,10 @@ export class Books {
     },
     {
       imagePath: "assets/flipbook/18.jpg",
+      altText: ""
+    }, 
+    {
+      imagePath: "assets/flipbook/19.jpg",
       altText: ""
     } 
   ]

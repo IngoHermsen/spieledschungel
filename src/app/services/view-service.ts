@@ -1,4 +1,4 @@
-import { effect, inject, Injectable, signal } from '@angular/core';
+import { AfterViewInit, effect, inject, Injectable, signal } from '@angular/core';
 import { KeyControlService } from './key-control';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { KeyControlService } from './key-control';
 export class ViewService {
   private keyControlService = inject(KeyControlService);
 
-  activeModal = signal(true);
+  activeModal = signal(false);
   navIsOpen = signal(false);
   isMobile: boolean = false;
 
@@ -17,18 +17,22 @@ export class ViewService {
     effect(() => {
       if (this.keyControlService.matchingKey() === 'Escape') {
         this.closeModal();
-        // this.keyControlService.matchingKey.set(null); // reset Signal
       }
-    })
+    });
+
+    this.openModal()
   }
 
+
+
   openModal() {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
     this.keyControlService.setKeyListeners();
     this.activeModal.set(true);
   }
 
   closeModal() {
+    document.body.style.overflowY = '';
     this.keyControlService.stopKeyListeners();
     this.activeModal.set(false);
   }

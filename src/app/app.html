@@ -3,7 +3,7 @@
     @if (viewService.activeModal()) {
     <div class="modal-overlay">
         <section class="modal--top-content">
-            <div class="modal--media-controls">
+            <div c.controls--replay--pauselass="modal--media-controls">
                 <app-media-controls></app-media-controls>
             </div>
             <app-book-flip></app-book-flip>
@@ -20,8 +20,14 @@
     </section>
     <div class="website-content">
         <app-navigation></app-navigation>
-        <section class="hero">Maries Spieledschungel LOGO usw.</section>
-        <router-outlet></router-outlet>
+        <section class="hero">
+            <div class="img-container">
+                <img src="/assets/logo/logo.png" alt="spieledschungel-logo">
+            </div>
+        </section>
+        <div class="outlet-content">
+            <router-outlet></router-outlet>
+        </div>
         <app-footer></app-footer>
     </div>
     <section class="white-space">

@@ -2,13 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MediaControls } from '../media-controls/media-controls';
 import { ViewService } from '../../services/view-service';
 import { AudioService } from '../../services/audio-service';
-import { Router } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 
 type Action = 'openModal' | 'navigate' | 'showSubMenu'
 
 @Component({
   selector: 'app-navigation',
-  imports: [MediaControls],
+  imports: [MediaControls, RouterLink],
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })

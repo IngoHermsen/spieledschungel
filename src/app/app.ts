@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Footer } from './components/footer/footer';
 import { Navigation } from './components/navigation/navigation';
 import { BookFlip } from './components/book-flip/book-flip';
@@ -7,7 +7,6 @@ import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { ViewService } from './services/view-service';
 import { KeyControlService } from './services/key-control';
 import { AudioService } from './services/audio-service';
-import {MatDialogModule} from '@angular/material/dialog';
 
 
 

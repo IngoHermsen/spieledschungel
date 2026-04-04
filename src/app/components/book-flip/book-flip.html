@@ -1,8 +1,6 @@
 <div class="book-wrapper">
   <!-- page control -->
-  <div class="book-header">
 
-  </div>
   <!-- <span class="page-controls">
 
     <button [disabled]="pageState === 'start'" (click)="flipPrevPage()"
@@ -14,27 +12,45 @@
       class="material-icons-round control-btn">keyboard_arrow_right</button>
 
   </span> -->
-
-  <div class="book-flip-wrapper" #bookWrapper>
-    <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
-      <button [disabled]="(pageState === 'start')" class="material-icons-round control-btn">keyboard_arrow_left</button>
+  <div (click)="flipPrevPage()" class="book-navigation-medium-screen back">
+    <div class="navigation-arrow control-btn">
+      <img src="assets/icons/arrow_orange_left.png" alt="arrow-orange-left">
+      <div class="page-number" #leftArrow></div>
     </div>
-    <div class="book" #book>
-      @for (page of bookService.parentsBookImages; let idx = $index; track $index) {
-      <div class="page">
-        <div class="page-content">
-          <img src="{{ page.imagePath }}" alt="{{ page.altText }}">
-          @if(!isLastPage(idx) && (isPortrait() || (!isPortrait() && pageIndexIsEven(idx)))) {
-          <div class="corner-triangle"></div>
-          }
+  </div>
+  <!-- <div class="book-flip-wrapper" #bookWrapper> -->
+
+  <div class="book" #book>
+    <div class="page">
+      <div class="book--intro page-content">
+        <div class="book--intro-content">
+          🦒 🐒 🐘 🦁 🦛 🐼<br><br>
+          Ein sanftes Willkommen im SpieleDschungel,<br>
+          wo kleine Schritte ganz viel Platz haben<br>
+          und Vertrauen in Ruhe wächst.<br><br>
+          Alles liebevoll von mir in diesem SpieleDschungel-Buch für Euch zusammengefasst.
+          <br><br>
+          Viele Grüße aus dem<br>
+          SpieleDschungel🦒🐒🐘🦁🦛<br><br>
+          Marie 🐼
         </div>
+        <span>Hier blättern >>></span>
+        <span>Mit [X] oben rechts geht es zur Webseite.</span>
       </div>
-      }
     </div>
-    <div class="book-navigation-medium-screen forward">
-      <button [disabled]="pageState === 'end'" (click)="flipNextPage()"
-        class="material-icons-round control-btn">keyboard_arrow_right</button>
-
+    @for (page of bookService.parentsBookImages; let idx = $index; track $index) {
+    <div class="page">
+      <div class="page-content">
+        <img src="{{ page.imagePath }}" alt="{{ page.altText }}">
+      </div>
+    </div>
+    }
+  </div>
+  <!-- </div> -->
+  <div (click)="flipNextPage()" class="book-navigation-medium-screen forward">
+    <div class="navigation-arrow control-btn">
+      <img src="assets/icons/arrow_orange_right.png" alt="arrow-orange-right">
+      <div class="page-number" #rightArrow></div>
     </div>
   </div>
 </div>

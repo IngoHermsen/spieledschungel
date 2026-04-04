@@ -1,0 +1,16 @@
+.intro-text {
+    margin-bottom: 40px;
+}
+
+.stories-accordion {
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    // medium devices
+
+    .stories-accordion {
+        padding: 0px 48px;
+    }
+
+}

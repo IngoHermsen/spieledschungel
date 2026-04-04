@@ -1,6 +1,7 @@
 .media-controls {
     width: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 12px;
     user-select: none;
@@ -8,6 +9,11 @@
 
 .button {
     font-size: 28px;
+}
+
+.controls--replay--pause {
+    display: flex;
+    flex-direction: column;
 }
 
 .controls--replay--pause .button:hover {
