@@ -1,0 +1,11 @@
+.img-container {
+    height: 250px;
+    max-width: 100%;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        // width: 100%;
+    }
+}

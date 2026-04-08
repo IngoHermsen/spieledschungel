@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BindungUndAnkommen } from './bindung-und-ankommen';
+import { räume } from './räume';
 
-describe('BindungUndAnkommen', () => {
-  let component: BindungUndAnkommen;
-  let fixture: ComponentFixture<BindungUndAnkommen>;
+describe('Räume', () => {
+  let component: Räume;
+  let fixture: ComponentFixture<Räume>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BindungUndAnkommen]
+      imports: [Räume]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BindungUndAnkommen);
+    fixture = TestBed.createComponent(Räume);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -55,12 +55,13 @@ export class BookFlip implements AfterViewInit {
     this.pageFlip = new PageFlip(this.book.nativeElement, {
       width: 400,
       height: 600,
-      minWidth: 100,
+      // minWidth: 100,
       // maxHeight: window.innerHeight - 100,
-      size: 'stretch',
-      usePortrait: this.viewService.isMobile,
+      size: this.viewService.isPortrait ? 'fixed' : 'stretch',
+      usePortrait: this.viewService.isPortrait,
       mobileScrollSupport: false,
       flippingTime: 1500,
+  
     });
 
     this.isPortrait.set(this.viewService.isMobile);

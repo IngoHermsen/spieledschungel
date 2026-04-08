@@ -10,9 +10,11 @@ export class ViewService {
   activeModal = signal(false);
   navIsOpen = signal(false);
   isMobile: boolean = false;
+  isPortrait: boolean = false;
 
   constructor() {
     this.isMobile = window.innerWidth < 768;
+    this.isPortrait = window.innerWidth < window.innerHeight;
 
     effect(() => {
       if (this.keyControlService.matchingKey() === 'Escape') {
@@ -20,10 +22,8 @@ export class ViewService {
       }
     });
 
-    this.openModal()
+    // this.openModal()
   }
-
-
 
   openModal() {
     document.body.style.overflowY = 'hidden';

@@ -23,14 +23,23 @@ export class Navigation {
   hasStarted: boolean = false;
 
 
-  toggleNav() {
-    this.showNav = !this.showNav;
-      this.viewService.navIsOpen.set(this.showNav);
+  handleNavClick(route: string) {
+    this.router.navigate([route]);
+    this.toggleNav()
   }
-  
+
+
+  toggleNav() {
+    if (this.viewService.isMobile) {
+      this.showNav = !this.showNav;
+      this.viewService.navIsOpen.set(this.showNav);
+    }
+
+  }
+
   toggleSubMenu(subMenuName: string) {
     this.activeSubMenu = subMenuName === this.activeSubMenu ? null : subMenuName;
-   
+
   }
 }
 

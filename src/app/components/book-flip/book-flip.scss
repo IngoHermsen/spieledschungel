@@ -5,9 +5,9 @@
 .book-wrapper {
     display: flex;
     height: 100%;
+    max-height: 95vh;
     justify-content: space-between;
     width: 100%;
-
 }
 
 .book-flip-wrapper {
@@ -30,7 +30,7 @@
 
 .book--intro {
     font-size: 20px;
-    color: black; 
+    color: black;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -223,10 +223,14 @@
 
     .navigation-arrow {
         position: relative;
+        color: white;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
     }
 
-    .navigation-arrow > .page-number {
-        color: white;
+    .navigation-arrow>.page-number {
         font-size: 20px;
         font-weight: 600;
         display: block;

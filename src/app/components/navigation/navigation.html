@@ -9,28 +9,26 @@
         <div (click)="this.viewService.openModal()" class="nav-entry">
             <span class="nav-entry--bg-color-red">📖Dschungel-Buch</span>
         </div>
-        <div class="nav-entry">
-            <span (click)="toggleSubMenu('ueberMich')" class="nav-entry--bg-color-orange"
-                [class.active-nav]="activeSubMenu === 'ueberMich'">Über mich</span>
+        <div (click)="handleNavClick('ueberMich')" class="nav-entry">
+            <span class="nav-entry--bg-color-orange">Über mich</span>
         </div>
-        <div (click)="toggleSubMenu('raeumlichkeiten')" [class.active-nav]="activeSubMenu === 'raeumlichkeiten'"
-            class="nav-entry">
-            <span class="nav-entry--bg-color-yellow">Räumlichkeiten</span>
+        <div (click)="handleNavClick('raeume')" class="nav-entry">
+            <span class="nav-entry--bg-color-yellow">Räume</span>
         </div>
-        <div routerLink="momente" class="nav-entry">
-            <span class="nav-entry--bg-color-green" (click)="toggleSubMenu('Momente')">Momente</span>
+        <div (click)="handleNavClick('momente')" class="nav-entry">
+            <span class="nav-entry--bg-color-green">Adlermomente</span>
         </div>
-        <div (click)="router.navigate(['galerie'])" class="nav-entry">
-            <span class="nav-entry--bg-color-blue">Galerie</span>
+        <div (click)="handleNavClick('elternstimmen')" class="nav-entry">
+            <span class="nav-entry--bg-color-blue">Elternstimmen</span>
         </div>
-        <div (click)="router.navigate(['eingewoehnung'])" class="nav-entry">
-            <span class="nav-entry--bg-color-pink">Eingewöhnung</span>
+        <div (click)="handleNavClick('herzens-spuren')" class="nav-entry">
+            <span class="nav-entry--bg-color-pink">Herzens-Spuren</span>
         </div>
-        <div (click)="router.navigate(['urlaub'])" class="nav-entry">
-            <span class="nav-entry--bg-color-violet">Urlaub</span>
+        <div (click)="handleNavClick('kontakt')" class="nav-entry">
+            <span class="nav-entry--bg-color-violet">Kontakt</span>
         </div>
-        <div (click)="router.navigate(['kontakt'])" class="nav-entry">
-            <span class="nav-entry--bg-color-red">Kontakt</span>
+        <div (click)="handleNavClick('urlaub')" class="nav-entry">
+            <span class="nav-entry--bg-color-red">Urlaubspläne</span>
         </div>
     </div>
 </div>

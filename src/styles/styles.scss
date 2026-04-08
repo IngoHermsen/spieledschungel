@@ -53,6 +53,11 @@ app-navigation {
 
 .close-button {
     font-size: 42px;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.7)
+    }
 }
 
 
@@ -160,6 +165,7 @@ app-navigation {
 
     img {
         max-height: 80%;
+        max-width: 100%;
     }
 }
 
