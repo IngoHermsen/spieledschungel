@@ -1,0 +1,29 @@
+.contact-me {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-data {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+@media (min-width: 768px) {
+
+    .contact-data {
+        flex-direction: row;
+        gap: 48px;
+    }
+}

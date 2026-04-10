@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, ElementRef, inject, NgZone, OnInit, ViewChild } from '@angular/core';
 import { Footer } from './components/footer/footer';
 import { Navigation } from './components/navigation/navigation';
 import { BookFlip } from './components/book-flip/book-flip';
@@ -24,13 +24,29 @@ export class App implements OnInit {
 
   controlKey: string | null = null;
 
-  constructor() {
+  @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>
+
+  constructor(private ngZone: NgZone) {
 
   }
 
   ngOnInit(): void {
     this.audioService.init();
     this.keyControlService.setKeyListeners();
+    this.blinkingEyes();
+  }
+
+  blinkingEyes() {
+    const randomTimeout = Math.floor(Math.random() * (10000 - 2500 + 1)) + 2500;
+    const blinkTimeout = setTimeout(() => {
+      console.log('timeout')
+      this.mainLogo.nativeElement.classList.add('hide-logo');
+      setTimeout(() => {
+        this.mainLogo.nativeElement.classList.remove('hide-logo')
+      }, 170);
+
+      this.blinkingEyes()
+    }, randomTimeout)
   }
 
 }

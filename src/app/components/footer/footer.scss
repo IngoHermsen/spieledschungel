@@ -3,7 +3,7 @@
 .footer--content {
     color: $secondary-color;
     background-color: $primary-color;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     padding: 24px
 }
@@ -28,16 +28,18 @@
     min-height: 180px;
 }
 
-.hover:hover {
-    cursor: pointer;
-    color: black;
-}
-
 .privacy {
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 24px;
 }
+
+.privacy >span:hover {    
+    cursor: pointer;
+    color: black;
+}
+
 
 .map-confirmation {
     display: flex;
@@ -53,15 +55,16 @@
 .confirm-button {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     width: 120px;
     height: 40px;
     background-color: white;
-    color: $primary-color;
+    color: $secondary-color;
     padding: 8px 4px;
     border-radius: 10px;
 
     &:hover {
+        cursor: pointer;
         font-weight: 500;
     }
 }

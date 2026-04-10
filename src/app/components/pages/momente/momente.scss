@@ -6,6 +6,24 @@
     user-select: none;
 }
 
+.eagle-title {
+    font-weight: 600;
+}
+    
+ul {
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+}
+
+ul .title {
+    font-weight: 600;
+    margin-right: 4px;
+
+}
+
 @media (min-width: 768px) {
     // medium devices
 

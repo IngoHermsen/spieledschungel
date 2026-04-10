@@ -17,4 +17,5 @@ export const routes: Routes = [
     {path: 'herzens-spuren', component: HerzensSpuren},
     {path: 'kontakt', component: Kontakt},
     {path: 'urlaub', component: Urlaub},
+    {path: 'impressum', component: Imprint},
 ];

@@ -22,7 +22,7 @@ export class ViewService {
       }
     });
 
-    // this.openModal()
+    this.openModal()
   }
 
   openModal() {
