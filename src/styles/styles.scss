@@ -32,7 +32,8 @@ a {
     color: unset;
 
     &:hover {
-        color: #98d36d;
+        cursor: pointer;
+        color: #085b08;
     }
 }
 
@@ -153,17 +154,30 @@ app-navigation {
 
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 700px;
     background-color: rgba(255, 255, 255, 0.7);
 }
+
+.hero .short-info {
+    color: #085b08;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.hero .short-info >.bindung-und-zeit {
+    color: #9c009b;
+}
+
 
 .hero .img-container {
     position: relative;
     display: flex;
     align-items: center;
-    height: 90%;
+    height: 100%;
     max-width: 100%;
     background-color: red;
 
@@ -173,8 +187,10 @@ app-navigation {
         left: 50%;
         transform: translate(-50%, -50%);
         max-width: 90vw;
+        max-height: 100%;
         height: auto;
     }
+
 
     .opened-eyes {
         z-index: 2;
@@ -183,6 +199,36 @@ app-navigation {
     .closed-eyes {
         z-index: 1;
     }
+}
+
+.hero .contact-data {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 24px 0px;
+}
+
+.hero .contact-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    border: 4px solid white;
+    border-radius: 25px;
+    padding: 0px 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 32px;
+    
+
+    &:hover {
+        border-color: #085b08;
+        color: #085b08;
+    }
+}
+
+.hero .contact-button >.icon-png {
+    max-height: 25px;
 }
 
 .hide-logo {
@@ -207,6 +253,15 @@ h1 {
     font-weight: 100;
     letter-spacing: 2pt;
     margin: unset;
+}
+
+@media (min-width: 720px) {
+
+    // medium devices
+    .hero .contact-data {
+        flex-direction: row;
+        margin: 12px 0px;
+    }
 }
 
 @media (min-width: 920px) {

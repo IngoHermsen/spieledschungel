@@ -1,3 +1,8 @@
 a {
     display: block;
 }
+
+.person {
+    display: flex;
+    flex-direction: column;
+}
