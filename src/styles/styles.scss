@@ -55,18 +55,21 @@ app-navigation {
 // click pointer START
 
 
-.click-here-btn {
+.click-me-btn {
+    position: relative;
     display: flex;
     padding: 4px 12px;
     border: 2px solid grey;
     border-radius: 25px;
     font-weight: 600;
+}
 
+.click-me-btn > a {
+    display: flex;
 }
 
 
 .pointer-area {
-    position: relative;
     height: 100%;
     width: 16px;
 }
@@ -74,7 +77,8 @@ app-navigation {
 .pointer-icon {
     position: absolute;
     height: 40px;
-    left: 4px;
+    right: 0px;
+    transform: translateX(90%) translateY(25%)
 }
 
 // click pointer END
@@ -237,7 +241,7 @@ app-navigation {
     margin: 24px 0px;
 }
 
-.hero .contact-button {
+.hero .click-me-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,7 +261,7 @@ app-navigation {
     }
 }
 
-.hero .contact-button >.icon-png {
+.hero .click-me-btn .icon-png {
     max-height: 25px;
 }
 
@@ -291,16 +295,11 @@ h1 {
 
     .hero {
         margin-top: unset;
-        height: 550px;
+        height: 600px;
     }
 
     .hero .img-container >img {
         max-height: 100%;
-    }
-    
-    .hero .contact-data {
-        flex-direction: row;
-        margin: 12px 0px;
     }
 }
 
