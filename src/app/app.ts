@@ -24,7 +24,8 @@ export class App implements OnInit {
 
   controlKey: string | null = null;
 
-  @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>
+  @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>;
+  @ViewChild('activeContent') activeContent!: ElementRef<HTMLElement>
 
   constructor(private ngZone: NgZone) {
 

@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { ExtraOptions, Routes } from '@angular/router';
 
 import { Momente } from './components/pages/momente/momente';
 import { Imprint } from './components/pages/imprint/imprint';
@@ -7,7 +7,8 @@ import { UeberMich } from './components/pages/ueber-mich/ueber-mich';
 import { Elternstimmen } from './components/pages/elternstimmen/elternstimmen';
 import { HerzensSpuren } from './components/pages/herzens-spuren/herzens-spuren';
 import { Kontakt } from './components/pages/kontakt/kontakt';
-import { Urlaub } from './components/pages/urlaub/urlaub';
+import { Eingewoehnung } from './components/pages/eingewoehnung/eingewoehnung';
+import { Transparenz } from './components/pages/transparenz/transparenz';
 
 export const routes: Routes = [
     {path: 'momente', component: Momente},
@@ -16,6 +17,8 @@ export const routes: Routes = [
     {path: 'elternstimmen', component: Elternstimmen},
     {path: 'herzens-spuren', component: HerzensSpuren},
     {path: 'kontakt', component: Kontakt},
-    {path: 'urlaub', component: Urlaub},
+    {path: 'eingewoehnung', component: Eingewoehnung},
     {path: 'impressum', component: Imprint},
+    {path: 'transparenz', component: Transparenz},
 ];
+

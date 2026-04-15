@@ -158,6 +158,7 @@ app-navigation {
     justify-content: center;
     align-items: center;
     height: 700px;
+    margin-top: 60px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -165,6 +166,7 @@ app-navigation {
     color: #085b08;
     font-weight: 700;
     text-align: center;
+    padding: 0px 12px;
 }
 
 
@@ -211,6 +213,7 @@ app-navigation {
 .hero .contact-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
     font-weight: 600;
@@ -255,9 +258,19 @@ h1 {
     margin: unset;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
 
     // medium devices
+
+    .hero {
+        margin-top: unset;
+        height: 550px;
+    }
+
+    .hero .img-container >img {
+        max-height: 100%;
+    }
+    
     .hero .contact-data {
         flex-direction: row;
         margin: 12px 0px;

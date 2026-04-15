@@ -1,0 +1,23 @@
+.meerbusch-link {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.page-link-btn {
+    padding: 4px 24px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    font-weight: 600;
+
+}
+
+.page-link-btn:hover {
+    cursor: pointer;
+    border-color: #005caa;
+    color: #005caa
+}
+
+.meerbusch-logo {
+    max-height: 25px;
+}
