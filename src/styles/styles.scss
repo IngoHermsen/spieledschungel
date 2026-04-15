@@ -55,6 +55,16 @@ app-navigation {
 // click pointer START
 
 
+.click-here-btn {
+    display: flex;
+    padding: 4px 12px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    font-weight: 600;
+
+}
+
+
 .pointer-area {
     position: relative;
     height: 100%;
