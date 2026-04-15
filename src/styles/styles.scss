@@ -52,6 +52,22 @@ app-navigation {
     // background-color: red;
 }
 
+// click pointer START
+
+
+.pointer-area {
+    position: relative;
+    width: 16px;
+}
+
+.pointer-icon {
+    position: absolute;
+    height: 40px;
+    left: -16px;
+}
+
+// click pointer END
+
 .close-button {
     font-size: 42px;
 
