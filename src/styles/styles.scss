@@ -57,13 +57,14 @@ app-navigation {
 
 .pointer-area {
     position: relative;
+    height: 100%;
     width: 16px;
 }
 
 .pointer-icon {
     position: absolute;
     height: 40px;
-    left: -16px;
+    left: 4px;
 }
 
 // click pointer END
