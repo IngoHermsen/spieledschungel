@@ -1,19 +1,17 @@
 .media-controls {
     width: 30px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     user-select: none;
 }
 
 .button {
-    font-size: 28px;
+    font-size: 24   px;
 }
 
 .controls--replay--pause {
     display: flex;
-    flex-direction: column;
 }
 
 .controls--replay--pause .button:hover {

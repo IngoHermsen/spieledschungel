@@ -5,7 +5,7 @@ import { Injectable, signal } from '@angular/core';
 })
 
 export class AudioService {
-  private audio = new Audio();
+  public audio = new Audio();
 
   // Signals für State
   isPlaying = signal(false);

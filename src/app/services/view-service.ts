@@ -1,10 +1,12 @@
 import { AfterViewInit, effect, inject, Injectable, signal } from '@angular/core';
 import { KeyControlService } from './key-control';
+import { AudioService } from './audio-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ViewService {
+  private audioService = inject(AudioService)
   private keyControlService = inject(KeyControlService);
 
   activeModal = signal(false);
@@ -27,6 +29,7 @@ export class ViewService {
 
   openModal() {
     document.body.style.overflowY = 'hidden';
+    this.audioService.audio.pause();
     this.keyControlService.setKeyListeners();
     this.activeModal.set(true);
   }

@@ -2,23 +2,27 @@
     <!-- Book Modal -->
     @if (viewService.activeModal()) {
     <div class="modal-overlay">
-        <section class="modal--top-content">
+        <section class="modal--content">
             <!-- <div c.controls--replay--pauselass="modal--media-controls">
                 <app-media-controls></app-media-controls>
             </div> -->
-            @if (viewService.isMobile) {
-            <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe"
-                src="https://heyzine.com/flip-book/eeaa33e599.html"
-                style="border: 1px solid lightgray; width: 100%; height: 80vh;"></iframe>
-            }
-            @if (!viewService.isMobile) {
-            <app-book-flip></app-book-flip>
+            <!-- @if (viewService.isMobile) { -->
+            <div class="iframe-div">
+                <div class="go-to-website-btn click-me-btn" (click)="viewService.closeModal()">
+                    <span class="close-button material-icons-round">close</span>
+                    <!-- <span>Zur Webseite</span> -->
+                </div>
+                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe"
+                    src="https://heyzine.com/flip-book/eeaa33e599.html"
+                    style="border: 1px solid lightgray; width: 100%; height: 100%;">
+                </iframe>
+            </div>
 
-            }
-            <span class="close-button material-icons-round" (click)="this.viewService.closeModal()">close</span>
-        </section>
-        <section class="modal--footer">
-            <span routerLink="">Impressum</span>
+            <!-- } -->
+            <!-- @if (!viewService.isMobile) { -->
+            <!-- <app-book-flip></app-book-flip> -->
+
+            <!-- } -->
         </section>
     </div>
     }
