@@ -124,7 +124,7 @@
 
 .nav-entry--bg-color-green {
     background-color: #11c51d;
-    
+
     +.sub-menu {
         color: #11c51d;
     }
@@ -132,7 +132,7 @@
 
 .nav-entry--bg-color-blue {
     background-color: #0000FF;
-    
+
     +.sub-menu {
         color: #0000FF;
     }
@@ -140,7 +140,7 @@
 
 .nav-entry--bg-color-pink {
     background-color: #fd0fae;
-    
+
     +.sub-menu {
         color: #fd0fae;
     }
@@ -148,7 +148,7 @@
 
 .nav-entry--bg-color-violet {
     background-color: #8A2BE2;
-    
+
     +.sub-menu {
         color: #8A2BE2;
     }
@@ -156,7 +156,7 @@
 
 .nav-entry--bg-color-lightblue {
     background-color: #92c8f5;
-    
+
     +.sub-menu {
         color: #92c8f5;
     }
@@ -164,7 +164,7 @@
 
 .nav-entry--bg-color-darkblue {
     background-color: #005caa;
-    
+
     +.sub-menu {
         color: #005caa;
     }
@@ -212,7 +212,14 @@ ul {
     gap: 4px;
 }
 
+.small-screen--controls {
+    position: absolute;
+    left: 4px;
+}
 
+.medium-screen--controls {
+    display: none;
+}
 
 
 @media (min-width: 768px) {
@@ -241,7 +248,7 @@ ul {
         height: fit-content;
     }
 
-    .sub-menu > li {
+    .sub-menu>li {
         margin-left: 12px;
     }
 
@@ -267,6 +274,14 @@ ul {
             color: unset;
         }
     }
+
+    .medium-screen--controls {
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
+
 }
 
 @media (min-width: 1024px) {

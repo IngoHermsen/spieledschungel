@@ -83,7 +83,31 @@ app-navigation {
 
 // click pointer END
 
-.close-btn {
+.default--icon--variant {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    top: 4px;
+    left: 4px;
+    padding: unset;
+
+}
+
+
+.default--icon--variant .button {
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 28px;
+    
+    &:hover {
+        cursor: pointer;
+        color: #346d98;
+        border-color: #346d98;
+    }
+}
+
+.modal--icon--variant {
     font-size: 32px;
     color: green;
     display: flex;
@@ -91,6 +115,13 @@ app-navigation {
     top: 4px;
     right: 4px;
     padding: unset;
+}
+
+.modal--icon--variant .button {
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 28px;
 
     &:hover {
         cursor: pointer;
@@ -105,9 +136,7 @@ app-navigation {
 }
 
 
-
 .modal-overlay {
-    color: lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -148,6 +177,7 @@ app-navigation {
     color: rgba(0, 0, 0, 0.4);
 }
 
+.modal--icon--variant {}
 
 
 .hide-modal {

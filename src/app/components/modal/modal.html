@@ -1,10 +1,10 @@
 <section class="modal--content">
     <div class="iframe-div">
-        <div class="floating-buttons">
-            <app-media-controls></app-media-controls>
+        <div class="floating-buttons music">
+            <app-media-controls [modalVariant]="true"></app-media-controls>
         </div>
-        <div class="floating-buttons">
-            <span (click)="viewService.closeModal()" class="modal--btn material-icons-round">close</span>
+        <div class="modal--icon--variant floating-buttons close">
+            <span (click)="viewService.closeModal()" class="button close-btn material-icons-round">close</span>
         </div>
         <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe"
             src="https://heyzine.com/flip-book/eeaa33e599.html"

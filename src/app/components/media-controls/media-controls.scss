@@ -1,17 +1,11 @@
 .media-controls {
-    position: absolute;
     width: 30px;
     display: flex;
     align-items: center;
     gap: 8px;
     user-select: none;
 }
-
-.button {
-    text-align: center;
-    font-size: 32px;
-    max-width: 32px;
-}
+  
 
 .controls--replay--pause {
     display: flex;
@@ -20,9 +14,15 @@
 
 .controls--replay--pause .button:hover {
     cursor: pointer;
-    color: rgba(255,255,255,0.7)
 }
 
 .toggle-img {
     height: 25px;
+}
+
+
+@media (min-width: 768px) {
+    // medium devices
+    .controls--replay--pause {
+    }
 }

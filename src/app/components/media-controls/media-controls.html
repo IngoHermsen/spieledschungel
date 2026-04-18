@@ -1,8 +1,5 @@
 <div (click)="stopPropagation($event)" translate="no" class="media-controls">
-    <div>
-        <img class="toggle-img icon" src="assets/music/music.svg" alt="music-on-button">
-    </div>
-    <div class="controls--replay--pause">
+    <div [ngClass]="modalVariant ? 'modal--icon--variant' : 'default--icon--variant'" class="controls--replay--pause">
         <span (click)="audioService.restartAudio()" class="button material-icons-round">replay</span>
         @if(audioService.isPlaying()) {
         <span (click)="audioService.togglePlay()" class="button material-icons-round">pause_circle</span>
@@ -10,6 +7,5 @@
         @if(!audioService.isPlaying()) {
         <span (click)="audioService.togglePlay()" class="button material-icons-round">play_circle</span>
         }
-
     </div>
 </div>
