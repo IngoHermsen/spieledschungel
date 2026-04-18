@@ -21,14 +21,22 @@ ul {
 ul .title {
     font-weight: 600;
     margin-right: 4px;
+}
 
+
+.img-container {
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.title-img {
+    object-fit: contain;
+    max-width: 100%;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
     // medium devices
-
-    .stories-accordion {
-        // padding: 0px 48px;
-    }
 
 }

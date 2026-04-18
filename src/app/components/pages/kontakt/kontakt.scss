@@ -15,6 +15,18 @@
     gap: 8px;
 }
 
+.img-container {
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.title-img {
+    object-fit: contain;
+    max-width: 100%;
+    text-align: center;
+}
+
 label {
     font-weight: 600;
     margin-right: 4px;
