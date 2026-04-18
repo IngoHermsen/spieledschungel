@@ -1,8 +1,5 @@
 .media-controls {
     position: absolute;
-    top: 0px;
-    left: 4px;
-    transform: translateY(50%);
     width: 30px;
     display: flex;
     align-items: center;
@@ -14,12 +11,6 @@
     text-align: center;
     font-size: 32px;
     max-width: 32px;
-}
-
-.control-icon {
-    max-height: 24px;
-    fill: green;
-    stroke-color: white;
 }
 
 .controls--replay--pause {

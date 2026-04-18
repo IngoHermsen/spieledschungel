@@ -64,7 +64,7 @@ app-navigation {
     font-weight: 600;
 }
 
-.click-me-btn > a {
+.click-me-btn>a {
     display: flex;
 }
 
@@ -83,15 +83,13 @@ app-navigation {
 
 // click pointer END
 
-.go-to-website-btn {
+.close-btn {
+    font-size: 32px;
     color: green;
     display: flex;
     align-items: center;
-    position: absolute;
     top: 4px;
     right: 4px;
-    font-size: 16px;
-    background-color: white;
     padding: unset;
 
     &:hover {
@@ -100,6 +98,12 @@ app-navigation {
         border-color: #5fc05f;
     }
 }
+
+.floating-buttons {
+    position: absolute;
+    top: 0px;
+}
+
 
 
 .modal-overlay {
@@ -121,10 +125,6 @@ app-navigation {
     /* für Safari */
 }
 
-.modal--content {
-    display: flex;
-    height: 100%;    
-}
 
 .modal--nav-bar--right {
     user-select: none;
@@ -148,10 +148,6 @@ app-navigation {
     color: rgba(0, 0, 0, 0.4);
 }
 
-.iframe-div {
-    position: relative;
-    width: 100%;
-}
 
 
 .hide-modal {
@@ -217,7 +213,7 @@ app-navigation {
 }
 
 
-.hero .short-info >.bindung-und-zeit {
+.hero .short-info>.bindung-und-zeit {
     color: #9c009b;
 }
 
@@ -269,7 +265,7 @@ app-navigation {
     padding: 0px 12px;
     background-color: rgba(0, 0, 0, 0.4);
     height: 32px;
-    
+
 
     &:hover {
         border-color: #085b08;
@@ -314,7 +310,7 @@ h1 {
         height: 600px;
     }
 
-    .hero .img-container >img {
+    .hero .img-container>img {
         max-height: 100%;
     }
 }

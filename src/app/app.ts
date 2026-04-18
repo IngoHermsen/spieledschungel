@@ -1,9 +1,8 @@
 import { Component, ElementRef, inject, NgZone, OnInit, ViewChild } from '@angular/core';
 import { Footer } from './components/footer/footer';
 import { Navigation } from './components/navigation/navigation';
-import { BookFlip } from './components/book-flip/book-flip';
-import { MediaControls } from './components/media-controls/media-controls';
-import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
+import { Modal } from './components/modal/modal';
+import { RouterOutlet } from '@angular/router';
 import { ViewService } from './services/view-service';
 import { KeyControlService } from './services/key-control';
 import { AudioService } from './services/audio-service';
@@ -12,7 +11,7 @@ import { AudioService } from './services/audio-service';
 
 @Component({
   selector: 'app-root',
-  imports: [Navigation, BookFlip, Footer, MediaControls, RouterOutlet, RouterLinkWithHref],
+  imports: [Navigation, Modal, Footer, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

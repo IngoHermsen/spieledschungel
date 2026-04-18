@@ -1,14 +1,14 @@
 <div (click)="stopPropagation($event)" translate="no" class="media-controls">
-    <span>
+    <div>
         <img class="toggle-img icon" src="assets/music/music.svg" alt="music-on-button">
-    </span>
+    </div>
     <div class="controls--replay--pause">
         <span (click)="audioService.restartAudio()" class="button material-icons-round">replay</span>
         @if(audioService.isPlaying()) {
-        <div (click)="audioService.togglePlay()" class="button material-icons-round">pause_circle</div>
+        <span (click)="audioService.togglePlay()" class="button material-icons-round">pause_circle</span>
         }
         @if(!audioService.isPlaying()) {
-        <div (click)="audioService.togglePlay()" class="button material-icons-round">play_circle</div>
+        <span (click)="audioService.togglePlay()" class="button material-icons-round">play_circle</span>
         }
 
     </div>

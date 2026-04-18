@@ -2,28 +2,7 @@
     <!-- Book Modal -->
     @if (viewService.activeModal()) {
     <div class="modal-overlay">
-        <section class="modal--content">
-            <!-- <div c.controls--replay--pauselass="modal--media-controls">
-                <app-media-controls></app-media-controls>
-            </div> -->
-            <!-- @if (viewService.isMobile) { -->
-            <div class="iframe-div">
-                <div class="go-to-website-btn click-me-btn" (click)="viewService.closeModal()">
-                    <span class="close-button material-icons-round">close</span>
-                    <!-- <span>Zur Webseite</span> -->
-                </div>
-                <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe"
-                    src="https://heyzine.com/flip-book/eeaa33e599.html"
-                    style="border: 1px solid lightgray; width: 100%; height: 100%;">
-                </iframe>
-            </div>
-
-            <!-- } -->
-            <!-- @if (!viewService.isMobile) { -->
-            <!-- <app-book-flip></app-book-flip> -->
-
-            <!-- } -->
-        </section>
+       <app-modal></app-modal>
     </div>
     }
     <!-- END of Book Modal -->
