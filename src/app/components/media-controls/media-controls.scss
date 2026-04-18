@@ -1,11 +1,10 @@
 .media-controls {
-    width: 30px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    align-items: start;
     user-select: none;
 }
-  
 
 .controls--replay--pause {
     display: flex;
@@ -18,6 +17,15 @@
 
 .toggle-img {
     height: 25px;
+}
+
+.music-status-label {
+    font-size: 12px;
+    display: flex;
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 25px;
 }
 
 

@@ -3,9 +3,13 @@
         <span (click)="audioService.restartAudio()" class="button material-icons-round">replay</span>
         @if(audioService.isPlaying()) {
         <span (click)="audioService.togglePlay()" class="button material-icons-round">pause_circle</span>
-        }
-        @if(!audioService.isPlaying()) {
+        } @else {
         <span (click)="audioService.togglePlay()" class="button material-icons-round">play_circle</span>
         }
     </div>
+    @if (audioService.isPlaying()) {
+    <span class="music-status-label">Musik läuft</span>
+    } @else {
+    <span class="music-status-label">Musik: AUS</span>
+    }
 </div>
