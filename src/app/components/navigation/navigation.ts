@@ -25,9 +25,6 @@ export class Navigation {
 
   handleNavClick(route: string) {
     this.router.navigate([route]);
-    document.getElementById('activeContent')?.scrollIntoView({
-      behavior: 'smooth'
-    })
     this.toggleNav();
   }
 

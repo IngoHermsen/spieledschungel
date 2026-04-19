@@ -9,6 +9,7 @@ import { HerzensSpuren } from './components/pages/herzens-spuren/herzens-spuren'
 import { Kontakt } from './components/pages/kontakt/kontakt';
 import { Eingewoehnung } from './components/pages/eingewoehnung/eingewoehnung';
 import { Transparenz } from './components/pages/transparenz/transparenz';
+import { FotoReise } from './components/pages/foto-reise/foto-reise';
 
 export const routes: Routes = [
     {path: 'momente', component: Momente},
@@ -20,5 +21,6 @@ export const routes: Routes = [
     {path: 'eingewoehnung', component: Eingewoehnung},
     {path: 'impressum', component: Imprint},
     {path: 'transparenz', component: Transparenz},
+    {path: 'foto-reise', component: FotoReise},
 ];
 

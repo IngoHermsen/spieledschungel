@@ -22,6 +22,25 @@
     flex: 2;
 }
 
+.social-media-section {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    flex: 2;
+
+    >a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        max-height: 80px;
+    }
+}
+
 .map-section {
     width: 100%;
     flex: 1;
@@ -71,4 +90,10 @@
 
 .gmaps-iframe {
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .main-section {
+        flex-direction: row;
+    }
 }
