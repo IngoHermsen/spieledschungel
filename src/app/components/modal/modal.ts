@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MediaControls } from '../media-controls/media-controls';
 import { ViewService } from '../../services/view-service';
 import { KeyControlService } from '../../services/key-control';
@@ -12,6 +12,14 @@ import { KeyControlService } from '../../services/key-control';
 export class Modal {
   public viewService = inject(ViewService);
   private keyControlService = inject(KeyControlService);
+  public showIntro: boolean = true;
 
+  showWebsite(showWebsite: boolean) {
+    if(showWebsite) {
+      this.viewService.closeModal();
+    }
+
+    this.viewService.showIntroText = false;
+  }
 
 }

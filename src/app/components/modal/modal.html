@@ -1,5 +1,31 @@
 <section class="modal--content">
     <div class="iframe-div">
+        @if(viewService.showIntroText) {
+        <div class="intro">
+            <div class="intro-content">
+                <p>Ein sanftes Willkommen im SpieleDschungel,</p>
+                <p>wo jedes Kind seinen Platz finden darf
+                    und Vertrauen in Ruhe wachsen kann.</p>
+                <p>Ob wilder Affe oder schüchterne Giraffe
+                    hier ist jedes Dschungeltier willkommen.</p>
+                <p>Hier darf man mich schriftlich kennenlernen, so wie ich bin.</p>
+                <p>Diese Seite ist bewusst ausführlicher und persönlicher geschrieben,
+                    weil mir genau das im Miteinander mit euch als Eltern wichtig ist.</p>
+                <p>Da die Kinder bei mir immer zu 100 Prozent Priorität haben,
+                    bitte ich bei Interesse um eine schriftliche Kontaktaufnahme.</p>
+                <p>Ich nehme mir Zeit für Ihre Nachricht
+                    und melde mich in Ruhe bei Ihnen zurück.</p>
+                <p>Viele Grüße aus dem
+                    SpieleDschungel 🦒🐒🐘🦁🦛</p>
+                <p>Marie 🐼</p>
+                <div class="target-selection">
+                    <span class="click-me-btn" (click)="showWebsite(false)">Zum Buch</span>
+                    <img src="assets/images/pandas_landscape_small.png" alt="reading and typing pandas">
+                    <span class="click-me-btn" (click)="showWebsite(true)">Zur Webseite</span>
+                </div>
+            </div>
+        </div>
+        }
         <div class="floating-buttons music">
             <app-media-controls [modalVariant]="true"></app-media-controls>
         </div>

@@ -10,6 +10,7 @@ export class ViewService {
   private keyControlService = inject(KeyControlService);
 
   activeModal = signal(false);
+  showIntroText = true;
   navIsOpen = signal(false);
   isMobile: boolean = false;
   isPortrait: boolean = false;

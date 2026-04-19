@@ -24,3 +24,55 @@
 .floating-buttons.close {
     right: 4px;
 }
+
+.intro {
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-content {
+    text-align: center;
+    border: 1px solid green;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0px 12px;
+}
+
+.target-selection {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 100%;
+
+    img {
+        max-height: 100%;
+    }
+}
+
+.target-selection>.click-me-btn {
+    border-color: green;
+
+    &:hover {
+        cursor: pointer;
+        color: #5fc05f;
+        border-color: #5fc05f;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (min-width: 768px) {
+
+    // medium screen
+    .target-selection {
+        color: green;
+        height: 200px;
+    }
+
+
+}
