@@ -10,6 +10,7 @@ import { Kontakt } from './components/pages/kontakt/kontakt';
 import { Eingewoehnung } from './components/pages/eingewoehnung/eingewoehnung';
 import { Transparenz } from './components/pages/transparenz/transparenz';
 import { FotoReise } from './components/pages/foto-reise/foto-reise';
+import { DataProtection } from './components/data-protection/data-protection';
 
 export const routes: Routes = [
     {path: 'momente', component: Momente},
@@ -22,5 +23,6 @@ export const routes: Routes = [
     {path: 'impressum', component: Imprint},
     {path: 'transparenz', component: Transparenz},
     {path: 'foto-reise', component: FotoReise},
+    {path: 'datenschutzerklaerung', component: DataProtection},
 ];
 
