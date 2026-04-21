@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './foto-reise.scss',
 })
 export class FotoReise {
+ 
 
 }
