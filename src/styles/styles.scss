@@ -48,6 +48,7 @@ app-navigation {
 
 .hero {
   min-height: 60vh;
+  padding-top: 24px;
 }
 
 // click pointer START
@@ -258,7 +259,7 @@ app-navigation {
   align-items: center;
   height: 700px;
   margin-top: 60px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero .short-info {
@@ -334,8 +335,7 @@ app-navigation {
 }
 
 .outlet-content {
-  margin-top: 90px;
-  padding-top: unset;
+  padding-top: 80px;
   background-color: white;
 }
 
@@ -359,6 +359,10 @@ h1 {
 
 @media (min-width: 768px) {
   // medium devices
+
+  .outlet-content {
+  padding-top: unset;
+}
 
   .hero {
     margin-top: unset;
