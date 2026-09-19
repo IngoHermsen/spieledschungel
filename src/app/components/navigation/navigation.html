@@ -1,43 +1,49 @@
 <div class="nav-menu">
-    <div class="medium-screen--controls">
-        <app-media-controls></app-media-controls>
+  <!-- Music controls -->
+  <!-- <div class="medium-screen--controls">
+    <app-media-controls></app-media-controls>
+  </div>
+  <div class="small-screen--controls">
+    <app-media-controls></app-media-controls>
+  </div> -->
+  <!-- Music controls END -->
+  <div class="nav-entries">
+    <div class="upper-nav nav-row">
+      <div (click)="handleNavClick('ueberMich')" class="nav-entry">
+        <span>Über mich</span>
+      </div>
+      <div (click)="handleNavClick('transparenz')" class="nav-entry">
+        <span>Transparenz</span>
+      </div>
+      <div (click)="handleNavClick('kontakt')" class="nav-entry">
+        <span>Kontakt</span>
+      </div>
+      <div (click)="handleNavClick('eingewoehnung')" class="nav-entry">
+        <span>Eingewöhnung</span>
+      </div>
     </div>
-    <div (click)="toggleNav()" translate="no" class="nav-toggle">
-        <div class="small-screen--controls">
-            <app-media-controls></app-media-controls>
-        </div>
-        <span>MENÜ</span>
+    <div class="below-nav nav-row">
+      <div (click)="handleNavClick('raeume')" class="nav-entry">
+        <span>Räume</span>
+      </div>
+      <div (click)="handleNavClick('foto-reise')" class="nav-entry">
+        <span>Foto-Reise</span>
+      </div>
     </div>
-    <div class="nav-list" [class.is-open]="showNav">
-        <div (click)="this.viewService.openModal()" class="nav-entry">
-            <span class="nav-entry--bg-color-red">📖Dschungel-Buch</span>
-        </div>
-        <div (click)="handleNavClick('ueberMich')" class="nav-entry">
-            <span class="nav-entry--bg-color-orange">Über mich</span>
-        </div>
-        <div (click)="handleNavClick('raeume')" class="nav-entry">
-            <span class="nav-entry--bg-color-yellow">Räume</span>
-        </div>
-        <div (click)="handleNavClick('momente')" class="nav-entry">
-            <span class="nav-entry--bg-color-lightblue">Adlermomente</span>
-        </div>
-        <div (click)="handleNavClick('elternstimmen')" class="nav-entry">
-            <span class="nav-entry--bg-color-green">? Elternstimmen ?</span>
-        </div>
-        <div (click)="handleNavClick('herzens-spuren')" class="nav-entry">
-            <span class="nav-entry--bg-color-pink">? Herzens-Spuren ?</span>
-        </div>
-        <div (click)="handleNavClick('kontakt')" class="nav-entry">
-            <span class="nav-entry--bg-color-violet">Kontakt</span>
-        </div>
-        <div (click)="handleNavClick('eingewoehnung')" class="nav-entry">
-            <span class="nav-entry--bg-color-red">Eingewöhnung</span>
-        </div>
-        <div (click)="handleNavClick('foto-reise')" class="nav-entry">
-            <span class="nav-entry--bg-color-orange">Foto-Reise</span>
-        </div>
-        <div (click)="handleNavClick('transparenz')" class="nav-entry">
-            <span class="nav-entry--bg-color-darkblue">Geprüft & transparent</span>
-        </div>
-    </div>
+
+    <!-- Über micht, transparenz, kontakt, eingewöhnung -->
+    <!-- Räume, Foto-Reise -->
+    <!-- <div (click)="handleNavClick('momente')" class="nav-entry">
+      <span>Adlermomente</span>
+    </div> -->
+    <!-- <div (click)="handleNavClick('elternstimmen')" class="nav-entry">
+      <span>Elternstimmen</span>
+    </div> -->
+    <!-- <div (click)="handleNavClick('herzens-spuren')" class="nav-entry">
+      <span>Herzens-Spuren</span>
+    </div> -->
+    <!-- <div (click)="this.viewService.openModal()" class="nav-entry">
+      <span>📖Dschungel-Buch</span>
+    </div> -->
+  </div>
 </div>
