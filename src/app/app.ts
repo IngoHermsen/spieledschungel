@@ -2,21 +2,20 @@ import { Component, ElementRef, inject, NgZone, OnInit, ViewChild } from '@angul
 import { Footer } from './components/footer/footer';
 import { Navigation } from './components/navigation/navigation';
 import { Modal } from './components/modal/modal';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ViewService } from './services/view-service';
 import { KeyControlService } from './services/key-control';
 import { AudioService } from './services/audio-service';
-
-
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   imports: [Navigation, Modal, Footer, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-
 export class App implements OnInit {
+  private router = inject(Router);
   viewService = inject(ViewService);
   keyControlService = inject(KeyControlService);
   audioService = inject(AudioService);
@@ -24,10 +23,20 @@ export class App implements OnInit {
   controlKey: string | null = null;
 
   @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>;
-  @ViewChild('activeContent') activeContent!: ElementRef<HTMLElement>
+  @ViewChild('activeContent') activeContent!: ElementRef<HTMLElement>;
 
   constructor(private ngZone: NgZone) {
-
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)
+  )
+    .subscribe(() => {
+      console.log('navheight', this.viewService.navigationHeight);
+      setTimeout(() => {
+        window.scrollBy({
+          top: -this.viewService.navigationHeight,
+          behavior: 'instant',
+        });
+      });
+    });
   }
 
   ngOnInit(): void {
@@ -39,14 +48,13 @@ export class App implements OnInit {
   blinkingEyes() {
     const randomTimeout = Math.floor(Math.random() * (10000 - 2500 + 1)) + 2500;
     const blinkTimeout = setTimeout(() => {
-      console.log('timeout')
+      console.log('timeout');
       this.mainLogo.nativeElement.classList.add('hide-logo');
       setTimeout(() => {
-        this.mainLogo.nativeElement.classList.remove('hide-logo')
+        this.mainLogo.nativeElement.classList.remove('hide-logo');
       }, 170);
 
-      this.blinkingEyes()
-    }, randomTimeout)
+      this.blinkingEyes();
+    }, randomTimeout);
   }
-
 }

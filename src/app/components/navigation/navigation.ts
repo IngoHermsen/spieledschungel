@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { MediaControls } from '../media-controls/media-controls';
 import { ViewService } from '../../services/view-service';
 import { AudioService } from '../../services/audio-service';
@@ -10,7 +10,14 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })
-export class Navigation {
+export class Navigation implements AfterViewInit {
+@ViewChild('navigation') navigation!: ElementRef<HTMLElement>;
+
+  ngAfterViewInit(): void {
+    const height = this.navigation.nativeElement.offsetHeight;
+    this.viewService.navigationHeight = height
+  }
+
   router = new Router();
   viewService = inject(ViewService);
   audioService = inject(AudioService);
@@ -18,9 +25,5 @@ export class Navigation {
 
   showNav: boolean = false;
   isMuted: boolean = true;
-  hasStarted: boolean = false;
-
-  handleNavClick(route: string) {
-    this.router.navigate([route]);
-  }
+  hasStarted: boolean = false
 }

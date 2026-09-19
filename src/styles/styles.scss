@@ -11,359 +11,343 @@
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family:
-        "Segoe UI",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-    margin: auto;
-    position: relative;
+  font-family:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  margin: auto;
+  position: relative;
 }
-
 
 a {
-    text-decoration: unset;
-    color: unset;
+  text-decoration: unset;
+  color: unset;
 
-    &:hover {
-        cursor: pointer;
-        color: #085b08;
-    }
+  &:hover {
+    cursor: pointer;
+    color: #085b08;
+  }
 }
 
-
 app-root {
-    height: 100%;
+  height: 100%;
 }
 
 app-navigation {
-    display: contents;
+  display: contents;
 }
 
-// 
+//
 
 .hero {
-    min-height: 60vh;
+  min-height: 60vh;
 }
 
 // click pointer START
 
-
 .click-me-btn {
-    position: relative;
-    display: flex;
-    padding: 4px 12px;
-    border: 2px solid grey;
-    border-radius: 25px;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  padding: 4px 12px;
+  border: 2px solid grey;
+  border-radius: 25px;
+  font-weight: 600;
 }
 
-.click-me-btn>a {
-    display: flex;
+.click-me-btn > a {
+  display: flex;
 }
-
 
 .pointer-area {
-    height: 100%;
-    width: 16px;
+  height: 100%;
+  width: 16px;
 }
 
 .pointer-icon {
-    position: absolute;
-    height: 40px;
-    right: 0px;
-    transform: translateX(90%) translateY(25%)
+  position: absolute;
+  height: 40px;
+  right: 0px;
+  transform: translateX(90%) translateY(25%);
 }
 
 // click pointer END
 
 .default--icon--variant {
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    top: 4px;
-    left: 4px;
-    padding: unset;
-
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  top: 4px;
+  left: 4px;
+  padding: unset;
 }
 
-
 .default--icon--variant .button {
-    border: 2px solid;
-    border-radius: 50%;
-    background-color: white;
-    font-size: 28px;
-    
-    &:hover {
-        cursor: pointer;
-        color: #346d98;
-        border-color: #346d98;
-    }
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 28px;
+
+  &:hover {
+    cursor: pointer;
+    color: #346d98;
+    border-color: #346d98;
+  }
 }
 
 .modal--icon--variant {
-    font-size: 32px;
-    color: green;
-    display: flex;
-    align-items: center;
-    top: 4px;
-    right: 4px;
-    padding: unset;
+  font-size: 32px;
+  color: green;
+  display: flex;
+  align-items: center;
+  top: 4px;
+  right: 4px;
+  padding: unset;
 }
 
 .modal--icon--variant .button {
-    border: 2px solid;
-    border-radius: 50%;
-    background-color: white;
-    font-size: 28px;
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 28px;
 
-    &:hover {
-        cursor: pointer;
-        color: #5fc05f;
-        border-color: #5fc05f;
-    }
+  &:hover {
+    cursor: pointer;
+    color: #5fc05f;
+    border-color: #5fc05f;
+  }
 }
 
 .floating-buttons {
-    position: absolute;
-    top: 0px;
+  position: absolute;
+  top: 0px;
 }
-
 
 .modal-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 12px;
-    position: fixed;
-    height: 100%;
-    width: 100vw;
-    z-index: 200;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow-y: scroll;
-    box-sizing: border-box;
-    backdrop-filter: blur(1px);
-    /* Blur-Effekt */
-    -webkit-backdrop-filter: blur(1px);
-    /* für Safari */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: scroll;
+  box-sizing: border-box;
+  backdrop-filter: blur(1px);
+  /* Blur-Effekt */
+  -webkit-backdrop-filter: blur(1px);
+  /* für Safari */
 }
 
-
 .modal--nav-bar--right {
-    user-select: none;
-    max-height: 100%;
-    display: flex;
-    gap: 4px;
+  user-select: none;
+  max-height: 100%;
+  display: flex;
+  gap: 4px;
 
-    &:hover {
-        cursor: pointer;
-        color: rgba(255, 255, 255, 0.7);
-    }
+  &:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .modal--footer {
-    color: rgba(0, 0, 0, 0.6);
-    text-align: end;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: end;
 }
 
 .modal--footer span:hover {
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.modal--icon--variant {}
-
+.modal--icon--variant {
+}
 
 .hide-modal {
-    display: none;
+  display: none;
 }
 
 .full-screen-content {
-    min-height: 100vh;
-    display: flex;
+  min-height: 100vh;
+  display: flex;
 
-    background-image: url('/assets/images/bg-image.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    /* optional */
-    background-repeat: no-repeat;
-    /* optional */
+  background-image: url('/assets/images/bg-image.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  /* optional */
+  background-repeat: no-repeat;
+  /* optional */
 }
 
 .white-space {
-    display: none;
+  display: none;
 }
 
 .media-controls {
-    display: flex;
+  display: flex;
 
-    .volume-toggle {
-        cursor: pointer,
-    }
+  .volume-toggle {
+    cursor: pointer;
+  }
 }
 
 .disable-scroll {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 .website-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 950px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 950px;
 }
 
 .imprint:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    margin-top: 60px;
-    background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  margin-top: 60px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .hero .short-info {
-    color: #085b08;
-    font-weight: 700;
-    text-align: center;
-    padding: 0px 12px;
+  color: #085b08;
+  font-weight: 700;
+  text-align: center;
+  padding: 0px 12px;
 }
 
-
-.hero .short-info>.bindung-und-zeit {
-    color: #9c009b;
+.hero .short-info > .bindung-und-zeit {
+  color: #9c009b;
 }
-
 
 .hero .img-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    max-width: 100%;
-    background-color: red;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  background-color: red;
 
-    img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 90vw;
-        max-height: 100%;
-        height: auto;
-    }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 100%;
+    height: auto;
+  }
 
+  .opened-eyes {
+    z-index: 2;
+  }
 
-    .opened-eyes {
-        z-index: 2;
-    }
-
-    .closed-eyes {
-        z-index: 1;
-    }
+  .closed-eyes {
+    z-index: 1;
+  }
 }
 
 .hero .contact-data {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 24px 0px;
 }
 
 .hero .click-me-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    border: 4px solid white;
-    border-radius: 25px;
-    padding: 0px 12px;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  border: 4px solid white;
+  border-radius: 25px;
+  padding: 0px 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 32px;
 
-
-    &:hover {
-        border-color: #085b08;
-        color: #085b08;
-    }
+  &:hover {
+    border-color: #085b08;
+    color: #085b08;
+  }
 }
 
 .hero .click-me-btn .icon-png {
-    max-height: 25px;
+  max-height: 25px;
 }
 
 .hide-logo {
-    display: none;
+  display: none;
 }
 
 .outlet-content {
-    padding: 20px;
-    background-color: white;
+  padding: 20px;
+  background-color: white;
 }
 
 .control-border {
-    display: flex;
-    border: 2px solid grey;
-    border-radius: 50px;
-    gap: inherit;
-    padding: 0px 4px;
-
+  display: flex;
+  border: 2px solid grey;
+  border-radius: 50px;
+  gap: inherit;
+  padding: 0px 4px;
 }
 
 h1 {
-    font-weight: 100;
-    letter-spacing: 2pt;
-    margin: unset;
+  font-weight: 100;
+  letter-spacing: 2pt;
+  margin: unset;
 }
 
 @media (min-width: 768px) {
+  // medium devices
 
-    // medium devices
+  .hero {
+    margin-top: unset;
+    height: 600px;
+  }
 
-    .hero {
-        margin-top: unset;
-        height: 600px;
-    }
-
-    .hero .img-container>img {
-        max-height: 100%;
-    }
+  .hero .img-container > img {
+    max-height: 100%;
+  }
 }
 
 @media (min-width: 920px) {
+  // medium devices
+  .white-space {
+    display: block;
+  }
 
-    // medium devices
-    .white-space {
-        display: block;
-    }
+  .white-space img {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+  }
 
-    .white-space img {
-        width: 100%;
-        position: sticky;
-        top: 0px;
-    }
-
-    .panda:hover {
-        filter: drop-shadow(4px 4px 6px rgba(255, 255, 255, 0.8));
-    }
+  .panda:hover {
+    filter: drop-shadow(4px 4px 6px rgba(255, 255, 255, 0.8));
+  }
 }
 
 @media (min-width: 1024px) {
-    // large devices
-
+  // large devices
 }

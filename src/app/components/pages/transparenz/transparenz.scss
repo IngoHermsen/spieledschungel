@@ -23,3 +23,9 @@
 .meerbusch-logo {
     max-height: 25px;
 }
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

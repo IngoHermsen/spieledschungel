@@ -8,7 +8,8 @@ import { AudioService } from './audio-service';
 export class ViewService {
   private audioService = inject(AudioService)
   private keyControlService = inject(KeyControlService);
-
+  public navigationHeight: number = 0;
+  
   activeModal = signal(false);
   showIntroText = true;
   navIsOpen = signal(false);

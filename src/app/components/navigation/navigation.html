@@ -1,4 +1,4 @@
-<div class="nav-menu">
+<div class="nav-menu" #navigation>
   <!-- Music controls -->
   <!-- <div class="medium-screen--controls">
     <app-media-controls></app-media-controls>
@@ -9,24 +9,24 @@
   <!-- Music controls END -->
   <div class="nav-entries">
     <div class="upper-nav nav-row">
-      <div (click)="handleNavClick('ueberMich')" class="nav-entry">
+      <div [routerLink]="['/ueberMich']" fragment="activeContent" class="nav-entry">
         <span>Über mich</span>
       </div>
-      <div (click)="handleNavClick('transparenz')" class="nav-entry">
+      <div [routerLink]="['/transparenz']" fragment="activeContent" class="nav-entry">
         <span>Transparenz</span>
       </div>
-      <div (click)="handleNavClick('kontakt')" class="nav-entry">
+      <div [routerLink]="['/kontakt']" fragment="activeContent" class="nav-entry">
         <span>Kontakt</span>
       </div>
-      <div (click)="handleNavClick('eingewoehnung')" class="nav-entry">
+      <div [routerLink]="['/eingewoehnung']" fragment="activeContent" class="nav-entry">
         <span>Eingewöhnung</span>
       </div>
     </div>
     <div class="below-nav nav-row">
-      <div (click)="handleNavClick('raeume')" class="nav-entry">
+      <div [routerLink]="['/raeume']" fragment="activeContent" class="nav-entry">
         <span>Räume</span>
       </div>
-      <div (click)="handleNavClick('foto-reise')" class="nav-entry">
+      <div [routerLink]="['foto-reise']" fragment="activeContent" class="nav-entry">
         <span>Foto-Reise</span>
       </div>
     </div>
