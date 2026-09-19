@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import './gallery.component'
 
@@ -12,13 +12,11 @@ import './gallery.component'
 })
 export class FotoReise implements OnInit {
   private http = inject(HttpClient);
-  bilderJson = '';
+  bilderJson = signal<string | null>(null);
 
   ngOnInit() {
     this.http.get('assets/galerie-bilder.json').subscribe(data => {
-      console.log('Bilder geladen:', data);
-      this.bilderJson = JSON.stringify(data);
-      console.log('bilderJson:', this.bilderJson);
-    }); // ← hier fehlte die );
+      this.bilderJson.set(JSON.stringify(data));
+    });
   }
 }
