@@ -4,6 +4,14 @@
     gap: 24px;
 }
 
+.click-me-btn {
+    text-align: center;
+}
+
+.click-me-btn .pointer-icon {
+    right: 30px;
+}
+
 
 .click-me-btn:hover {
     cursor: pointer;
