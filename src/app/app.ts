@@ -25,19 +25,6 @@ export class App implements OnInit {
   @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>;
   @ViewChild('activeContent') activeContent!: ElementRef<HTMLElement>;
 
-  constructor(private ngZone: NgZone) {
-    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)
-  )
-    .subscribe(() => {
-      console.log('navheight', this.viewService.navigationHeight);
-      setTimeout(() => {
-        window.scrollBy({
-          top: -this.viewService.navigationHeight,
-          behavior: 'instant',
-        });
-      });
-    });
-  }
 
   ngOnInit(): void {
     this.audioService.init();

@@ -9,24 +9,24 @@
   <!-- Music controls END -->
   <div class="nav-entries">
     <div class="upper-nav nav-row">
-      <div [routerLink]="['/ueberMich']" fragment="activeContent" class="nav-entry">
+      <div (click)="handleNavigation('/ueberMich')" class="nav-entry">
         <span>Über mich</span>
       </div>
-      <div [routerLink]="['/transparenz']" fragment="activeContent" class="nav-entry">
+      <div (click)="handleNavigation('/transparenz')" class="nav-entry">
         <span>Transparenz</span>
       </div>
-      <div [routerLink]="['/kontakt']" fragment="activeContent" class="nav-entry">
+      <div (click)="handleNavigation('/kontakt')" class="nav-entry">
         <span>Kontakt</span>
       </div>
-      <div [routerLink]="['/eingewoehnung']" fragment="activeContent" class="nav-entry">
+      <div (click)="handleNavigation('/eingewoehnung')"  class="nav-entry">
         <span>Eingewöhnung</span>
       </div>
     </div>
     <div class="below-nav nav-row">
-      <div [routerLink]="['/raeume']" fragment="activeContent" class="nav-entry">
+      <div (click)="handleNavigation('/raeume')" class="nav-entry">
         <span>Räume</span>
       </div>
-      <div [routerLink]="['foto-reise']" fragment="activeContent" class="nav-entry">
+      <div (click)="handleNavigation('/foto-reise')" class="nav-entry">
         <span>Foto-Reise</span>
       </div>
     </div>

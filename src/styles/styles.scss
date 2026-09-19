@@ -213,6 +213,40 @@ app-navigation {
   max-width: 950px;
 }
 
+.contact-banner {
+  position: relative;
+}
+
+.contact-banner img {
+  width: 100%;
+}
+
+.contact-banner .click-overlay {
+  cursor: pointer;
+  position: absolute;
+  background-color: unset;
+  border-radius: 15%;
+  height: 20%;
+  bottom: 25%;
+  z-index: 2;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3)
+  }
+}
+
+.contact-banner .click-overlay.mail {
+  width: 22%;
+  right: 8%;
+  transform: rotate(5deg);
+}
+
+.contact-banner .click-overlay.phone {
+  width: 22%;
+  left: 8%;
+  transform: rotate(-5deg)
+}
+
 .imprint:hover {
   cursor: pointer;
 }
@@ -300,8 +334,13 @@ app-navigation {
 }
 
 .outlet-content {
-  padding: 20px;
+  margin-top: 90px;
+  padding-top: unset;
   background-color: white;
+}
+
+.content-wrapper {
+  padding: 12px;
 }
 
 .control-border {

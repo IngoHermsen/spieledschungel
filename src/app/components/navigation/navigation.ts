@@ -10,13 +10,7 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })
-export class Navigation implements AfterViewInit {
-@ViewChild('navigation') navigation!: ElementRef<HTMLElement>;
-
-  ngAfterViewInit(): void {
-    const height = this.navigation.nativeElement.offsetHeight;
-    this.viewService.navigationHeight = height
-  }
+export class Navigation {
 
   router = new Router();
   viewService = inject(ViewService);
@@ -25,5 +19,12 @@ export class Navigation implements AfterViewInit {
 
   showNav: boolean = false;
   isMuted: boolean = true;
-  hasStarted: boolean = false
+  hasStarted: boolean = false;
+
+  handleNavigation(route: string) {
+    this.viewService.journeyStarted = true;
+    this.router.navigate([route], {
+      fragment: 'activeContent',
+    });
+  }
 }

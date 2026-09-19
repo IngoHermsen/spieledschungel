@@ -1,56 +1,85 @@
-<div [class.disable-scroll]="viewService.activeModal() || viewService.navIsOpen()" class="full-screen-content">
-    <!-- Book Modal -->
-    @if (viewService.activeModal()) {
+<div
+  [class.disable-scroll]="viewService.activeModal() || viewService.navIsOpen()"
+  class="full-screen-content"
+>
+  <!-- Book Modal -->
+  @if (viewService.activeModal()) {
     <div class="modal-overlay">
-       <app-modal></app-modal>
+      <app-modal></app-modal>
     </div>
-    }
-    <!-- END of Book Modal -->
-    <section class="white-space">
-        <img class="contact-img" src="assets/images/contact-tiger.png" alt="contact-tiger-with-sign">
-    </section>
-    <div class="website-content">
-        <app-navigation></app-navigation>
-        <section class="hero">
-            <div class="logo img-container">
-                <img class="opened-eyes" src="/assets/logo/logo-v1.png" alt="spieledschungel-logo-panda-open-eyes"
-                    #mainLogo>
-                <img class="closed-eyes" src="/assets/logo/logo-v1-ec.png" alt="spieledschungel-logo-panda-eyes-closed">
-            </div>
-            <div class="short-info outline">
-                <p>Warum zu mir?</p>
-
-                <p class="bindung-und-zeit">Echte Bindung und Zeit<br>
-                    sind der Grundbaustein im SpieleDschungel</p>
-
-                <p>– finanziell genauso gefördert wie ein Kita-Platz –</p>
-
-                <p>(Max. 5 Kinder | Persönliche Bindung | Staatlich anerkannt)</p>
-            </div>
-            <div class="contact-data">
-                <a href="https://wa.me/4915233527042" target="_blank" class="click-me-btn phone">
-                    <img class="icon-png" src="assets/icons/Android_App_Icon_2026.png" alt="whatsapp_android-app-icon">
-                    : +49 152 335 27 042
-                    <div class="pointer-area">
-                        <img class="pointer-icon" src="assets/icons/click-me.png" alt="click-me pointer hand icon">
-                    </div>
-                </a>
-
-                <a href="mailto:panda@spieledschungel.de" class="click-me-btn mail">&#x1F4E7;Email:
-                    Panda@SpieleDschungel.de
-                    <img class="pointer-icon" src="assets/icons/click-me.png" alt="click-me pointer hand icon">
-                </a>
-
-            </div>
-        </section>
-        <div class="outlet-content" id="activeContent" #outlet>
-            <router-outlet></router-outlet>
+  }
+  <!-- END of Book Modal -->
+  <div class="website-content">
+    <app-navigation></app-navigation>
+    @if (!viewService.journeyStarted) {
+      <section class="hero">
+        <div class="logo img-container">
+          <img
+            class="opened-eyes"
+            src="/assets/logo/logo-v1.png"
+            alt="spieledschungel-logo-panda-open-eyes"
+            #mainLogo
+          />
+          <img
+            class="closed-eyes"
+            src="/assets/logo/logo-v1-ec.png"
+            alt="spieledschungel-logo-panda-eyes-closed"
+          />
         </div>
-        <app-footer></app-footer>
-    </div>
-    <section class="white-space">
-        <a class="contact-img-link panda" href="mailto: panda@spieledschungel.de">
-            <img class="contact-img" src="assets/images/contact-panda.png" alt="contact-panda-with-sign">
-        </a>
-    </section>
+        <div class="short-info outline">
+          <p>Warum zu mir?</p>
+
+          <p class="bindung-und-zeit">
+            Echte Bindung und Zeit<br />
+            sind der Grundbaustein im SpieleDschungel
+          </p>
+
+          <p>– finanziell genauso gefördert wie ein Kita-Platz –</p>
+
+          <p>(Max. 5 Kinder | Persönliche Bindung | Staatlich anerkannt)</p>
+        </div>
+        <div class="contact-data">
+          <a href="https://wa.me/4915233527042" target="_blank" class="click-me-btn phone">
+            <img
+              class="icon-png"
+              src="assets/icons/Android_App_Icon_2026.png"
+              alt="whatsapp_android-app-icon"
+            />
+            : +49 152 335 27 042
+            <div class="pointer-area">
+              <img
+                class="pointer-icon"
+                src="assets/icons/click-me.png"
+                alt="click-me pointer hand icon"
+              />
+            </div>
+          </a>
+
+          <a href="mailto:panda@spieledschungel.de" class="click-me-btn mail"
+            >&#x1F4E7;Email: Panda@SpieleDschungel.de
+            <img
+              class="pointer-icon"
+              src="assets/icons/click-me.png"
+              alt="click-me pointer hand icon"
+            />
+          </a>
+        </div>
+      </section>
+    }
+    @if (viewService.journeyStarted) {
+      <div class="outlet-content" id="activeContent" #outlet>
+        <div class="contact-banner">
+          <div class="click-overlay mail"></div>
+          <div class="click-overlay phone"></div>
+          <img src="assets/images/contact-banner.jpeg" alt="contact-banner-tiger-panda" />
+        </div>
+
+        <div class="content-wrapper">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    }
+
+    <app-footer></app-footer>
+  </div>
 </div>
