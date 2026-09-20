@@ -1,78 +1,115 @@
 :host {
-    height: 100%;
+  height: 100%;
 }
 
 .modal--content {
-    display: flex;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.welcome-image {
+  height: fit-content;
+  position: relative;
+  max-width: 800px;
+}
+
+.welcome-image .content-image {
+  width: 100%;
+}
+
+.welcome-image .click-overlay {
+  cursor: pointer;
+  position: absolute;
+  bottom: 17%;
+  height: 20%;
+  width: 27%;
+  border-radius: 10%;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.welcome-image .click-overlay.left {
+  left: 8%;
+}
+
+.welcome-image .click-overlay.middle {
+  left: 36%;
+}
+
+.welcome-image .click-overlay.right {
+  left: 64%;
 }
 
 
 .iframe-div {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .floating-buttons {
-    top: 4px;
+  top: 4px;
 }
 
 .floating-buttons.music {
-    left: 4px;
+  left: 4px;
 }
 
 .floating-buttons.close {
-    right: 4px;
+  right: 4px;
+}
+
+.floating-buttons .close-btn {
+  max-width: 32px;
 }
 
 .intro {
-    position: absolute;
-    inset: 0px 0px 0px 0px;
-    z-index: 2;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  inset: 0px 0px 0px 0px;
+  z-index: 2;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-content {
-    text-align: center;
-    border: 1px solid green;
-    border-radius: 12px;
-    padding: 24px;
-    margin: 0px 12px;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0px 12px;
 }
 
 .target-selection {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    height: 100px;
-    width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100px;
+  width: 100%;
 
-    img {
-        max-height: 100%;
-    }
+  img {
+    max-height: 100%;
+  }
 }
 
-.target-selection>.click-me-btn {
-    border-color: green;
+.target-selection > .click-me-btn {
+  border-color: green;
 
-    &:hover {
-        cursor: pointer;
-        color: #5fc05f;
-        border-color: #5fc05f;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
+  &:hover {
+    cursor: pointer;
+    color: #5fc05f;
+    border-color: #5fc05f;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: 768px) {
-
-    // medium screen
-    .target-selection {
-        color: green;
-        height: 200px;
-    }
-
-
+  // medium screen
+  .target-selection {
+    color: green;
+    height: 200px;
+  }
 }

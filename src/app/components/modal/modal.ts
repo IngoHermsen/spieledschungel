@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { MediaControls } from '../media-controls/media-controls';
 import { ViewService } from '../../services/view-service';
 import { KeyControlService } from '../../services/key-control';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -10,16 +11,19 @@ import { KeyControlService } from '../../services/key-control';
   styleUrl: './modal.scss',
 })
 export class Modal {
+  public router = inject(Router);
   public viewService = inject(ViewService);
   private keyControlService = inject(KeyControlService);
-  public showIntro: boolean = true;
 
   showWebsite(showWebsite: boolean) {
-    if(showWebsite) {
+    if (showWebsite) {
       this.viewService.closeModal();
     }
-
-    this.viewService.showIntroText = false;
   }
 
+  goToAudioStory() {
+    this.viewService.journeyStarted = true;
+    this.router.navigate(['hoer-reise']);
+    this.viewService.closeModal();
+  }
 }

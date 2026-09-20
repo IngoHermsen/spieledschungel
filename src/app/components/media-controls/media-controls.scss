@@ -6,6 +6,10 @@
     user-select: none;
 }
 
+.media-controls .button {
+    max-width: 32px;
+}
+
 .controls--replay--pause {
     display: flex;
     gap: 8px;

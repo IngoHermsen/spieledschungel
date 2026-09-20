@@ -12,7 +12,7 @@ export class ViewService {
   public journeyStarted: boolean = false;
 
   activeModal = signal(false);
-  showIntroText = true;
+  showIntro = true;
   navIsOpen = signal(false);
   isMobile: boolean = false;
   isPortrait: boolean = false;
@@ -33,13 +33,11 @@ export class ViewService {
   openModal() {
     document.body.style.overflowY = 'hidden';
     this.audioService.audio.pause();
-    this.keyControlService.setKeyListeners();
     this.activeModal.set(true);
   }
 
   closeModal() {
     document.body.style.overflowY = '';
-    this.keyControlService.stopKeyListeners();
     this.activeModal.set(false);
   }
 }

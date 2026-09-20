@@ -11,18 +11,18 @@ import { Eingewoehnung } from './components/pages/eingewoehnung/eingewoehnung';
 import { Transparenz } from './components/pages/transparenz/transparenz';
 import { FotoReise } from './components/pages/foto-reise/foto-reise';
 import { DataProtection } from './components/data-protection/data-protection';
+import { Hoerreise } from './components/hoerreise/hoerreise';
 
 export const routes: Routes = [
     {path: 'momente', component: Momente},
     {path: 'ueberMich', component: UeberMich},
     {path: 'raeume', component: Räume},
-    // {path: 'elternstimmen', component: Elternstimmen},
-    // {path: 'herzens-spuren', component: HerzensSpuren},
     {path: 'kontakt', component: Kontakt},
     {path: 'eingewoehnung', component: Eingewoehnung},
     {path: 'impressum', component: Imprint},
     {path: 'transparenz', component: Transparenz},
     {path: 'foto-reise', component: FotoReise},
+    {path: 'hoer-reise', component: Hoerreise},
     {path: 'datenschutzerklaerung', component: DataProtection},
 ];
 

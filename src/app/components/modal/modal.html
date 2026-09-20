@@ -1,40 +1,32 @@
 <section class="modal--content">
-    <div class="iframe-div">
-        @if(viewService.showIntroText) {
-        <div class="intro">
-            <div class="intro-content">
-                <p>Ein sanftes Willkommen im SpieleDschungel,</p>
-                <p>wo jedes Kind seinen Platz finden darf
-                    und Vertrauen in Ruhe wachsen kann.</p>
-                <p>Ob wilder Affe oder schüchterne Giraffe
-                    hier ist jedes Dschungeltier willkommen.</p>
-                <p>Hier darf man mich schriftlich kennenlernen, so wie ich bin.</p>
-                <p>Diese Seite ist bewusst ausführlicher und persönlicher geschrieben,
-                    weil mir genau das im Miteinander mit euch als Eltern wichtig ist.</p>
-                <p>Da die Kinder bei mir immer zu 100 Prozent Priorität haben,
-                    bitte ich bei Interesse um eine schriftliche Kontaktaufnahme.</p>
-                <p>Ich nehme mir Zeit für Ihre Nachricht
-                    und melde mich in Ruhe bei Ihnen zurück.</p>
-                <p>Viele Grüße aus dem
-                    SpieleDschungel<br>🦒🐒🐘🦁🦛</p>
-                <p>Marie 🐼</p>
-                <div class="target-selection">
-                    <span class="click-me-btn" (click)="showWebsite(false)">Zum Buch</span>
-                    <img src="assets/images/pandas_landscape_small.webp" alt="reading and typing pandas">
-                    <span class="click-me-btn" (click)="showWebsite(true)">Zur Webseite</span>
-                </div>
-            </div>
-        </div>
-        }
-        <div class="floating-buttons music">
-            <app-media-controls [modalVariant]="true"></app-media-controls>
-        </div>
-        <div class="modal--icon--variant floating-buttons close">
-            <span (click)="viewService.closeModal()" class="button close-btn material-icons-round">close</span>
-        </div>
-        <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe"
-            src="https://heyzine.com/flip-book/97cba22a31.html"
-            style="border: 1px solid lightgray; width: 100%; height: 100%;">
-        </iframe>
+  @if (viewService.showIntro) {
+    <div class="welcome-image">
+      <a (click)="viewService.closeModal()" class="click-overlay left"></a>
+      <a
+        href="https://heyzine.com/flip-book/e7c0d4e0be.html"
+        target="_blank"
+        class="click-overlay middle"
+      ></a>
+      <!-- <div (click)="goToAudioStory()" class="click-overlay right soonAvailable">Bald verfügbar</div> -->
+      <a class="click-overlay right"></a>
+      <img class="content-image" src="assets/images/welcome-image.jpeg" alt="welcome-image" />
     </div>
+  }
+  <div class="floating-buttons music">
+    <app-media-controls [modalVariant]="true"></app-media-controls>
+  </div>
+  <div class="modal--icon--variant floating-buttons close">
+    <span (click)="viewService.closeModal()" class="button close-btn material-icons-round"
+      >close</span
+    >
+  </div>
+  <!-- <iframe
+      allowfullscreen="allowfullscreen"
+      allow="clipboard-write"
+      scrolling="no"
+      class="fp-iframe"
+      src="https://heyzine.com/flip-book/97cba22a31.html"
+      style="border: 1px solid lightgray; width: 100%; height: 100%"
+    >
+    </iframe> -->
 </section>
