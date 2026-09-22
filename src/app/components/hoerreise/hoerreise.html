@@ -1,5 +1,53 @@
 <h3>Hör-Reise durch den SpieleDschungel</h3>
 
 <div class="audio-story">
-    
+  <p>Titel</p>
+  <p>Höre dir die Geschichte Kapitel für Kapitel an.</p>
+
+  <audio #journeyAudioPlayer controls (ended)="onChapterEnded()"></audio>
+
+  <div class="chapters">
+    @for (chapter of chapters; track chapter.file; let i = $index) {
+      <button type="button"
+      [class.active]="i === currentChapter"
+      (click)="playChapter(i)">
+
+        {{ i + 1 }} – {{ chapter.title }}
+
+      </button>
+    }
+  </div>
 </div>
+
+<!-- 
+
+<div class="audio-story">
+
+  <h1>Ein typischer Tag bei der Kindertagespflege</h1>
+
+  <p>
+    Höre dir die Geschichte Kapitel für Kapitel an.
+  </p>
+
+  <audio
+    #audioPlayer
+    controls
+    (ended)="onChapterEnded()">
+  </audio>
+
+  <div class="chapters">
+
+    <button
+      *ngFor="let chapter of chapters; let i = index"
+      type="button"
+      [class.active]="i === currentChapter"
+      (click)="playChapter(i)">
+
+      <span>{{ i + 1 }}</span>
+      <span>{{ chapter.title }}</span>
+
+    </button>
+
+  </div>
+
+</div> -->
