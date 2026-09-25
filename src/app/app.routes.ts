@@ -11,7 +11,7 @@ import { Eingewoehnung } from './components/pages/eingewoehnung/eingewoehnung';
 import { Transparenz } from './components/pages/transparenz/transparenz';
 import { FotoReise } from './components/pages/foto-reise/foto-reise';
 import { DataProtection } from './components/data-protection/data-protection';
-import { Hoerreise } from './components/hoerreise/hoerreise';
+import { Hoerreise } from './components/pages/hoerreise/hoerreise';
 import { Hero } from './components/pages/hero/hero';
 
 export const routes: Routes = [

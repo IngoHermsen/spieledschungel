@@ -1,5 +1,5 @@
 import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
-import { ViewService } from '../../services/view-service';
+import { ViewService } from '../../../services/view-service';
 
 interface Chapter {
   title: string;

@@ -13,9 +13,12 @@
 
   <div class="chapters">
     @for (chapter of chapters; track chapter.file; let i = $index) {
-      <button type="button" [class.active]="i === currentChapterIdx" (click)="playChapter(i)">
-        {{ i + 1 }} – {{ chapter.title }}
-      </button>
+      <div  class="chapter-select" (click)="playChapter(i)">
+        <img [src]="`assets/images/audio-journey/chapter-${i + 1}.jpeg`" alt="chapter">
+        <div class="chapter-select-overlay" [class.active]="i == currentChapterIdx">
+
+        </div>
+      </div>
     }
   </div>
 </div>
