@@ -21,7 +21,6 @@ export class Navigation {
   hasStarted: boolean = false;
 
   handleNavigation(route: string) {
-    this.viewService.journeyStarted = true;
     this.router.navigate([route]).then(() => {
       window.scrollTo({
         top: 0,

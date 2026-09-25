@@ -230,7 +230,7 @@ app-navigation {
   z-index: 2;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.3)
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -243,7 +243,7 @@ app-navigation {
 .contact-banner .click-overlay.phone {
   width: 22%;
   left: 8%;
-  transform: rotate(-5deg)
+  transform: rotate(-5deg);
 }
 
 .imprint:hover {
@@ -256,8 +256,6 @@ app-navigation {
   justify-content: center;
   align-items: center;
   height: 700px;
-  margin-top: 86px;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero .short-info {
@@ -277,7 +275,6 @@ app-navigation {
   align-items: center;
   height: 100%;
   max-width: 100%;
-  background-color: red;
 
   img {
     position: absolute;
@@ -286,6 +283,7 @@ app-navigation {
     transform: translate(-50%, -50%);
     max-width: 90vw;
     max-height: 100%;
+    width: 300px;
     height: auto;
   }
 
@@ -334,11 +332,14 @@ app-navigation {
 
 .outlet-content {
   padding-top: 80px;
-  background-color: white;
 }
 
 .content-wrapper {
-  padding: 12px 28px
+  padding: 12px 28px;
+}
+
+.outlet-content.transparent-bg {
+  background-color: rgba(255,255,255,0.4)
 }
 
 .control-border {
@@ -359,8 +360,8 @@ h1 {
   // medium devices
 
   .outlet-content {
-  padding-top: unset;
-}
+    padding-top: unset;
+  }
 
   .hero {
     margin-top: unset;

@@ -1,19 +1,20 @@
-<h3>Hör-Reise durch den SpieleDschungel</h3>
+<h2>Hör-Reise durch den SpieleDschungel</h2>
+<span class="end-hint">(Zum Beenden bitte Tab schließen)</span>
+
+<p>Höre dir die Geschichte Kapitel für Kapitel an.</p>
 
 <div class="audio-story">
-  <p>Titel</p>
-  <p>Höre dir die Geschichte Kapitel für Kapitel an.</p>
+  <div class="title">
+    <span class="currentChapter">{{ currentChapterIdx + 1 }}.</span>
+    <span>{{ currentTitle }}</span>
+  </div>
 
   <audio #journeyAudioPlayer controls (ended)="onChapterEnded()"></audio>
 
   <div class="chapters">
     @for (chapter of chapters; track chapter.file; let i = $index) {
-      <button type="button"
-      [class.active]="i === currentChapter"
-      (click)="playChapter(i)">
-
+      <button type="button" [class.active]="i === currentChapterIdx" (click)="playChapter(i)">
         {{ i + 1 }} – {{ chapter.title }}
-
       </button>
     }
   </div>

@@ -9,7 +9,8 @@ export class ViewService {
   private audioService = inject(AudioService)
   private keyControlService = inject(KeyControlService);
   public navigationHeight: number = 0;
-  public journeyStarted: boolean = false;
+
+  public transparentContentBackground = signal(false);
 
   activeModal = signal(false);
   showIntro = true;
@@ -23,7 +24,7 @@ export class ViewService {
 
     effect(() => {
       if (this.keyControlService.matchingKey() === 'Escape') {
-        this.closeModal();
+        // this.closeModal();
       }
     });
 

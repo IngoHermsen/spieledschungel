@@ -22,8 +22,6 @@ export class Modal {
   }
 
   goToAudioStory() {
-    this.viewService.journeyStarted = true;
-    this.router.navigate(['hoer-reise']);
-    this.viewService.closeModal();
+    window.open('/hoer-reise', '_blank');
   }
 }

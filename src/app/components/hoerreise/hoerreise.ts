@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { ViewService } from '../../services/view-service';
 
 interface Chapter {
   title: string;
@@ -10,9 +11,18 @@ interface Chapter {
   templateUrl: './hoerreise.html',
   styleUrl: './hoerreise.scss',
 })
-export class Hoerreise {
+export class Hoerreise implements OnInit {
+  public viewService = inject(ViewService);
+  public currentChapterIdx: number = 0;
+  public currentTitle: string | null = null;
 
   @ViewChild('journeyAudioPlayer') audioPlayer!: ElementRef<HTMLAudioElement>;
+
+  ngOnInit(): void {
+    this.currentTitle = this.chapters[this.currentChapterIdx].title
+    console.log(this.currentTitle)
+    this.viewService.closeModal();
+  }
 
   public chapters: Chapter[] = [
     {
@@ -45,13 +55,12 @@ export class Hoerreise {
     }
   ];
 
-  currentChapter = 0;
-
   /**
    * Kapitel auswählen
    */
   playChapter(index: number): void {
-    this.currentChapter = index;
+    this.currentChapterIdx = index;
+    this.currentTitle = this.chapters[this.currentChapterIdx].title;
 
     const audio = this.audioPlayer.nativeElement;
 
@@ -66,20 +75,25 @@ export class Hoerreise {
   onChapterEnded(): void {
 
     // Gibt es noch ein weiteres Kapitel?
-    if (this.currentChapter < this.chapters.length - 1) {
+    if (this.currentChapterIdx < this.chapters.length - 1) {
 
-      this.currentChapter++;
+      this.currentChapterIdx++;
+      this.currentTitle = this.chapters[this.currentChapterIdx].title;
+
 
       const audio = this.audioPlayer.nativeElement;
 
-      audio.src = this.chapters[this.currentChapter].file;
+      audio.src = this.chapters[this.currentChapterIdx].file;
       audio.load();
       audio.play();
 
     } else {
 
       // Geschichte ist komplett fertig
-      this.currentChapter = 0;
+      this.currentChapterIdx = 0;
     }
+  }
+
+  setActiveChapter() {
   }
 }

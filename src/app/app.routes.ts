@@ -12,8 +12,10 @@ import { Transparenz } from './components/pages/transparenz/transparenz';
 import { FotoReise } from './components/pages/foto-reise/foto-reise';
 import { DataProtection } from './components/data-protection/data-protection';
 import { Hoerreise } from './components/hoerreise/hoerreise';
+import { Hero } from './components/pages/hero/hero';
 
 export const routes: Routes = [
+    {path: '', component: Hero, pathMatch: 'full'},
     {path: 'momente', component: Momente},
     {path: 'ueberMich', component: UeberMich},
     {path: 'raeume', component: Räume},
@@ -22,7 +24,7 @@ export const routes: Routes = [
     {path: 'impressum', component: Imprint},
     {path: 'transparenz', component: Transparenz},
     {path: 'foto-reise', component: FotoReise},
-    {path: 'hoer-reise', component: Hoerreise},
+    {path: 'hoer-reise', component: Hoerreise, data: { StandaloneComponent: true } },
     {path: 'datenschutzerklaerung', component: DataProtection},
 ];
 
