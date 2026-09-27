@@ -32,7 +32,6 @@ export class ViewService {
   }
 
   openModal() {
-    document.body.style.overflowY = 'hidden';
     this.audioService.audio.pause();
     this.activeModal.set(true);
   }

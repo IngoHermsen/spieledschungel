@@ -11,6 +11,7 @@
 
 html,
 body {
+  height: 100vh;
   height: 100%;
 }
 
@@ -24,6 +25,7 @@ body {
     sans-serif;
   margin: auto;
   position: relative;
+  overflow-y: scroll;
 }
 
 a {
@@ -135,7 +137,6 @@ app-navigation {
   padding: 12px;
   position: fixed;
   height: 100%;
-  width: 100vw;
   z-index: 200;
   background-color: white;
   overflow-y: scroll;
@@ -168,14 +169,7 @@ app-navigation {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.modal--icon--variant {
-}
-
-.hide-modal {
-  display: none;
-}
-
-.full-screen-content {
+.main-layout {
   min-height: 100vh;
   display: flex;
 
@@ -204,13 +198,6 @@ app-navigation {
   overflow-y: hidden;
 }
 
-.website-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 950px;
-}
 
 .contact-banner {
   position: relative;
@@ -341,6 +328,7 @@ app-navigation {
 
 .content-wrapper {
   padding: 12px 28px;
+  background-color: white;
 }
 
 .outlet-content.transparent-bg {

@@ -13,18 +13,35 @@ import { FotoReise } from './components/pages/foto-reise/foto-reise';
 import { DataProtection } from './components/data-protection/data-protection';
 import { Hoerreise } from './components/pages/hoerreise/hoerreise';
 import { Hero } from './components/pages/hero/hero';
+import { MainLayout } from './components/main-layout/main-layout';
+import { StandaloneLayout } from './components/standalone-layout/standalone-layout'
+import { Flipbook } from './components/pages/flipbook/flipbook';
+import { EntryPage } from './components/pages/entry-page/entry-page';
 
 export const routes: Routes = [
-    {path: '', component: Hero, pathMatch: 'full'},
-    {path: 'momente', component: Momente},
-    {path: 'ueberMich', component: UeberMich},
-    {path: 'raeume', component: Räume},
-    {path: 'kontakt', component: Kontakt},
-    {path: 'eingewoehnung', component: Eingewoehnung},
-    {path: 'impressum', component: Imprint},
-    {path: 'transparenz', component: Transparenz},
-    {path: 'foto-reise', component: FotoReise},
-    {path: 'hoer-reise', component: Hoerreise, data: { StandaloneComponent: true } },
-    {path: 'datenschutzerklaerung', component: DataProtection},
+  {
+    path: 'pages',
+    component: MainLayout,
+    children: [
+      { path: 'intro', component: Hero, pathMatch: 'full' },
+      { path: 'momente', component: Momente },
+      { path: 'ueberMich', component: UeberMich },
+      { path: 'raeume', component: Räume },
+      { path: 'kontakt', component: Kontakt },
+      { path: 'eingewoehnung', component: Eingewoehnung },
+      { path: 'impressum', component: Imprint },
+      { path: 'transparenz', component: Transparenz },
+      { path: 'foto-reise', component: FotoReise },
+      { path: 'hoer-reise', component: Hoerreise, data: { StandaloneComponent: true } },
+      { path: 'datenschutzerklaerung', component: DataProtection },
+    ],
+  },
+  {
+    path: '',
+    component: StandaloneLayout,
+    children: [
+        {path: '', component: EntryPage},
+        {path: 'flipbook', component: Flipbook}
+    ]
+  },
 ];
-
