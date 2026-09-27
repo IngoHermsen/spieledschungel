@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { ViewService } from '../../../services/view-service';
 
 interface Chapter {
@@ -11,7 +11,7 @@ interface Chapter {
   templateUrl: './hoerreise.html',
   styleUrl: './hoerreise.scss',
 })
-export class Hoerreise implements OnInit {
+export class Hoerreise implements OnInit, AfterViewInit {
   public viewService = inject(ViewService);
   public currentChapterIdx: number = 0;
   public currentTitle: string | null = null;
@@ -20,8 +20,12 @@ export class Hoerreise implements OnInit {
 
   ngOnInit(): void {
     this.currentTitle = this.chapters[this.currentChapterIdx].title
-    console.log(this.currentTitle)
     this.viewService.closeModal();
+  }
+
+  ngAfterViewInit() {
+    const audio = this.audioPlayer.nativeElement;
+    audio.src = this.chapters[this.currentChapterIdx].file;
   }
 
   public chapters: Chapter[] = [

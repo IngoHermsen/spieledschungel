@@ -14,7 +14,7 @@
           <app-navigation></app-navigation>
     }
     
-      <div [class.transparent-bg]="viewService.transparentContentBackground()" class="outlet-content" id="activeContent" #outlet>
+      <div [class.outlet-content--no-padding]="routeIsStandalone" [class.transparent-bg]="viewService.transparentContentBackground == true" class="outlet-content" id="activeContent" #outlet>
         <div class="contact-banner">
           <a href="mailto:panda@spieledschungel.de" target="_blank" class="click-overlay mail"></a>
           <a href="sms:+4915233527042" target="_blank" class="click-overlay phone"></a>

@@ -43,11 +43,14 @@ export class App implements OnInit {
       let currentRoute = this.activatedRoute;
       while (currentRoute.firstChild) {
         currentRoute = currentRoute.firstChild;
-        console.log('currentRoute', currentRoute)
       }
 
       // 3. Das Data-Attribut aus dem Snapshot auslesen
       this.routeIsStandalone = currentRoute.snapshot.data['StandaloneComponent'];
+      
+      const routeName = currentRoute.snapshot.routeConfig?.path;
+      this.viewService.transparentContentBackground = routeName === '';
+      console.log('transparent bg', this.viewService.transparentContentBackground)
       // Hier kommt später deine Basis-Logik/Reaktion hin
     
     });

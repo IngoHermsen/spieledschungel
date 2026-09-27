@@ -1,14 +1,31 @@
 <section class="modal--content">
-  @if (viewService.showIntro) {
+  @if (viewService.showModalContent === 'welcome') {
     <div class="welcome-image">
       <a (click)="viewService.closeModal()" class="click-overlay left"></a>
-      <a
+      <!-- <a
         href="https://heyzine.com/flip-book/e7c0d4e0be.html"
         target="_blank"
         class="click-overlay middle"
-      ></a>
+      ></a> -->
+      <div
+        (click)="viewService.showModalContent = 'book'"
+        class="click-overlay middle"
+      ></div>
       <a (click)="goToAudioStory()" class="click-overlay right"></a>
       <img class="content-image" src="assets/images/welcome-image.jpeg" alt="welcome-image" />
+    </div>
+  }
+
+  @if (viewService.showModalContent === 'book') {
+    <div class="heyzine-book">
+      <iframe
+        allowfullscreen
+        allow="autoplay; fullscreen; clipboard-write"
+        scrolling="no"
+        style="width: 100%; height: 100%; border: 1px solid lightgray"
+        src="https://heyzine.com/flip-book/e7c0d4e0be.html"
+      ></iframe>
+      <span (click)="viewService.showModalContent = 'welcome'">[x]</span>
     </div>
   }
   <!-- <div class="floating-buttons music">

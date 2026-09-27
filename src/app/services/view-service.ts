@@ -10,10 +10,10 @@ export class ViewService {
   private keyControlService = inject(KeyControlService);
   public navigationHeight: number = 0;
 
-  public transparentContentBackground = signal(false);
+  public transparentContentBackground = false;
 
   activeModal = signal(false);
-  showIntro = true;
+  showModalContent = 'welcome';
   navIsOpen = signal(false);
   isMobile: boolean = false;
   isPortrait: boolean = false;

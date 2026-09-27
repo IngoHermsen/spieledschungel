@@ -332,6 +332,11 @@ app-navigation {
 
 .outlet-content {
   padding-top: 80px;
+  background-color: white;
+}
+
+.outlet-content--no-padding {
+  padding-top: 0;
 }
 
 .content-wrapper {

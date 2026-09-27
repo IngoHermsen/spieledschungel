@@ -11,7 +11,7 @@ export class Hero implements OnInit {
   private viewService = inject(ViewService)
 
   ngOnInit() {
-    this.viewService.transparentContentBackground.set(true)
+    this.viewService.transparentContentBackground = true;
   }
 
 }
