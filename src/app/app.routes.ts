@@ -23,7 +23,7 @@ export const routes: Routes = [
     path: 'pages',
     component: MainLayout,
     children: [
-      { path: 'intro', component: Hero, pathMatch: 'full' },
+      { path: 'intro', component: Hero },
       { path: 'momente', component: Momente },
       { path: 'ueberMich', component: UeberMich },
       { path: 'raeume', component: Räume },
@@ -32,7 +32,7 @@ export const routes: Routes = [
       { path: 'impressum', component: Imprint },
       { path: 'transparenz', component: Transparenz },
       { path: 'foto-reise', component: FotoReise },
-      { path: 'hoer-reise', component: Hoerreise, data: { StandaloneComponent: true } },
+      { path: 'hoer-reise', component: Hoerreise, data: { FocusComponent: true } },
       { path: 'datenschutzerklaerung', component: DataProtection },
     ],
   },

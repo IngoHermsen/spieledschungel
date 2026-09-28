@@ -22,6 +22,6 @@ export class Modal {
   }
 
   goToAudioStory() {
-    window.open('/hoer-reise', '_blank');
+    window.open('pages/hoer-reise', '_blank');
   }
 }

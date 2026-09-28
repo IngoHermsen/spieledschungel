@@ -270,9 +270,9 @@ app-navigation {
     transform: translate(-50%, -50%);
     max-width: 90vw;
     max-height: 100%;
-    width: 300px;
     height: auto;
   }
+
 
   .opened-eyes {
     z-index: 2;
@@ -331,10 +331,6 @@ app-navigation {
   background-color: white;
 }
 
-.outlet-content.transparent-bg {
-  background-color: rgba(255,255,255,0.4)
-}
-
 .control-border {
   display: flex;
   border: 2px solid grey;
@@ -358,11 +354,15 @@ h1 {
 
   .hero {
     margin-top: unset;
-    height: 600px;
+    height: 800px;
   }
 
   .hero .img-container > img {
     max-height: 100%;
+  }
+
+  .hero img {
+    height: 100%;
   }
 }
 

@@ -1,17 +1,24 @@
 <div class="main-layout">
-  <div class="website-content">
-    <app-navigation></app-navigation>
-
+  <div class="page-content">
+    @if (!viewService.reducedContent) {
+      <app-navigation></app-navigation>
+    }
     <div>
       <div class="contact-banner">
         <a href="mailto:panda@spieledschungel.de" target="_blank" class="click-overlay mail"></a>
         <a href="sms:+4915233527042" target="_blank" class="click-overlay phone"></a>
         <img src="assets/images/contact-banner.jpeg" alt="contact-banner-tiger-panda" />
       </div>
-      <div class="content-wrapper">
+      <div
+        class="content-wrapper"
+        [class.transparent-bg]="viewService.transparentContentBackground()"
+      >
         <router-outlet></router-outlet>
       </div>
+
     </div>
-    <app-footer></app-footer>
+          @if (!viewService.reducedContent) {
+        <app-footer></app-footer>
+      }
   </div>
 </div>

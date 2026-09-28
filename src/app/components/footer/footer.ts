@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { ViewService } from '../../services/view-service';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,7 @@ import { RouterLink } from "@angular/router";
   styleUrl: './footer.scss',
 })
 export class Footer {
+  public viewService = inject(ViewService);
+  
   public showMap: boolean = false;
 }

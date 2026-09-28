@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ViewService } from '../../../services/view-service';
 
 @Component({
   selector: 'app-entry-page',
@@ -8,7 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './entry-page.scss',
 })
 export class EntryPage {
-  goToAudioStory() {
-    
-  }
+  public viewService = inject(ViewService)
 }

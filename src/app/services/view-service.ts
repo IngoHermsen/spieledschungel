@@ -9,11 +9,13 @@ export class ViewService {
   private audioService = inject(AudioService)
   private keyControlService = inject(KeyControlService);
   public navigationHeight: number = 0;
+  public reducedContent: boolean = false;
+  public previousRoute: string | null = null;
+  public currentRoute: string | null = null;
+  
 
-  public transparentContentBackground = false;
+  public transparentContentBackground = signal(false);
 
-  activeModal = signal(false);
-  showModalContent = 'welcome';
   navIsOpen = signal(false);
   isMobile: boolean = false;
   isPortrait: boolean = false;
@@ -33,11 +35,14 @@ export class ViewService {
 
   openModal() {
     this.audioService.audio.pause();
-    this.activeModal.set(true);
   }
 
   closeModal() {
     document.body.style.overflowY = '';
-    this.activeModal.set(false);
+  }
+
+  openAudioStory() {
+    console.log("open Audio Story")
+        window.open('/pages/hoer-reise', '_blank');
   }
 }

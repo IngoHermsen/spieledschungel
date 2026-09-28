@@ -1,1 +1,12 @@
-<p>flipbook works!</p>
+<div class="flipbook-container">
+  <span [routerLink]="viewService.previousRoute" class="close-icon">&#10006;</span>
+  <div class="heyzine-book">
+    <iframe
+      allowfullscreen
+      allow="autoplay; fullscreen; clipboard-write"
+      scrolling="no"
+      style="width: 100%; height: 100%; border: 1px solid lightgray"
+      src="https://heyzine.com/flip-book/e7c0d4e0be.html"
+    ></iframe>
+  </div>
+</div>

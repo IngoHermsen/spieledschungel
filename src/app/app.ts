@@ -17,7 +17,6 @@ import { filter } from 'rxjs';
 export class App implements OnInit {
   private router = inject(Router);
   private activatedRoute = inject(ActivatedRoute);
-  public routeIsStandalone = false;
 
   viewService = inject(ViewService);
   keyControlService = inject(KeyControlService);
@@ -25,47 +24,41 @@ export class App implements OnInit {
 
   controlKey: string | null = null;
 
-  @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>;
   @ViewChild('activeContent') activeContent!: ElementRef<HTMLElement>;
 
 
   ngOnInit(): void {
     this.audioService.init();
     this.keyControlService.setKeyListeners();
-    this.blinkingEyes();
 
-    // Check route for standalone flag in route.ts 
-    this.router.events.pipe(
-      // 1. Filtern, sodass wir nur reagieren, wenn die Navigation abgeschlossen ist
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      // 2. Den Routen-Baum bis nach unten zur tiefsten aktiven Route durchlaufen
-      let currentRoute = this.activatedRoute;
-      while (currentRoute.firstChild) {
-        currentRoute = currentRoute.firstChild;
-      }
+        this.router.events
+      .pipe(
+        // 1. Filtern, sodass wir nur reagieren, wenn die Navigation abgeschlossen ist
+        filter((event) => event instanceof NavigationEnd),
+      )
+      .subscribe((event) => {
 
-      // 3. Das Data-Attribut aus dem Snapshot auslesen
-      this.routeIsStandalone = currentRoute.snapshot.data['StandaloneComponent'];
-      
-      const routeName = currentRoute.snapshot.routeConfig?.path;
-      this.viewService.transparentContentBackground = routeName === '';
-      console.log('transparent bg', this.viewService.transparentContentBackground)
-      // Hier kommt später deine Basis-Logik/Reaktion hin
-    
-    });
+        this.viewService.previousRoute = this.viewService.currentRoute;
 
-  }
+        this.viewService.currentRoute = event.urlAfterRedirects
 
-  blinkingEyes() {
-    const randomTimeout = Math.floor(Math.random() * (10000 - 2500 + 1)) + 2500;
-    const blinkTimeout = setTimeout(() => {
-      this.mainLogo.nativeElement.classList.add('hide-logo');
-      setTimeout(() => {
-        this.mainLogo.nativeElement.classList.remove('hide-logo');
-      }, 170);
+        // 2. Den Routen-Baum bis nach unten zur tiefsten aktiven Route durchlaufen
+        let currentRoute = this.activatedRoute;
+        while (currentRoute.firstChild) {
+          currentRoute = currentRoute.firstChild;
+        }
 
-      this.blinkingEyes();
-    }, randomTimeout);
+        console.log('route', currentRoute.snapshot.data)
+
+        // 3. Das Data-Attribut aus dem Snapshot auslesen
+        this.viewService.reducedContent = currentRoute.snapshot.data['FocusComponent'];
+
+        const routeName = currentRoute.snapshot.routeConfig?.path;
+        this.viewService.transparentContentBackground.set(routeName === 'pages/intro');
+        
+        console.log('previous route', this.viewService.previousRoute)
+        
+      });
+
   }
 }

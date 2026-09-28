@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { ViewService } from '../../../services/view-service';
 
 @Component({
@@ -8,10 +8,25 @@ import { ViewService } from '../../../services/view-service';
   styleUrl: './hero.scss',
 })
 export class Hero implements OnInit {
-  private viewService = inject(ViewService)
+  @ViewChild('mainLogo') mainLogo!: ElementRef<HTMLElement>;
+
+  private viewService = inject(ViewService);
 
   ngOnInit() {
-    this.viewService.transparentContentBackground = true;
-  }
+    this.viewService.transparentContentBackground.set(true);
+    this.blinkingEyes()
+  };
 
+  
+  blinkingEyes() {
+    const randomTimeout = Math.floor(Math.random() * (10000 - 2500 + 1)) + 2500;
+    const blinkTimeout = setTimeout(() => {
+      this.mainLogo.nativeElement.classList.add('hide-logo');
+      setTimeout(() => {
+        this.mainLogo.nativeElement.classList.remove('hide-logo');
+      }, 170);
+
+      this.blinkingEyes();
+    }, randomTimeout);
+  }
 }
