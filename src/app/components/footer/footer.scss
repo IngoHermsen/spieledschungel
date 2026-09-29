@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .footer--content {
-  color: $secondary-color;
+  color: purple;
   background-color: $primary-color;
   display: flex;
   flex-direction: column;
@@ -105,9 +105,6 @@
   margin-top: 24px;
 }
 
-.link-buttons img:hover {
-  transform: scale(1.2);
-}
 
 @media (min-width: 768px) {
   .main-section {
@@ -118,5 +115,11 @@
     flex-direction: column;
     gap: unset;
     margin: 0px 48px 0px 0px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link-buttons img:hover {
+    transform: scale(1.2);
   }
 }

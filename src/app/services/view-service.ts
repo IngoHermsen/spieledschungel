@@ -40,9 +40,4 @@ export class ViewService {
   closeModal() {
     document.body.style.overflowY = '';
   }
-
-  openAudioStory() {
-    console.log("open Audio Story")
-        window.open('/pages/hoer-reise', '_blank');
-  }
 }
