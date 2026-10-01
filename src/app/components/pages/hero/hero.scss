@@ -1,0 +1,14 @@
+.elternstimmen-box {
+  color: rgb(156, 0, 155);
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px 28px;
+  border: 4px solid white;
+}
+
+.elternstimmen-box:hover {
+    color: rgba(156, 0, 155, 0.4)
+}

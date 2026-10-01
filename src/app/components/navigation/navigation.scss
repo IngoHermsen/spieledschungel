@@ -6,6 +6,8 @@
 }
 
 .nav-menu {
+  display: flex;
+  justify-content: center;
   height: 90px;
   font-size: 14px;
   color: #9c009b;
@@ -80,73 +82,38 @@
 
 .nav-entries {
   display: flex;
+  justify-content: center;
+  max-width: fit-content;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: unset;
 }
 
 .nav-entry {
-  position: relative;
-  display: flex;
+  cursor: pointer;
   flex-direction: column;
-  align-items: start;
   color: white;
   margin-bottom: 8px;
   margin-bottom: 8px;
   background-color: #9c009b;
   border-radius: 50px;
-  padding-left: 8px;
-  padding-right: 8px;
-
-  &:not(:last-child) {
-    border-right: 1px solid #9c009b;
-  }
+  padding: 4px 12px;
+  
 }
 
-.nav-entry > span {
-  cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
+.nav-entry:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-entry.inverted-style {
+  background-color: white;
+  color: #9c009b;
+  // border: 1px solid #9c009b;
   box-sizing: border-box;
 }
 
-.nav-entry span {
-  border-radius: 10px;
-  padding: 4px 8px;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.8);
-  }
-}
-
-.sub-menu {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  background-color: white;
-  // background-color: rgb(247, 194, 241);
-  gap: 16px;
-  margin-top: 8px;
-  border-radius: 10px;
-  padding: 12px 12px 12px 24px;
-  border: 2px solid white;
-}
-
-.sub-menu li {
-  cursor: pointer;
-  white-space: nowrap;
-
-  &:hover {
-    color: white;
-  }
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.nav-entry.inverted-style:hover {
+  color: rgba(156, 0, 155, 0.4);
 }
 
 .book-txt {
@@ -166,8 +133,6 @@ ul {
 
 @media (min-width: 768px) {
   .nav-menu {
-    display: flex;
-    justify-content: center;
     position: sticky;
   }
 

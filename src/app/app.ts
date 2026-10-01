@@ -48,16 +48,12 @@ export class App implements OnInit {
           currentRoute = currentRoute.firstChild;
         }
 
-        console.log('route', currentRoute.snapshot.data)
-
         // 3. Das Data-Attribut aus dem Snapshot auslesen
         this.viewService.reducedContent = currentRoute.snapshot.data['FocusComponent'];
 
         const routeName = currentRoute.snapshot.routeConfig?.path;
         this.viewService.transparentContentBackground.set(routeName === 'pages/intro');
-        
-        console.log('previous route', this.viewService.previousRoute)
-        
+                
       });
 
   }
