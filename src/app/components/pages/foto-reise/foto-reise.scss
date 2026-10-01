@@ -1,3 +1,14 @@
-.image-gallery {
+.img-slider {
+    display: flex;
+    justify-content: center;
     margin-top: 80px;
+    width: 100%;
+}
+
+splide {
+    width: 60%;
+}
+
+splide img {
+    width: 100%;
 }
