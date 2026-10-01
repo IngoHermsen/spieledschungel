@@ -1,12 +1,11 @@
-import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
-import { MediaControls } from '../media-controls/media-controls';
+import { Component, inject } from '@angular/core';
 import { ViewService } from '../../services/view-service';
 import { AudioService } from '../../services/audio-service';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
-  imports: [MediaControls, RouterLink],
+  imports: [RouterLink],
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })

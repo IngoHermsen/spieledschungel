@@ -1,7 +1,6 @@
-import { Component, ElementRef, inject, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { Footer } from './components/footer/footer';
 import { Navigation } from './components/navigation/navigation';
-import { Modal } from './components/modal/modal';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ViewService } from './services/view-service';
 import { KeyControlService } from './services/key-control';
@@ -10,7 +9,7 @@ import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [Navigation, Modal, Footer, RouterOutlet],
+  imports: [Navigation, Footer, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
