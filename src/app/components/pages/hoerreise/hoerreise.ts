@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { ViewService } from '../../../services/view-service';
+import { RouterLink } from '@angular/router';
 
 interface Chapter {
   title: string;
@@ -8,6 +9,7 @@ interface Chapter {
 
 @Component({
   selector: 'app-hoerreise',
+  imports: [RouterLink],
   templateUrl: './hoerreise.html',
   styleUrl: './hoerreise.scss',
 })

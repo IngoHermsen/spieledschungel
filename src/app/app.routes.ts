@@ -32,7 +32,7 @@ export const routes: Routes = [
       { path: 'impressum', component: Imprint },
       { path: 'transparenz', component: Transparenz },
       { path: 'foto-reise', component: FotoReise },
-      { path: 'hoer-reise', component: Hoerreise },
+      { path: 'hoer-reise', component: Hoerreise, data: { FocusComponent: true } },
       { path: 'datenschutzerklaerung', component: DataProtection },
     ],
   },

@@ -2,10 +2,12 @@ import { Component, inject } from '@angular/core';
 import { ViewService } from '../../services/view-service';
 import { AudioService } from '../../services/audio-service';
 import { Router, RouterLink } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
-  imports: [RouterLink],
+  imports: [RouterLink, FontAwesomeModule],
   templateUrl: './navigation.html',
   styleUrl: './navigation.scss',
 })
@@ -18,6 +20,8 @@ export class Navigation {
   showNav: boolean = false;
   isMuted: boolean = true;
   hasStarted: boolean = false;
+  faHouseIcon = faHouse
+  
 
   handleNavigation(route: string) {
     this.router.navigate([route]).then(() => {

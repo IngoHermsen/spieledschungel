@@ -8,11 +8,10 @@
       </span>
     </div>
     <div class="below-nav nav-row">
+      <fa-icon (click)="handleNavigation('pages/intro')" class="nav-entry" [icon]="faHouseIcon"></fa-icon>
       <span (click)="handleNavigation('pages/raeume')" class="nav-entry"> Räume </span>
       <span (click)="handleNavigation('pages/foto-reise')" class="nav-entry"> Foto-Reise </span>
-      <span (click)="handleNavigation('pages/kontakt')" class="nav-entry inverted-style">
-        Kontakt
-      </span>
+      <span (click)="handleNavigation('pages/kontakt')" class="nav-entry"> Kontakt </span>
     </div>
   </div>
 </div>

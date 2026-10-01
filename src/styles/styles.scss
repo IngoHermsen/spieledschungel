@@ -125,7 +125,6 @@ app-navigation {
   overflow-y: hidden;
 }
 
-
 .contact-banner {
   position: relative;
 }
@@ -200,7 +199,6 @@ app-navigation {
     height: auto;
   }
 
-
   .opened-eyes {
     z-index: 2;
   }
@@ -254,6 +252,7 @@ app-navigation {
 }
 
 .content-wrapper {
+  position: relative;
   padding: 12px 28px;
   background-color: white;
 }
@@ -290,6 +289,18 @@ h1 {
 
   .hero img {
     height: 100%;
+  }
+
+  .close-icon {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .close-icon:hover {
+    opacity: 0.6;
   }
 }
 
