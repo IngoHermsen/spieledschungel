@@ -14,9 +14,9 @@
 .welcome-image-content .click-overlay {
   cursor: pointer;
   position: absolute;
-  bottom: 16%;
-  height: 20.5%;
-  width: 26.5%;
+  bottom: 19.3%;
+  height: 17%;
+  width: 30.5%;
   border-radius: 10%;
 
   &:hover {
@@ -25,7 +25,7 @@
 }
 
 .welcome-image-content .click-overlay.left {
-  left: 8%;
+  left: 3%;
 }
 
 .welcome-image-content .click-overlay.middle {
@@ -34,4 +34,5 @@
 
 .welcome-image-content .click-overlay.right {
   left: 65%;
+  width: 32.5%
 }
