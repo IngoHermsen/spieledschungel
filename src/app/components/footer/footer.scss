@@ -22,6 +22,12 @@
   flex: 2;
 }
 
+.company-data-section .company-subtitle {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
 .social-media-section {
   display: flex;
   gap: 24px;
@@ -103,6 +109,10 @@
   cursor: pointer;
   max-width: 120px;
   margin-top: 24px;
+}
+
+.location-info {
+  margin-bottom: 24px;
 }
 
 
