@@ -8,6 +8,7 @@
 .nav-menu {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   height: 90px;
   font-size: 14px;
   color: #9c009b;
@@ -25,41 +26,6 @@
   box-sizing: border-box;
 }
 
-.nav-toggle {
-  display: flex;
-  text-align: center;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  box-sizing: border-box;
-  cursor: pointer;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid white;
-  background-color: $primary-color;
-}
-
-
-.nav-list {
-  margin-top: 60px;
-  background-color: $primary-color;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  overflow-y: auto;
-  width: 100%;
-  padding: 0px 32px;
-  z-index: 30;
-  box-sizing: border-box;
-
-  /* Firefox */
-  scrollbar-width: none;
-
-  /* IE / Edge (alt) */
-  -ms-overflow-style: none;
-}
-
 .nav-row {
   display: flex;
   justify-content: center;
@@ -67,14 +33,9 @@
   margin-top: 8px;
 }
 
-.upper-nav {
-  border-bottom: 1px solid #9c009b;
-}
-
 .nav-entries {
   display: flex;
   justify-content: center;
-  max-width: fit-content;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: unset;
@@ -89,7 +50,16 @@
   background-color: #9c009b;
   border-radius: 50px;
   padding: 4px 12px;
-  
+}
+
+.nav-entry.active {
+  color: #9c009b;
+  // border: 2px solid #9c009b;
+  background-color: white;
+}
+
+.nav-entry.active:hover {
+  color: unset;
 }
 
 .nav-entry:hover {
@@ -147,13 +117,6 @@
     display: none;
   }
 
-  .active-nav {
-    color: rgb(247, 194, 241);
-
-    &:hover {
-      color: unset;
-    }
-  }
 
   .medium-screen--controls {
     display: block;
