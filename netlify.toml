@@ -1,3 +1,94 @@
+
+# Legacy WordPress redirects (301)
+
+[[redirects]]
+  from = "/anmeldung/"
+  to = "/pages/intro"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to = "/pages/intro"
+  status = 301
+
+[[redirects]]
+  from = "/die-einrichtung/"
+  to = "/pages/raeume"
+  status = 301
+
+[[redirects]]
+  from = "/die-einrichtung/das-spielzimmer/"
+  to = "/pages/raeume"
+  status = 301
+
+[[redirects]]
+  from = "/die-einrichtung/der-flur/"
+  to = "/pages/raeume"
+  status = 301
+
+[[redirects]]
+  from = "/die-einrichtung/der-ruheraum/"
+  to = "/pages/raeume"
+  status = 301
+
+[[redirects]]
+  from = "/die-einrichtung/die-kueche/"
+  to = "/pages/raeume"
+  status = 301
+
+[[redirects]]
+  from = "/kontakt/"
+  to = "/pages/kontakt"
+  status = 301
+
+[[redirects]]
+  from = "/kontakt/datenschutzerklarung/"
+  to = "/pages/datenschutzerklaerung"
+  status = 301
+
+[[redirects]]
+  from = "/kontakt/impressum/"
+  to = "/pages/impressum"
+  status = 301
+
+[[redirects]]
+  from = "/testimonial/test/"
+  to = "/pages/intro"
+  status = 301
+
+[[redirects]]
+  from = "/ueber/"
+  to = "/pages/ueberMich"
+  status = 301
+
+[[redirects]]
+  from = "/ueber/ein-tag-im-spieledschungel/"
+  to = "/flipbook"
+  status = 301
+
+[[redirects]]
+  from = "/ueber/eingewoehnung/"
+  to = "/pages/eingewoehnung"
+  status = 301
+
+[[redirects]]
+  from = "/ueber/marie-bode/"
+  to = "/pages/ueberMich"
+  status = 301
+
+[[redirects]]
+  from = "/ueber/paedagogisches-konzept/"
+  to = "/pages/transparenz"
+  status = 301
+
+[[redirects]]
+  from = "/verpflegung/"
+  to = "/flipbook"
+  status = 301
+
+
+# SPA fallback – must remain last
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
