@@ -17,22 +17,7 @@
   status = 301
 
 [[redirects]]
-  from = "/die-einrichtung/das-spielzimmer/"
-  to = "/pages/raeume"
-  status = 301
-
-[[redirects]]
-  from = "/die-einrichtung/der-flur/"
-  to = "/pages/raeume"
-  status = 301
-
-[[redirects]]
-  from = "/die-einrichtung/der-ruheraum/"
-  to = "/pages/raeume"
-  status = 301
-
-[[redirects]]
-  from = "/die-einrichtung/die-kueche/"
+  from = "/die-einrichtung/*"
   to = "/pages/raeume"
   status = 301
 
