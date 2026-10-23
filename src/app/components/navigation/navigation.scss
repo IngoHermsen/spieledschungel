@@ -8,7 +8,8 @@
 .nav-menu {
   display: flex;
   justify-content: center;
-  height: 90px;
+  flex-direction: column;
+  height: 108px;
   font-size: 14px;
   color: #9c009b;
   background: rgba(255, 255, 255, 0.2);
@@ -20,44 +21,10 @@
   left: 0px;
   right: 0px;
   z-index: 100;
-  margin-bottom: 8px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 3px solid white;
   box-sizing: border-box;
-}
-
-.nav-toggle {
-  display: flex;
-  text-align: center;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  box-sizing: border-box;
-  cursor: pointer;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid white;
-  background-color: $primary-color;
-}
-
-
-.nav-list {
-  margin-top: 60px;
-  background-color: $primary-color;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  overflow-y: auto;
-  width: 100%;
-  padding: 0px 32px;
-  z-index: 30;
-  box-sizing: border-box;
-
-  /* Firefox */
-  scrollbar-width: none;
-
-  /* IE / Edge (alt) */
-  -ms-overflow-style: none;
 }
 
 .nav-row {
@@ -67,14 +34,9 @@
   margin-top: 8px;
 }
 
-.upper-nav {
-  border-bottom: 1px solid #9c009b;
-}
-
 .nav-entries {
   display: flex;
   justify-content: center;
-  max-width: fit-content;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: unset;
@@ -87,9 +49,19 @@
   margin-bottom: 8px;
   margin-bottom: 8px;
   background-color: #9c009b;
+  border: 2px solid transparent;
   border-radius: 50px;
-  padding: 4px 12px;
-  
+  padding: 4px 16px;
+}
+
+.nav-entry.active {
+  color: #9c009b;
+  border-color: #9c009b;
+  background-color: white;
+}
+
+.nav-entry.active:hover {
+  color: unset;
 }
 
 .nav-entry:hover {
@@ -137,32 +109,4 @@
   .sub-menu > li {
     margin-left: 12px;
   }
-
-  .nav-entry:not(:last-child) {
-    border-bottom: none;
-    flex-direction: row;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
-
-  .active-nav {
-    color: rgb(247, 194, 241);
-
-    &:hover {
-      color: unset;
-    }
-  }
-
-  .medium-screen--controls {
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-  }
-}
-
-@media (min-width: 1024px) {
-  // large devices
 }

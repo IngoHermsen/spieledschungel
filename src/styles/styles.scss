@@ -271,15 +271,12 @@ h1 {
   margin: unset;
 }
 
-  .close-icon {
+  .toIntro {
     cursor: pointer;
     font-size: 20px;
-    position: absolute;
-    top: 12px;
-    right: 12px;
   }
 
-  .close-icon:hover {
+  .toIntro:hover {
     opacity: 0.6;
   }
 
