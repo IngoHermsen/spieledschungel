@@ -38,7 +38,6 @@ export class App implements OnInit {
       .subscribe((event) => {
 
         this.viewService.previousRoute = this.viewService.currentRoute;
-
         this.viewService.currentRoute = event.urlAfterRedirects
 
         // 2. Den Routen-Baum bis nach unten zur tiefsten aktiven Route durchlaufen

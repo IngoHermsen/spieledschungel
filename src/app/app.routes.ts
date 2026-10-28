@@ -19,6 +19,14 @@ import { Flipbook } from './components/pages/flipbook/flipbook';
 import { EntryPage } from './components/pages/entry-page/entry-page';
 
 export const routes: Routes = [
+    {
+    path: '',
+    component: StandaloneLayout,
+    children: [
+        {path: '', component: EntryPage},
+        {path: 'flipbook', component: Flipbook}
+    ]
+  },
   {
     path: 'pages',
     component: MainLayout,
